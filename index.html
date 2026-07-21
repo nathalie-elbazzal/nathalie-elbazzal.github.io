@@ -1,16 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Nathalie El-Bazzal | International Trade & Geoeconomics</title>
-
-  <meta name="description"
-        content="Nathalie El-Bazzal, PhD Candidate in Economics, researcher at the Paris School of Economics, and specialist in international trade, geoeconomics, and geopolitical risk.">
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nathalie El-Bazzal | Economics &amp; Geoeconomics</title>
+<meta content="Nathalie El-Bazzal, PhD Candidate in Economics, researcher at the Paris School of Economics, and specialist in international trade, geoeconomics, and geopolitical risk." name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://nathalie-elbazzal.github.io/" property="og:url"/>
+<meta content="Nathalie El-Bazzal | International Trade &amp; Geoeconomics" property="og:title"/>
+<meta content="PhD Candidate in Economics researching international trade, geoeconomics, and geopolitical risk." property="og:description"/>
+<meta content="https://nathalie-elbazzal.github.io/social-preview.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="627" property="og:image:height"/>
+<meta content="Nathalie El-Bazzal — International Trade, Geoeconomics and Geopolitical Risk" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Nathalie El-Bazzal | International Trade &amp; Geoeconomics" name="twitter:title"/>
+<meta content="PhD Candidate in Economics researching international trade, geoeconomics, and geopolitical risk." name="twitter:description"/>
+<meta content="https://nathalie-elbazzal.github.io/social-preview.jpg" name="twitter:image"/>
+<style>
     :root {
       --navy: #173e58;
       --dark-navy: #102f44;
@@ -737,476 +745,761 @@
       }
     }
 
-  </style>
+
+    /* =========================================================
+       SECTIONED DESKTOP LAYOUT
+       Fixed academic sidebar + clearly separated content panels
+       ========================================================= */
+
+    .sidebar {
+      position: fixed;
+      inset: 0 auto 0 0;
+      z-index: 30;
+      width: 285px;
+      padding: 42px 30px 28px;
+      color: var(--white);
+      background: var(--dark-navy);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .sidebar-photo {
+      width: 118px;
+      aspect-ratio: 1 / 1;
+      margin: 0 auto 22px;
+      padding: 4px;
+      background: var(--white);
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .sidebar-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      border-radius: 50%;
+    }
+
+    .sidebar h2 {
+      margin: 0;
+      color: var(--white);
+      text-align: center;
+      font-size: 25px;
+      letter-spacing: -0.5px;
+    }
+
+    .sidebar-role {
+      margin: 8px 0 25px;
+      color: #c9d9e2;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .sidebar nav {
+      display: grid;
+      gap: 3px;
+      margin-top: 4px;
+    }
+
+    .sidebar nav a {
+      display: block;
+      padding: 9px 12px;
+      color: #dbe7ed;
+      border-left: 2px solid transparent;
+      font-size: 12px;
+      letter-spacing: 0.2px;
+    }
+
+    .sidebar nav a:hover,
+    .sidebar nav a:focus {
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.07);
+      border-left-color: var(--gold);
+    }
+
+    .sidebar-email {
+      margin-top: auto;
+      padding-top: 25px;
+      color: #c9d9e2;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    body > header {
+      display: none;
+    }
+
+    main,
+    footer {
+      margin-left: 285px;
+    }
+
+    main > section,
+    main > .highlights,
+    main > .institution-logos {
+      border-bottom: 1px solid var(--border);
+    }
+
+    main > section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 88px 0;
+      scroll-margin-top: 0;
+    }
+
+    main > section > .container {
+      width: min(980px, calc(100% - 80px));
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding: 70px 0;
+    }
+
+    .hero .hero-content {
+      max-width: 760px;
+    }
+
+    .highlights,
+    .institution-logos {
+      margin-left: 0;
+    }
+
+    .highlights {
+      padding: 34px 0;
+    }
+
+    .institution-logos {
+      padding: 30px 0;
+    }
+
+    #research,
+    #academic,
+    #professional,
+    #education,
+    #conferences {
+      align-items: flex-start;
+    }
+
+    #research > .container,
+    #academic > .container,
+    #professional > .container,
+    #education > .container,
+    #conferences > .container {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .funding {
+      min-height: 100vh;
+    }
+
+    .contact {
+      width: 100%;
+    }
+
+    footer {
+      padding: 24px 0;
+    }
+
+    @media (max-width: 980px) {
+      .sidebar {
+        display: none;
+      }
+
+      body > header {
+        display: block;
+      }
+
+      main,
+      footer {
+        margin-left: 0;
+      }
+
+      main > section {
+        min-height: auto;
+        display: block;
+        padding: 64px 0;
+        scroll-margin-top: 105px;
+      }
+
+      main > section > .container {
+        width: min(1120px, calc(100% - 40px));
+      }
+
+      .hero {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 620px) {
+      main > section {
+        padding: 52px 0;
+      }
+
+      main > section > .container {
+        width: min(100% - 26px, 1120px);
+      }
+    }
+
+  
+    /* TRUE SECTION-BY-SECTION NAVIGATION */
+    .page-panel {
+      display: none !important;
+      min-height: 100vh;
+      animation: panelFade 0.28s ease;
+    }
+
+    .page-panel.active {
+      display: block !important;
+    }
+
+    .home-panel.active {
+      display: block !important;
+    }
+
+    .home-panel .hero {
+      min-height: calc(100vh - 190px);
+      display: flex;
+      align-items: center;
+    }
+
+    main > section.page-panel.active {
+      display: flex !important;
+      align-items: center;
+    }
+
+    #research.page-panel.active,
+    #academic.page-panel.active,
+    #professional.page-panel.active,
+    #education.page-panel.active,
+    #conferences.page-panel.active {
+      align-items: flex-start;
+    }
+
+    .sidebar nav a.active-link {
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.08);
+      border-left-color: var(--gold);
+    }
+
+    @keyframes panelFade {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 980px) {
+      main > section.page-panel.active {
+        display: block !important;
+      }
+
+      .home-panel .hero {
+        min-height: auto;
+      }
+    }
+</style>
 </head>
-
-
 <body>
-
-  <header>
-    <div class="container navbar">
-      <a class="brand" href="#home">N. El-Bazzal</a>
-      <nav aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#grant">Grant</a>
-        <a href="#academic">Academic Experience</a>
-        <a href="#professional">Professional Experience</a>
-        <a href="#education">Education</a>
-        <a href="#conferences">Conferences</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-
-    <section class="hero" id="home">
-      <div class="container hero-content">
-        <div class="eyebrow">International Trade · Geoeconomics · Geopolitical Risk</div>
-
-        <div class="photo">
-          <img src="photo.jpg" alt="Portrait of Nathalie El-Bazzal">
-        </div>
-
-        <h1>Nathalie El-Bazzal</h1>
-
-        <p class="position">PhD Candidate in Economics</p>
-        <p class="institution">Université Paris 8</p>
-
-        <p class="hero-affiliation">
-          Research Affiliate, Paris School of Economics<br>
+<aside aria-label="Profile navigation" class="sidebar" id="sidebar">
+<div class="sidebar-photo">
+<img alt="Portrait of Nathalie El-Bazzal" src="photo.jpg"/>
+</div>
+<h2>Nathalie El-Bazzal</h2>
+<p class="sidebar-role">
+      PhD Candidate in Economics<br/>
+      Université Paris 8
+    </p>
+<nav aria-label="Sidebar navigation">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a href="#grant">Grant</a>
+<a href="#academic">Academic Experience</a>
+<a href="#professional">Professional Experience</a>
+<a href="#education">Education</a>
+<a href="#conferences">Conferences</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+<a class="sidebar-email" href="mailto:nathalie.elbazzal@psemail.eu">
+      nathalie.elbazzal@psemail.eu
+    </a>
+</aside>
+<header>
+<div class="container navbar">
+<a class="brand" href="#home">N. El-Bazzal</a>
+<nav aria-label="Main navigation">
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a href="#grant">Grant</a>
+<a href="#academic">Academic Experience</a>
+<a href="#professional">Professional Experience</a>
+<a href="#education">Education</a>
+<a href="#conferences">Conferences</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+<main><div class="page-panel active home-panel" id="home"><section class="hero">
+<div class="container hero-content">
+<div class="eyebrow">International Trade · Geoeconomics · Geopolitical Risk</div>
+<div class="photo">
+<img alt="Portrait of Nathalie El-Bazzal" src="photo.jpg"/>
+</div>
+<h1>Nathalie El-Bazzal</h1>
+<p class="position">PhD Candidate in Economics</p>
+<p class="institution">Université Paris 8</p>
+<p class="hero-affiliation">
+          Research Affiliate, Paris School of Economics<br/>
           through the CEPR ReCIPE research project hosted at PSE
         </p>
+<div class="buttons">
+<a class="button primary" href="#research">View my research</a>
+<a class="button secondary" href="cv.pdf" rel="noopener" target="_blank">Download CV</a>
+</div>
+<div class="profile-links">
+<a href="mailto:nathalie.elbazzal@psemail.eu">Email</a>
+</div>
+</div>
+</section><div class="highlights">
+<div class="container highlight-grid">
+<div class="highlight">
+<strong>PhD Candidate</strong>
+<span>Economics, Université Paris 8</span>
+</div>
+<div class="highlight">
+<strong>Research Affiliate</strong>
+<span>PSE, through the CEPR ReCIPE project</span>
+</div>
+<div class="highlight">
+<strong>£100,000 Grant</strong>
+<span>CEPR ReCIPE Big Research Grant</span>
+</div>
+<div class="highlight">
+<strong>Trade &amp; Geoeconomics</strong>
+<span>Conflict, sanctions and fragmentation</span>
+</div>
+</div>
+</div><div aria-label="Current institutional affiliations" class="institution-logos">
+<div class="container logo-row">
+<img alt="Université Paris 8 logo" src="paris8-logo.jpg"/>
+<img alt="Paris School of Economics logo" src="pse-logo.png"/>
+</div>
+</div></div>
 
-        <div class="buttons">
-          <a class="button primary" href="#research">View my research</a>
-          <a class="button secondary" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
-        </div>
 
-        <div class="profile-links">
-          <a href="mailto:nathalie.elbazzal@psemail.eu">Email</a>
-        </div>
-      </div>
-    </section>
 
-    <div class="highlights">
-      <div class="container highlight-grid">
-        <div class="highlight">
-          <strong>PhD Candidate</strong>
-          <span>Economics, Université Paris 8</span>
-        </div>
-
-        <div class="highlight">
-          <strong>Research Affiliate</strong>
-          <span>PSE, through the CEPR ReCIPE project</span>
-        </div>
-
-        <div class="highlight">
-          <strong>£100,000 Grant</strong>
-          <span>CEPR ReCIPE Big Research Grant</span>
-        </div>
-
-        <div class="highlight">
-          <strong>Trade &amp; Geoeconomics</strong>
-          <span>Conflict, sanctions and fragmentation</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="institution-logos" aria-label="Current institutional affiliations">
-      <div class="container logo-row">
-        <img src="paris8-logo.jpg" alt="Université Paris 8 logo">
-        <img src="pse-logo.png" alt="Paris School of Economics logo">
-      </div>
-    </div>
-
-    <section id="about">
-      <div class="container about">
-        <div class="section-label">About</div>
-        <h2>Hello!</h2>
-
-        <p>
-          I am a PhD Candidate in Economics at Université Paris 8 and a Research Affiliate at 
-          the Paris School of Economics (PSE) through the CEPR ReCIPE research project.
+<section class="page-panel" id="about">
+<div class="container about">
+<div class="section-label">About</div>
+<h2>Hello!</h2>
+<p>
+          Hello! I am a PhD Candidate in Economics at Université Paris 8 and a Research Affiliate
+          at the Paris School of Economics through the CEPR ReCIPE research project hosted at PSE.
           Before entering academia, I worked across the Middle East, where I witnessed how conflict,
           sanctions, and political instability reshape economies and international trade.
         </p>
-
-        <p>
+<p>
           That experience naturally led me to research the intersection of international trade,
           geoeconomics, and geopolitical risk. Today, my work explores how geopolitical shocks
           reshape trade through different transmission channels, with a particular focus on
           maritime trade, market integration, and global value chains.
         </p>
-      </div>
-    </section>
-
-    <section class="grey-section" id="research">
-      <div class="container">
-        <div class="section-label">Research</div>
-        <h2>Selected research projects</h2>
-
-        <div class="research-group">
-          <h3 class="research-group-title">Working Paper</h3>
-
-          <article class="research-project">
-            <div>
-              <p class="status">Working paper</p>
-              <h3>Trading Under Fire: Houthi Attacks and the Disruption of Global Shipping</h3>
-              <p>
+</div>
+</section>
+<section class="grey-section page-panel" id="research">
+<div class="container">
+<div class="section-label">Research</div>
+<h2>Selected research projects</h2>
+<div class="research-group">
+<h3 class="research-group-title">Working Paper</h3>
+<article class="research-project">
+<div>
+<p class="status">Working paper</p>
+<h3>Trading Under Fire: Houthi Attacks and the Disruption of Global Shipping</h3>
+<p>
                 This paper studies how the Red Sea crisis affected maritime routes,
                 vessel behaviour, shipping delays, and global trade flows using
                 high-frequency AIS and Kpler data.
               </p>
-            </div>
-            <span class="tag gold-tag">Maritime trade</span>
-          </article>
-        </div>
-
-        <div class="research-group">
-          <h3 class="research-group-title">Work in Progress</h3>
-
-          <article class="research-project">
-            <div>
-              <p class="status">Work in progress</p>
-              <h3>Trade and Financial Frictions in Fragmented Economies</h3>
-              <p>
+</div>
+<span class="tag gold-tag">Maritime trade</span>
+</article>
+</div>
+<div class="research-group">
+<h3 class="research-group-title">Work in Progress</h3>
+<article class="research-project">
+<div>
+<p class="status">Work in progress</p>
+<h3>Trade and Financial Frictions in Fragmented Economies</h3>
+<p>
                 This project studies how fragmented territorial control, financial
                 disruptions, and political instability affect trade, prices, and market integration.
               </p>
-              <p class="coauthors">
-                with <a href="https://pierrelouisvezina.weebly.com" target="_blank" rel="noopener">Pierre-Louis Vézina</a>
+<p class="coauthors">
+                with <a href="https://pierrelouisvezina.weebly.com" rel="noopener" target="_blank">Pierre-Louis Vézina</a>
                 (King’s College London) and
-                <a href="https://www.banque-france.fr/fr/jean-charles-bricongne" target="_blank" rel="noopener">Jean-Charles Bricongne</a>
+                <a href="https://www.banque-france.fr/fr/jean-charles-bricongne" rel="noopener" target="_blank">Jean-Charles Bricongne</a>
                 (Banque de France).
               </p>
-            </div>
-            <span class="tag">Conflict economics</span>
-          </article>
-
-          <article class="research-project">
-            <div>
-              <p class="status">Work in progress</p>
-              <h3>Measuring Bilateral Geopolitical Tensions</h3>
-              <p>
+</div>
+<span class="tag">Conflict economics</span>
+</article>
+<article class="research-project">
+<div>
+<p class="status">Work in progress</p>
+<h3>Measuring Bilateral Geopolitical Tensions</h3>
+<p>
                 A bilateral indicator combining event data and international political
                 information to measure conflict, cooperation, and geopolitical alignment over time.
               </p>
-              <p class="coauthors">
-                with <a href="https://www.banque-france.fr/fr/jean-charles-bricongne" target="_blank" rel="noopener">Jean-Charles Bricongne</a>
+<p class="coauthors">
+                with <a href="https://www.banque-france.fr/fr/jean-charles-bricongne" rel="noopener" target="_blank">Jean-Charles Bricongne</a>
                 (Banque de France),
-                <a href="https://bchaulvet.github.io" target="_blank" rel="noopener">Benoît Chaulvet</a>
+                <a href="https://bchaulvet.github.io" rel="noopener" target="_blank">Benoît Chaulvet</a>
                 (Université Paris 1 Panthéon-Sorbonne),
-                <a href="https://www.thomas-renault.com" target="_blank" rel="noopener">Thomas Renault</a>
+                <a href="https://www.thomas-renault.com" rel="noopener" target="_blank">Thomas Renault</a>
                 (Université Paris-Saclay), and
-                <a href="https://www.jamelsaadaoui.com" target="_blank" rel="noopener">Jamel Saadaoui</a>
+                <a href="https://www.jamelsaadaoui.com" rel="noopener" target="_blank">Jamel Saadaoui</a>
                 (Université Paris 8).
               </p>
-            </div>
-            <span class="tag">Measurement</span>
-          </article>
-
-          <article class="research-project">
-            <div>
-              <p class="status">Work in progress</p>
-              <h3>Geopolitics, Geoeconomics and Politics: A Survey and Event-Classification Protocol</h3>
-              <p>
+</div>
+<span class="tag">Measurement</span>
+</article>
+<article class="research-project">
+<div>
+<p class="status">Work in progress</p>
+<h3>Geopolitics, Geoeconomics and Politics: A Survey and Event-Classification Protocol</h3>
+<p>
                 This project develops a conceptual framework and classification protocol
                 for political, geopolitical, and geoeconomic events.
               </p>
-              <p class="coauthors">
-                with <a href="https://www.jamelsaadaoui.com" target="_blank" rel="noopener">Jamel Saadaoui</a>
+<p class="coauthors">
+                with <a href="https://www.jamelsaadaoui.com" rel="noopener" target="_blank">Jamel Saadaoui</a>
                 (Université Paris 8).
               </p>
-            </div>
-            <span class="tag">Geoeconomics</span>
-          </article>
-        </div>
-
-        <div class="research-group">
-          <h3 class="research-group-title">Research Notes</h3>
-
-          <article class="research-project">
-            <div>
-              <p class="status">Research note · 2026</p>
-              <h3>When Market Spillovers Are Not Geopolitics</h3>
-              <p>
+</div>
+<span class="tag">Geoeconomics</span>
+</article>
+</div>
+<div class="research-group">
+<h3 class="research-group-title">Research Notes</h3>
+<article class="research-project">
+<div>
+<p class="status">Research note · 2026</p>
+<h3>When Market Spillovers Are Not Geopolitics</h3>
+<p>
                 This note examines the distinction between market spillovers,
                 geopolitical shocks, and geoeconomic transmission channels.
               </p>
-              <p class="coauthors">
-                with <a href="https://www.jamelsaadaoui.com" target="_blank" rel="noopener">Jamel Saadaoui</a>
+<p class="coauthors">
+                with <a href="https://www.jamelsaadaoui.com" rel="noopener" target="_blank">Jamel Saadaoui</a>
                 (Université Paris 8).
               </p>
-            </div>
-            <span class="tag">Geopolitics</span>
-          </article>
-
-          <article class="research-project">
-            <div>
-              <p class="status">Research note · 2026</p>
-              <h3>How Sanctions Redraw Oil Trade Flows, 2022–2025</h3>
-              <p>
+</div>
+<span class="tag">Geopolitics</span>
+</article>
+<article class="research-project">
+<div>
+<p class="status">Research note · 2026</p>
+<h3>How Sanctions Redraw Oil Trade Flows, 2022–2025</h3>
+<p>
                 This note studies the reorganisation of oil trade routes following
                 sanctions and geopolitical fragmentation.
               </p>
-              <p class="coauthors">
+<p class="coauthors">
                 with <strong>Homayoun Falakshahi</strong> (Kpler).
               </p>
-            </div>
-            <span class="tag">Sanctions</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="funding" id="grant">
-      <div class="container funding-content">
-        <div>
-          <div class="section-label">Research Grant</div>
-          <h2>CEPR ReCIPE Big Research Grant</h2>
-
-          <p class="grant-name">Trade and Financial Frictions in Fragmented Economies</p>
-
-          <p>
+</div>
+<span class="tag">Sanctions</span>
+</article>
+</div>
+</div>
+</section>
+<section class="funding page-panel" id="grant">
+<div class="container funding-content">
+<div>
+<div class="section-label">Research Grant</div>
+<h2>CEPR ReCIPE Big Research Grant</h2>
+<p class="grant-name">Trade and Financial Frictions in Fragmented Economies</p>
+<p>
             £100,000 research grant awarded for 2026–2028. The project is funded
             by CEPR ReCIPE and hosted at the Paris School of Economics.
           </p>
-          
-        </div>
-
-        <div class="grant-box">
-          <strong>£100k</strong>
-          <span>2026–2028
-        </div>
-      </div>
-    </section>
-
-    <section id="academic">
-      <div class="container">
-        <div class="section-label">Academic Experience</div>
-        <h2>Research, teaching and supervision</h2>
-
-        <div class="timeline">
-          <article class="experience-line">
-            <div class="date">2026–Present</div>
-            <img class="experience-logo" src="pse-logo.png" alt="Paris School of Economics logo">
-            <div>
-              <h3>Research Affiliate · Paris School of Economics</h3>
-            </div>
-          </article>
-
-          <article class="experience-line">
-            <div class="date">2026–Present</div>
-            <img class="experience-logo" src="rennes-logo.jpg" alt="Rennes School of Business logo">
-            <div>
-              <h3>Adjunct Lecturer · Rennes School of Business</h3>
-              <ul>
-                <li>Contemporary Economic Issues, taught in English and French.</li>
-                <li>Geo-economy, Programme Grande École.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="experience-line">
-            <div class="date">2023–Present</div>
-            <img class="experience-logo" src="iris-logo.png" alt="IRIS Sup' logo">
-            <div>
-              <h3>Master’s Thesis Supervisor &amp; Project Leader · IRIS Sup’</h3>
-              <p>
+<p>
+            I hold a research affiliation with the Paris School of Economics for
+            the duration of this hosted research project.
+          </p>
+</div>
+<div class="grant-box">
+<strong>£100k</strong>
+<span>2026–2028 · Hosted at PSE</span>
+</div>
+</div>
+</section>
+<section class="page-panel" id="academic">
+<div class="container">
+<div class="section-label">Academic Experience</div>
+<h2>Research, teaching and supervision</h2>
+<div class="timeline">
+<article class="experience-line">
+<div class="date">July 2026–Present</div>
+<img alt="Paris School of Economics logo" class="experience-logo" src="pse-logo.png"/>
+<div>
+<h3>Research Affiliate · Paris School of Economics</h3>
+</div>
+</article>
+<article class="experience-line">
+<div class="date">2026–Present</div>
+<img alt="Rennes School of Business logo" class="experience-logo" src="rennes-logo.jpg"/>
+<div>
+<h3>Adjunct Lecturer · Rennes School of Business</h3>
+<ul>
+<li>Contemporary Economic Issues, taught in English and French.</li>
+<li>Geo-economy, Programme Grande École.</li>
+</ul>
+</div>
+</article>
+<article class="experience-line">
+<div class="date">2023–Present</div>
+<img alt="IRIS Sup' logo" class="experience-logo" src="iris-logo.png"/>
+<div>
+<h3>Master’s Thesis Supervisor &amp; Project Leader · IRIS Sup’</h3>
+<p>
                 Supervision of Master’s theses and applied projects in geopolitics,
                 international trade, development, and public policy.
               </p>
-            </div>
-          </article>
-
-          <article class="experience-line">
-            <div class="date">2025–2026</div>
-            <img class="experience-logo" src="paris1-logo.jpg" alt="Université Paris 1 Panthéon-Sorbonne logo">
-            <div>
-              <h3>Teaching Assistant in Economics · Université Paris 1 Panthéon-Sorbonne</h3>
-              <ul>
-                <li>Introduction to Econometrics.</li>
-                <li>History of Economic Thought.</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="grey-section" id="professional">
-      <div class="container">
-        <div class="section-label">Professional Experience</div>
-        <h2>International and policy experience</h2>
-
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="date">2022–2024</div>
-            <div>
-              <h3>Trade Advisor · Business France, French Embassy in Cairo, Egypt</h3>
-              <p>
+</div>
+</article>
+<article class="experience-line">
+<div class="date">2025–2026</div>
+<img alt="Université Paris 1 Panthéon-Sorbonne logo" class="experience-logo" src="paris1-logo.jpg"/>
+<div>
+<h3>Teaching Assistant in Economics · Université Paris 1 Panthéon-Sorbonne</h3>
+<ul>
+<li>Introduction to Econometrics.</li>
+<li>History of Economic Thought.</li>
+</ul>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="grey-section page-panel" id="professional">
+<div class="container">
+<div class="section-label">Professional Experience</div>
+<h2>International and policy experience</h2>
+<div class="timeline">
+<article class="timeline-item">
+<div class="date">2022–2024</div>
+<div>
+<h3>Trade Advisor · Business France, Cairo, Egypt</h3>
+<p>
                 Sectoral economic analysis, market-entry advice, and organisation
                 of institutional and business missions across the Middle East and North Africa.
               </p>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="date">2019–2020</div>
-            <div>
-              <h3>Chief Education Advisor · French High School Charles de Gaulle, Damascus, Syria</h3>
-              <p>
+</div>
+</article>
+<article class="timeline-item">
+<div class="date">2019–2020</div>
+<div>
+<h3>Chief Education Advisor · French High School Charles de Gaulle, Damascus, Syria</h3>
+<p>
                 Academic operations and educational policy implementation in a
                 complex geopolitical environment.
               </p>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="date">2018–2019</div>
-            <div>
-              <h3>Trade Officer · Business France, French Embassy in Doha, Qatar</h3>
-              <p>
+</div>
+</article>
+<article class="timeline-item">
+<div class="date">2018–2019</div>
+<div>
+<h3>Trade Officer · Business France, Doha, Qatar</h3>
+<p>
                 Economic analysis, identification of market opportunities, and support
                 for high-level France–Qatar economic exchanges.
               </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="education">
-      <div class="container">
-        <div class="section-label">Education</div>
-        <h2>Academic background</h2>
-
-        <div class="cards">
-          <article class="card">
-            <h3>Université Paris 8 · 2026–Present</h3>
-            <p>
-              PhD Candidate in Economics.<br>
-              <em>Trade Shocks and Geoeconomic Fragmentation</em>.<br>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="page-panel" id="education">
+<div class="container">
+<div class="section-label">Education</div>
+<h2>Academic background</h2>
+<div class="cards">
+<article class="card">
+<h3>Université Paris 8 · 2026–Present</h3>
+<p>
+              PhD Candidate in Economics.<br/>
+<em>Trade Shocks and Geoeconomic Fragmentation</em>.<br/>
               Supervisor: Professor Jamel Saadaoui.
             </p>
-          </article>
-
-          <article class="card">
-            <h3>Université Paris 1 Panthéon-Sorbonne · 2024–2026</h3>
-            <p>Pre-Doctoral Studies in Economics.</p>
-          </article>
-
-          <article class="card">
-            <h3>ESCP Business School · 2020–2021</h3>
-            <p>MSc in Financial Management.</p>
-          </article>
-
-          <article class="card">
-            <h3>Sciences Po Grenoble · 2018–2020</h3>
-            <p>Master in International Relations, Middle Eastern and Mediterranean Studies.</p>
-          </article>
-
-          <article class="card">
-            <h3>University of Lille &amp; Saint Joseph University of Beirut · 2014–2018</h3>
-            <p>Bachelor in Political Science.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="grey-section" id="conferences">
-      <div class="container">
-        <div class="section-label">Conference Presentations</div>
-        <h2>Selected conferences</h2>
-
-        <div class="conference-year-block">
-          <div class="conference-year">2026</div>
-
-          <div class="conference-items">
-            <article class="conference-item">
-              <h3>Sardinian Empirical Trade Conference</h3>
-              <p>FREIT · Alghero, Italy · September 2026</p>
-            </article>
-
-            <article class="conference-item">
-              <h3>European Trade Study Group Annual Conference</h3>
-              <p>University of Exeter, United Kingdom · September 2026</p>
-            </article>
-
-            <article class="conference-item">
-              <h3>World Trade Dialogue</h3>
-              <p>Kiel Institute for the World Economy, Germany · April 2026</p>
-            </article>
-          </div>
-        </div>
-
-        <h3 style="margin-top: 56px; margin-bottom: 18px; color: var(--navy);">
+</article>
+<article class="card">
+<h3>Université Paris 1 Panthéon-Sorbonne · 2024–2026</h3>
+<p>Pre-Doctoral Studies in Economics.</p>
+</article>
+<article class="card">
+<h3>ESCP Business School · 2020–2021</h3>
+<p>MSc in Financial Management.</p>
+</article>
+<article class="card">
+<h3>Sciences Po Grenoble · 2018–2020</h3>
+<p>Master in International Relations, Middle Eastern and Mediterranean Studies.</p>
+</article>
+<article class="card">
+<h3>University of Lille &amp; Saint Joseph University of Beirut · 2014–2018</h3>
+<p>Bachelor in Political Science.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="grey-section page-panel" id="conferences">
+<div class="container">
+<div class="section-label">Conference Presentations</div>
+<h2>Selected conferences</h2>
+<div class="conference-year-block">
+<div class="conference-year">2026</div>
+<div class="conference-items">
+<article class="conference-item">
+<h3>Sardinian Empirical Trade Conference</h3>
+<p>FREIT · Alghero, Italy · 14–15 September 2026</p>
+</article>
+<article class="conference-item">
+<h3>European Trade Study Group Annual Conference</h3>
+<p>University of Exeter, United Kingdom · 10–12 September 2026</p>
+</article>
+<article class="conference-item">
+<h3>World Trade Dialogue</h3>
+<p>Kiel Institute for the World Economy, Germany · April 2026</p>
+</article>
+</div>
+</div>
+<h3 style="margin-top: 56px; margin-bottom: 18px; color: var(--navy);">
           Discussant Roles
         </h3>
-
-        <article class="research-project">
-          <div>
-            <p class="status">2026</p>
-            <h3>Geopolitical Risk and Foreign Dependence in Global Shipping</h3>
-            <p class="coauthors">
+<article class="research-project">
+<div>
+<p class="status">2026</p>
+<h3>Geopolitical Risk and Foreign Dependence in Global Shipping</h3>
+<p class="coauthors">
               Paper by
-              <a href="https://sfuchs-de.github.io" target="_blank" rel="noopener">Simon Fuchs</a>
+              <a href="https://sfuchs-de.github.io" rel="noopener" target="_blank">Simon Fuchs</a>
               (Federal Reserve Bank of Atlanta),
-              <a href="https://www.fernandoleibovici.com" target="_blank" rel="noopener">Fernando Leibovici</a>
+              <a href="https://www.fernandoleibovici.com" rel="noopener" target="_blank">Fernando Leibovici</a>
               (Federal Reserve Bank of St. Louis), and
-              <a href="https://sites.google.com/site/wongwoanfoong/home" target="_blank" rel="noopener">Woan Foong Wong</a>
+              <a href="https://sites.google.com/site/wongwoanfoong/home" rel="noopener" target="_blank">Woan Foong Wong</a>
               (University of Oregon, CEPR, and NBER).
             </p>
-          </div>
-          <span class="tag">Discussant</span>
-        </article>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="container">
-        <div class="section-label">Skills</div>
-        <h2>Research profile</h2>
-
-        <div class="skills-grid">
-          <div class="skill-box">
-            <strong>Research Interests</strong>
+</div>
+<span class="tag">Discussant</span>
+</article>
+</div>
+</section>
+<section class="page-panel" id="skills">
+<div class="container">
+<div class="section-label">Skills</div>
+<h2>Research profile</h2>
+<div class="skills-grid">
+<div class="skill-box">
+<strong>Research Interests</strong>
             International trade, geoeconomics, political economy,
-            geopolitical risk.
+            geopolitical risk, conflict economics.
           </div>
-
-          <div class="skill-box">
-            <strong>Technical Skills</strong>
+<div class="skill-box">
+<strong>Technical Skills</strong>
             R, Python, Stata, LaTeX.
           </div>
-
-          <div class="skill-box">
-            <strong>Languages</strong>
+<div class="skill-box">
+<strong>Languages</strong>
             French and Arabic: native. English: fluent.
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="grey-section" id="contact">
-      <div class="container contact">
-        <div class="section-label">Contact</div>
-        <h2>For more information</h2>
-        <p>
-          <a href="mailto:nathalie.elbazzal@psemail.eu">nathalie.elbazzal@psemail.eu</a>
-        </p>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container">
+</div>
+</div>
+</section>
+<section class="grey-section page-panel" id="contact">
+<div class="container contact">
+<div class="section-label">Contact</div>
+<h2>For more information</h2>
+<p>
+<a href="mailto:nathalie.elbazzal@psemail.eu">nathalie.elbazzal@psemail.eu</a>
+</p>
+</div>
+</section>
+</main>
+<footer>
+<div class="container">
       © 2026 Nathalie El-Bazzal
     </div>
-  </footer>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const panels = Array.from(document.querySelectorAll(".page-panel"));
+      const navigationLinks = Array.from(
+        document.querySelectorAll('a[href^="#"]')
+      );
 
-</body>
+      function showPanel(panelId, updateHash = true) {
+        const requestedPanel = document.getElementById(panelId);
+        const targetPanel = requestedPanel && requestedPanel.classList.contains("page-panel")
+          ? requestedPanel
+          : document.getElementById("home");
+
+        panels.forEach(panel => panel.classList.remove("active"));
+        targetPanel.classList.add("active");
+
+        navigationLinks.forEach(link => {
+          const isActive = link.getAttribute("href") === "#" + targetPanel.id;
+          link.classList.toggle("active-link", isActive);
+        });
+
+        window.scrollTo({ top: 0, behavior: "instant" });
+
+        if (updateHash) {
+          history.pushState(null, "", "#" + targetPanel.id);
+        }
+
+        document.title =
+          targetPanel.id === "home"
+            ? "Nathalie El-Bazzal | International Trade & Geoeconomics"
+            : targetPanel.id.charAt(0).toUpperCase() +
+              targetPanel.id.slice(1) +
+              " | Nathalie El-Bazzal";
+      }
+
+      navigationLinks.forEach(link => {
+        const href = link.getAttribute("href");
+        if (!href || href === "#" || !document.querySelector(href)) return;
+
+        link.addEventListener("click", function (event) {
+          const target = document.querySelector(href);
+          if (!target.classList.contains("page-panel")) return;
+
+          event.preventDefault();
+          showPanel(href.substring(1));
+        });
+      });
+
+      window.addEventListener("popstate", function () {
+        showPanel(window.location.hash.substring(1) || "home", false);
+      });
+
+      showPanel(window.location.hash.substring(1) || "home", false);
+    });
+</script></body>
 </html>
