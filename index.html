@@ -158,16 +158,15 @@
       font-size: 16px;
     }
 
-    .photo {
-      width: 220px;
-      aspect-ratio: 4 / 5;
-      margin-top: 30px;
-      padding: 6px;
-      background: white;
-      border: 1px solid var(--border);
-      box-shadow: 0 12px 30px rgba(20, 45, 60, 0.1);
-      overflow: hidden;
-    }
+    .photo{
+    width:110px;
+    aspect-ratio:4 / 5;
+    margin:18px auto;
+    padding:4px;
+    background:white;
+    border:1px solid var(--border);
+    overflow:hidden;
+}
 
     .photo img {
       display: block;
@@ -1010,9 +1009,6 @@ overflow: hidden;
 </head>
 <body>
 <aside aria-label="Profile navigation" class="sidebar" id="sidebar">
-<div class="sidebar-photo">
-<img alt="Portrait of Nathalie El-Bazzal" src="photo.jpg"/>
-</div>
 <h2>Nathalie El-Bazzal</h2>
 <p class="sidebar-role">
       PhD Candidate in Economics<br/>
@@ -1052,13 +1048,18 @@ overflow: hidden;
 <main><div class="page-panel active home-panel" id="home"><section class="hero">
 <div class="container hero-content">
 <div class="eyebrow">International Trade · Geoeconomics · Geopolitical Risk</div>
+
+<div class="hero-photo">
+    <img src="photo.jpg" alt="Portrait of Nathalie El-Bazzal">
+</div>
+
 <h1>Nathalie El-Bazzal</h1>
 <p class="position">PhD Candidate in Economics</p>
 <p class="institution">Université Paris 8</p>
 <p class="hero-affiliation">
-          Research Affiliate, Paris School of Economics<br/>
-          through the CEPR ReCIPE research project
-        </p>
+    Research Affiliate, Paris School of Economics<br/>
+    through the CEPR ReCIPE research project
+</p>
 <div class="buttons">
 <a class="button primary" href="#research">View my research</a>
 <a class="button secondary" href="cv.pdf" rel="noopener" target="_blank">Download CV</a>
@@ -1184,6 +1185,7 @@ overflow: hidden;
 <span class="tag">Geoeconomics</span>
 </article>
 </div>
+    
 <article class="research-project">
   <div>
     <p class="status">Research note · 2026</p>
