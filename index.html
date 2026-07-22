@@ -496,6 +496,15 @@
       font-family: Arial, sans-serif;
       font-size: 13px;
     }
+    #contact.active {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact .contact {
+  width: 100%;
+}
 
 
     .institution-logos {
@@ -946,10 +955,6 @@ overflow: hidden;
       display: none !important;
       min-height: 100vh;
       animation: panelFade 0.28s ease;
-    }
-
-    .page-panel.active {
-      display: block !important;
     }
 
     .home-panel.active {
@@ -1486,7 +1491,7 @@ overflow: hidden;
 </div>
     
 
-  <section class="grey-section page-panel" id="contact">
+  <section class="grey-section page-panel active" id="contact">
   <div class="container contact">
     <div class="section-label">Contact</div>
 
