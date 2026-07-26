@@ -1007,34 +1007,73 @@ overflow: hidden;
         min-height: auto;
       }
     }
-    .talk-item {
-display: flex;
-gap: 20px;
-margin-bottom: 35px;
-align-items: flex-start;
+    /* ==================== TALKS ==================== */
+
+.talks-list {
+    margin-top: 28px;
 }
 
-.talk-icon {
-width: 42px;
-font-size: 22px;
-color: #6b7280;
-margin-top: 4px;
+.talk-row {
+    display: grid;
+    grid-template-columns: 120px 90px 1fr;
+    gap: 24px;
+    align-items: center;
+    padding: 28px 0;
+    border-top: 1px solid #d8dee5;
 }
 
-.talk-content h3 {
-margin: 0 0 6px;
-font-size: 1.1rem;
-}
-
-.talk-content p {
-margin: 4px 0;
+.talk-row:last-child {
+    border-bottom: 1px solid #d8dee5;
 }
 
 .talk-date {
-display: inline-block;
-margin-top: 6px;
-font-size: 0.95rem;
-color: #777;
+    font-size: 15px;
+    color: #5f6b76;
+    white-space: nowrap;
+}
+
+.talk-logo {
+    width: 78px;
+    max-height: 58px;
+    object-fit: contain;
+    justify-self: center;
+}
+
+.talk-details h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+    line-height: 1.35;
+}
+
+.talk-title {
+    margin: 0 0 6px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.talk-description {
+    margin: 0;
+    color: #4f5964;
+    line-height: 1.6;
+}
+
+/* Mobile */
+
+@media (max-width: 760px) {
+    .talk-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        align-items: start;
+    }
+
+    .talk-logo {
+        justify-self: start;
+        width: 70px;
+    }
+
+    .talk-date {
+        font-size: 14px;
+    }
 }
 </style>
 </head>
@@ -1051,10 +1090,10 @@ color: #777;
 <a href="#research">Research</a>
 <a href="#grant">Grant</a>
 <a href="#academic">Academic Experience</a>
-<a href="#talks">Talks</a>
 <a href="#professional">Professional Experience</a>
 <a href="#education">Education</a>
 <a href="#conferences">Conferences</a>
+<a href="#talks">Talks</a>
 <a href="#skills">Skills</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -1067,10 +1106,10 @@ color: #777;
 <a href="#research">Research</a>
 <a href="#grant">Grant</a>
 <a href="#academic">Academic Experience</a>
-<a href="#talks">Talks</a>
 <a href="#professional">Professional Experience</a>
 <a href="#education">Education</a>
 <a href="#conferences">Conferences</a>
+<a href="#talks">Talks</a>
 <a href="#skills">Skills</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -1381,55 +1420,10 @@ Today, I am a PhD Candidate in Economics at the University of Paris 8 and a Rese
 </ul>
 </div>
 </article> 
+</div>  
 </div>
 </section>
-
-    <!-- ==================== TALKS ==================== -->
-
-<section class="page-panel" id="talks">
-    <div class="container">
-
-        <div class="section-label">Talks</div>
-        <h2>Invited Talks</h2>
-
-        <div class="talks-box">
-
-            <div class="talk-entry">
-                <h3>
-                    Guest Lecturer · HEIP – The School of Political Science and International Relations
-                </h3>
-
-                <p class="talk-title">
-                    How Do Middle East Conflicts Affect Maritime Corridors and International Trade?
-                </p>
-
-                <p>
-                    Master's Program in International Relations and Cooperation,
-                    Specialization in Economic Diplomacy · May 2026
-                </p>
-            </div>
-
-            <div class="talk-divider"></div>
-
-            <div class="talk-entry">
-                <h3>
-                    Podcast Guest · ESCP International Politics Society
-                </h3>
-
-                <p class="talk-title">
-                    Corporate Diplomacy in the MENA Region
-                </p>
-
-                <p>
-                    Interview on corporate diplomacy, state-led development models,
-                    and the interaction between business strategy and geopolitics · February 2026
-                </p>
-            </div>
-
-        </div> <!-- fermeture talks-box -->
-
-</div>  
-</section>
+    
 <section class="grey-section page-panel" id="professional">
 <div class="container">
 <div class="section-label">Professional Experience</div>
@@ -1589,8 +1583,76 @@ Jamel Saadaoui
 </div>
 <span class="tag">Poster</span>
 </article>
-</div>
+</div>      <!-- cards-grid ou conference-list -->
+</div>      <!-- container -->
+</section>  <!-- Conferences -->
+<!-- ==================== TALKS ==================== -->
+
+<section class="page-panel" id="talks">
+    <div class="container">
+
+        <div class="section-label">Talks</div>
+        <h2>Invited Talks & Media</h2>
+
+        <div class="talks-list">
+
+            <article class="talk-row">
+                <div class="talk-date">May 2026</div>
+
+                <img
+                    src="heip-logo.png"
+                    alt="HEIP logo"
+                    class="talk-logo"
+                />
+
+                <div class="talk-details">
+                    <h3>Guest Lecturer · HEIP</h3>
+
+                    <p class="talk-institution">
+                        The School of International and Political Studies
+                    </p>
+
+                    <p class="talk-title">
+                        How Do Middle East Conflicts Affect Maritime Corridors and International Trade?
+                    </p>
+
+                    <p class="talk-description">
+                        Master's Program in International Relations and Cooperation,
+                        Specialization in Economic Diplomacy.
+                    </p>
+                </div>
+            </article>
+
+            <article class="talk-row">
+                <div class="talk-date">February 2026</div>
+
+                <img
+                    src="escp-politics-logo.png"
+                    alt="ESCP International Politics Society logo"
+                    class="talk-logo"
+                />
+
+                <div class="talk-details">
+                    <h3>Guest Speaker · ESCP International Politics Society</h3>
+
+                    <p class="talk-title">
+                        Corporate Diplomacy in the MENA Region
+                    </p>
+
+                    <p class="talk-description">
+                        Discussion on corporate diplomacy, state-led development models,
+                        business strategy, and geopolitics in the MENA region.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
 </section>
+
+
+    
 <section class="page-panel" id="skills">
 <div class="container">
 <div class="section-label">Skills</div>
