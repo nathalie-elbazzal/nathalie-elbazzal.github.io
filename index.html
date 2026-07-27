@@ -1076,80 +1076,80 @@
       }
     }
 
-    /* ====== ACADEMIC EXPERIENCE – COMPACT ====== */
-    .academic-entry {
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border);
-    }
+    /* ====== ACADEMIC EXPERIENCE ====== */
+.academic-entry {
+  padding: 20px 0;
+  border-bottom: 1px solid #dce3e8;
+}
+.academic-entry:last-child {
+  border-bottom: none;
+}
+.academic-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 16px;
+  margin-bottom: 4px;
+}
+.academic-header .title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.academic-header .univ {
+  font-size: 14px;
+  color: #173e58;
+}
+.academic-header .date {
+  font-size: 13px;
+  color: #173e58;  /* couleur navy comme demandé */
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin-left: auto;
+}
+.academic-logo {
+  width: 70px;
+  max-height: 50px;
+  object-fit: contain;
+}
+.academic-sub {
+  font-size: 14px;
+  color: #63717c;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+.academic-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin-top: 6px;
+}
+.academic-topics span {
+  font-size: 12px;
+  color: #46545f;
+  background: #eef2f4;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+}
+.academic-content-list {
+  padding-left: 20px;
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: #46545f;
+}
+.academic-content-list li {
+  font-size: 14px;
+}
 
-    .academic-entry:last-child {
-      border-bottom: none;
-    }
-
-    .academic-header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      gap: 4px 16px;
-      margin-bottom: 4px;
-    }
-
-    .academic-header .title {
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    .academic-header .univ {
-      font-size: 14px;
-      color: var(--navy);
-    }
-
-    .academic-header .date {
-      font-size: 13px;
-      color: var(--grey);
-      font-family: Arial, sans-serif;
-      margin-left: auto;
-    }
-
-    .academic-sub {
-      font-size: 14px;
-      color: var(--grey);
-      font-style: italic;
-      margin-bottom: 4px;
-    }
-
-    .academic-topics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px 12px;
-      margin-top: 6px;
-    }
-
-    .academic-topics span {
-      font-size: 12px;
-      color: #46545f;
-      background: #eef2f4;
-      padding: 2px 10px;
-      border-radius: 12px;
-      font-family: Arial, sans-serif;
-    }
-
-    .academic-content-list {
-      padding-left: 20px;
-      margin: 6px 0 0;
-      font-size: 14px;
-      color: #46545f;
-    }
-
-    .academic-content-list li {
-      font-size: 14px;
-    }
-
-    @media (max-width: 620px) {
-      .academic-header .date {
-        margin-left: 0;
-      }
-    }
+@media (max-width: 620px) {
+  .academic-header .date {
+    margin-left: 0;
+  }
+  .academic-logo {
+    width: 55px;
+    max-height: 40px;
+  }
+}
 </style>
 </head>
 <body>
@@ -1350,18 +1350,10 @@
     <div class="section-label">Academic Experience</div>
     <h2>Research, Teaching and Supervision</h2>
 
-    <!-- LOGOS -->
-    <div class="institution-logos" style="padding:10px 0 20px 0; border-bottom:none;">
-      <div class="logo-row">
-        <img alt="Paris School of Economics" src="pse-logo.png" />
-        <img alt="IRIS Sup'" src="iris-logo.png" />
-        <img alt="University of Paris 1 Panthéon-Sorbonne" src="paris1-logo.jpg" />
-      </div>
-    </div>
-
     <!-- Research Affiliate -->
     <div class="academic-entry">
       <div class="academic-header">
+        <img alt="Paris School of Economics" class="academic-logo" src="pse-logo.png" />
         <span class="title">Research Affiliate</span>
         <span class="univ">Paris School of Economics</span>
         <span class="date">2026–Present</span>
@@ -1376,6 +1368,7 @@
     <!-- IRIS Sup' -->
     <div class="academic-entry">
       <div class="academic-header">
+        <img alt="IRIS Sup'" class="academic-logo" src="iris-logo.png" />
         <span class="title">Master's Thesis Supervisor &amp; Project Leader</span>
         <span class="univ">IRIS Sup'</span>
         <span class="date">2023–Present</span>
@@ -1383,43 +1376,47 @@
       <p style="font-size:14px; color:#46545f;">Supervision of Master's theses and applied research projects in geopolitics, international trade, development, and public policy.</p>
     </div>
 
-    <!-- Teaching Assistant – Econometrics -->
+    <!-- Teaching Assistant – University of Paris 1 Panthéon-Sorbonne -->
     <div class="academic-entry">
       <div class="academic-header">
-        <span class="title">Teaching Assistant – Introduction to Econometrics</span>
+        <img alt="University of Paris 1 Panthéon-Sorbonne" class="academic-logo" src="paris1-logo.jpg" />
+        <span class="title">Teaching Assistant in Economics</span>
         <span class="univ">University of Paris 1 Panthéon-Sorbonne</span>
-        <span class="date">Bachelor · Spring 2026</span>
+        <span class="date">2025–2026</span>
       </div>
-      <p class="academic-sub">
-        Course coordinated by Ibrahim Ahamada · Foundations of econometric analysis: statistical theory with empirical applications.
-      </p>
-      <div class="academic-topics">
-        <span>OLS</span>
-        <span>Statistical Inference</span>
-        <span>Multiple Linear Regression</span>
-        <span>Dummy Variables</span>
-        <span>Model Specification</span>
-        <span>Applied Econometrics</span>
-      </div>
-    </div>
 
-    <!-- Teaching Assistant – History of Economic Thought -->
-    <div class="academic-entry">
-      <div class="academic-header">
-        <span class="title">Teaching Assistant – History of Economic Thought</span>
-        <span class="univ">University of Paris 1 Panthéon-Sorbonne</span>
-        <span class="date">Bachelor · Fall 2025</span>
+      <!-- Course 1: Econometrics -->
+      <div style="margin-top:12px; padding-left:10px; border-left:3px solid #173e58;">
+        <h4 style="font-size:15px; font-weight:bold; margin:0 0 4px 0;">Introduction to Econometrics</h4>
+        <p class="academic-sub" style="margin-bottom:4px;">
+          Course coordinated by Ibrahim Ahamada · Bachelor in Economics · Spring 2026
+        </p>
+        <p style="font-size:14px; color:#46545f; margin-bottom:6px;">Foundations of econometric analysis: statistical theory with empirical applications.</p>
+        <div class="academic-topics">
+          <span>OLS</span>
+          <span>Statistical Inference</span>
+          <span>Multiple Linear Regression</span>
+          <span>Dummy Variables</span>
+          <span>Model Specification</span>
+          <span>Applied Econometrics</span>
+        </div>
       </div>
-      <p class="academic-sub">
-        Course coordinated by Goulven Rubin, Jean Delmotte &amp; Laurie Breban · Evolution of economic thought from classical economists to the marginalist and institutionalist traditions.
-      </p>
-      <div class="academic-topics">
-        <span>Smith</span>
-        <span>Marx</span>
-        <span>Marshall</span>
-        <span>Walras</span>
-        <span>Veblen</span>
-        <span>Schumpeter</span>
+
+      <!-- Course 2: History of Economic Thought -->
+      <div style="margin-top:16px; padding-left:10px; border-left:3px solid #173e58;">
+        <h4 style="font-size:15px; font-weight:bold; margin:0 0 4px 0;">History of Economic Thought</h4>
+        <p class="academic-sub" style="margin-bottom:4px;">
+          Course coordinated by Goulven Rubin, Jean Delmotte &amp; Laurie Breban · Bachelor in Economics · Fall 2025
+        </p>
+        <p style="font-size:14px; color:#46545f; margin-bottom:6px;">Evolution of economic thought from classical economists to the marginalist and institutionalist traditions.</p>
+        <div class="academic-topics">
+          <span>Smith</span>
+          <span>Marx</span>
+          <span>Marshall</span>
+          <span>Walras</span>
+          <span>Veblen</span>
+          <span>Schumpeter</span>
+        </div>
       </div>
     </div>
 
