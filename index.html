@@ -36,7 +36,7 @@
             margin: 0 auto;
         }
 
-        /* ─── MENU LATÉRAL FIXE À GAUCHE (comme Thomas Renault) ─── */
+        /* ─── MENU LATÉRAL FIXE À GAUCHE ─── */
         .sidebar-menu {
             position: fixed;
             top: 0;
@@ -65,17 +65,6 @@
             border-bottom: 1px solid #e9edf2;
             padding-bottom: 1rem;
         }
-        .sidebar-menu .menu-section {
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #94a3b8;
-            font-weight: 600;
-            margin: 0.8rem 0 0.3rem 0.2rem;
-        }
-        .sidebar-menu .menu-section:first-of-type {
-            margin-top: 0;
-        }
         .sidebar-menu nav {
             display: flex;
             flex-direction: column;
@@ -102,11 +91,6 @@
             color: #1a4b6d;
             font-weight: 600;
         }
-        .sidebar-menu .menu-divider {
-            border: none;
-            border-top: 1px solid #e9edf2;
-            margin: 0.6rem 0.2rem;
-        }
         .sidebar-menu .footer-text {
             margin-top: auto;
             font-size: 0.65rem;
@@ -116,7 +100,7 @@
             text-align: center;
         }
 
-        /* ─── Contenu principal (décalé à droite) ─── */
+        /* ─── Contenu principal ─── */
         .main-content {
             margin-left: 250px;
             padding: 0.5rem 0.5rem 2rem 0.5rem;
@@ -736,19 +720,6 @@
                 opacity: 1;
                 visibility: visible;
             }
-            .dropdown-menu .menu-section {
-                font-size: 0.65rem;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                color: #94a3b8;
-                font-weight: 600;
-                margin: 0.8rem 0 0.3rem 0.2rem;
-            }
-            .dropdown-menu .menu-divider {
-                border: none;
-                border-top: 1px solid #e9edf2;
-                margin: 0.6rem 0.2rem;
-            }
         }
 
         @media (max-width: 640px) {
@@ -814,7 +785,6 @@
     <div class="brand">N. El-Bazzal</div>
     <div class="sub-brand">PhD Candidate · Economics</div>
 
-    <div class="menu-section">Navigation</div>
     <nav>
         <a href="#" data-page="home" class="active-link">Home</a>
         <a href="#" data-page="research">Research</a>
@@ -828,8 +798,6 @@
         <a href="#" data-page="contact">Contact</a>
     </nav>
 
-    <hr class="menu-divider" />
-
     <div class="footer-text">© 2026 Nathalie El-Bazzal</div>
 </aside>
 
@@ -838,7 +806,7 @@
 <!-- ============================================================ -->
 <div class="main-content">
 
-    <!-- ========== HEADER MOBILE (hamburger) ========== -->
+    <!-- ========== HEADER MOBILE ========== -->
     <div class="header-top" id="mobileHeader" style="display:none;">
         <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
             <span></span>
@@ -853,7 +821,6 @@
     <!-- Menu mobile -->
     <div class="dropdown-menu" id="dropdownMenu">
         <button class="close-btn" id="closeMenuBtn">✕</button>
-        <div class="menu-section">Navigation</div>
         <nav>
             <a href="#" data-page="home">Home</a>
             <a href="#" data-page="research">Research</a>
@@ -866,7 +833,7 @@
             <a href="#" data-page="skills">Skills</a>
             <a href="#" data-page="contact">Contact</a>
         </nav>
-        <hr class="menu-divider" />
+        <hr class="menu-divider" style="border:none;border-top:1px solid #e9edf2;margin:0.6rem 0.2rem;" />
         <div style="font-size:0.65rem; color:#94a3b8; text-align:center; padding-top:0.5rem;">© 2026 Nathalie El-Bazzal</div>
     </div>
 
@@ -1240,7 +1207,6 @@
             target.classList.add('active');
         }
 
-        // Mettre à jour le lien actif dans le menu latéral
         sidebarLinks.forEach(link => {
             link.classList.remove('active-link');
             if (link.getAttribute('data-page') === pageId) {
@@ -1281,7 +1247,7 @@
         });
     });
 
-    // ─── Clic sur les boutons "View my research" ───
+    // ─── Clic sur les boutons ───
     allPageLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const pageId = this.getAttribute('data-page');
@@ -1292,7 +1258,7 @@
         });
     });
 
-    // ─── Menu mobile hamburger ───
+    // ─── Menu mobile ───
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const dropdownMenu = document.getElementById('dropdownMenu');
     const overlay = document.getElementById('overlay');
@@ -1333,7 +1299,7 @@
     window.addEventListener('resize', checkMobileMenu);
     checkMobileMenu();
 
-    // ─── Gestion du hash dans l'URL ───
+    // ─── Gestion du hash ───
     window.addEventListener('hashchange', function() {
         const hash = window.location.hash.replace('#', '') || 'home';
         if (document.getElementById('page-' + hash)) {
@@ -1341,7 +1307,6 @@
         }
     });
 
-    // ─── Page par défaut ───
     const initialPage = window.location.hash.replace('#', '') || 'home';
     if (document.getElementById('page-' + initialPage)) {
         showPage(initialPage);
