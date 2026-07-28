@@ -36,34 +36,34 @@
             margin: 0 auto;
         }
 
-        /* ─── MENU LATÉRAL FIXE À GAUCHE ─── */
+        /* ─── MENU LATÉRAL FIXE À GAUCHE (ultra simplifié) ─── */
         .sidebar-menu {
             position: fixed;
             top: 0;
             left: 0;
-            width: 220px;
+            width: 190px;
             height: 100vh;
             background: #f8fafc;
             border-right: 1px solid #e9edf2;
-            padding: 2.5rem 1.5rem 2rem 1.5rem;
+            padding: 2rem 1.2rem 1.5rem 1.2rem;
             overflow-y: auto;
             z-index: 10;
             display: flex;
             flex-direction: column;
         }
         .sidebar-menu .brand {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             color: #1a4b6d;
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.1rem;
             letter-spacing: -0.02em;
         }
         .sidebar-menu .sub-brand {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: #64748b;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             border-bottom: 1px solid #e9edf2;
-            padding-bottom: 1rem;
+            padding-bottom: 0.8rem;
         }
         .sidebar-menu nav {
             display: flex;
@@ -71,12 +71,12 @@
             gap: 0.05rem;
         }
         .sidebar-menu nav a {
-            padding: 0.4rem 0.6rem;
+            padding: 0.35rem 0.5rem;
             color: #334155;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.85rem;
-            border-radius: 6px;
+            font-size: 0.8rem;
+            border-radius: 4px;
             transition: background 0.2s, color 0.2s;
             border-bottom: none;
             display: block;
@@ -93,16 +93,16 @@
         }
         .sidebar-menu .footer-text {
             margin-top: auto;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             color: #94a3b8;
-            padding-top: 1rem;
+            padding-top: 0.8rem;
             border-top: 1px solid #e9edf2;
             text-align: center;
         }
 
         /* ─── Contenu principal ─── */
         .main-content {
-            margin-left: 250px;
+            margin-left: 210px;
             padding: 0.5rem 0.5rem 2rem 0.5rem;
         }
 
@@ -720,6 +720,11 @@
                 opacity: 1;
                 visibility: visible;
             }
+            .dropdown-menu .menu-divider {
+                border: none;
+                border-top: 1px solid #e9edf2;
+                margin: 0.6rem 0.2rem;
+            }
         }
 
         @media (max-width: 640px) {
@@ -779,7 +784,7 @@
 <body>
 
 <!-- ============================================================ -->
-<!-- ========== MENU LATÉRAL FIXE À GAUCHE ========== -->
+<!-- ========== MENU LATÉRAL FIXE À GAUCHE (ultra simplifié) ========== -->
 <!-- ============================================================ -->
 <aside class="sidebar-menu" id="sidebarMenu">
     <div class="brand">N. El-Bazzal</div>
@@ -833,7 +838,7 @@
             <a href="#" data-page="skills">Skills</a>
             <a href="#" data-page="contact">Contact</a>
         </nav>
-        <hr class="menu-divider" style="border:none;border-top:1px solid #e9edf2;margin:0.6rem 0.2rem;" />
+        <hr class="menu-divider" />
         <div style="font-size:0.65rem; color:#94a3b8; text-align:center; padding-top:0.5rem;">© 2026 Nathalie El-Bazzal</div>
     </div>
 
