@@ -137,7 +137,7 @@
             visibility: visible;
         }
 
-        /* ─── Pages (affichées une par une) ─── */
+        /* ─── Pages ─── */
         .page {
             display: none;
             animation: fadeIn 0.3s ease;
@@ -151,7 +151,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* ─── Typographie réduite ─── */
+        /* ─── Typographie ─── */
         h1 {
             font-size: 1.8rem;
             font-weight: 600;
@@ -239,7 +239,7 @@
             background-color: #f1f5f9;
         }
 
-        /* ─── HOME : Photo à gauche, texte à droite ─── */
+        /* ─── HOME ─── */
         .home-grid {
             display: flex;
             flex-wrap: wrap;
@@ -256,6 +256,7 @@
             height: auto;
             aspect-ratio: 4 / 5;
             object-fit: cover;
+            object-position: center 20%;
             border-radius: 8px;
             background: #f1f5f9;
             display: block;
@@ -289,7 +290,7 @@
             filter: grayscale(0%);
         }
 
-        /* ─── Academic Experience (avec logos) ─── */
+        /* ─── Academic Experience ─── */
         .academic-entry {
             padding: 1.2rem 0;
             border-bottom: 1px solid #f1f5f9;
@@ -366,7 +367,7 @@
             color: #475569;
         }
 
-        /* ─── Research items ─── */
+        /* ─── Research ─── */
         .research-item {
             margin-bottom: 1.5rem;
             padding-bottom: 1.2rem;
@@ -450,7 +451,7 @@
             font-size: 0.9rem;
         }
 
-        /* ─── Cards ─── */
+        /* ─── Education ─── */
         .card-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -474,7 +475,7 @@
             margin-bottom: 0;
         }
 
-        /* ─── Talks (avec logos) ─── */
+        /* ─── Talks ─── */
         .talk-item {
             padding: 1rem 0;
             border-bottom: 1px solid #f1f5f9;
@@ -516,12 +517,27 @@
             margin-top: 0.2rem;
         }
 
-        /* ─── Conferences ─── */
+        /* ─── CONFERENCES : avec année à gauche ─── */
+        .conf-year-block {
+            display: grid;
+            grid-template-columns: 90px 1fr;
+            gap: 1.5rem;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .conf-year-block:last-child {
+            border-bottom: none;
+        }
+        .conf-year-block .year {
+            font-weight: 600;
+            color: #1a4b6d;
+            font-size: 1rem;
+            padding-top: 0.1rem;
+        }
         .conf-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 1rem;
-            margin-bottom: 1.5rem;
         }
         .conf-item {
             background: #fafcff;
@@ -644,6 +660,10 @@
                 width: 100%;
                 left: -100%;
             }
+            .conf-year-block {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
             .conf-grid {
                 grid-template-columns: 1fr;
             }
@@ -700,7 +720,7 @@
                 <img src="photo.jpg" alt="Portrait of Nathalie El-Bazzal" />
             </div>
             <div class="home-text">
-                <div class="welcome-text">Hello and welcome to my website ! </div>
+                <div class="welcome-text">Hello and welcome to my website</div>
                 <p>
                     Growing up in an environment marked by recurrent geopolitical tensions and later working across the Middle East provided me with early exposure to the economic implications of political instability. Observing how conflict, sanctions, and geopolitical uncertainty disrupted trade, reshaped markets, and influenced firms' behavior motivated me to pursue research in international economics. I first explored these dynamics in my Master's theses, which examined the economic effects of the Syrian conflict. Over time, this work evolved into a broader research agenda on how geopolitical shocks propagate through international trade. As a PhD Candidate in Economics at the University of Paris 8 and a Research Affiliate at the Paris School of Economics, I investigate these issues with the support of the CEPR ReCIPE Big Research Grant, focusing on maritime trade, market integration, and global value chains.
                 </p>
@@ -795,7 +815,6 @@
     <div class="page" id="page-academic">
         <h2>Academic Experience</h2>
 
-        <!-- Research Affiliate -->
         <div class="academic-entry">
             <div class="academic-header">
                 <img src="pse-logo.png" alt="Paris School of Economics" class="logo" />
@@ -809,7 +828,6 @@
             </ul>
         </div>
 
-        <!-- IRIS Sup' -->
         <div class="academic-entry">
             <div class="academic-header">
                 <img src="iris-logo.png" alt="IRIS Sup'" class="logo" />
@@ -820,7 +838,6 @@
             <p style="margin-top:0.2rem; font-size:0.9rem;">Supervision of Master's theses and applied research projects in geopolitics, international trade, development, and public policy.</p>
         </div>
 
-        <!-- Teaching Assistant -->
         <div class="academic-entry">
             <div class="academic-header">
                 <img src="paris1-logo.jpg" alt="University of Paris 1 Panthéon-Sorbonne" class="logo" />
@@ -923,22 +940,47 @@
         <h2>Conferences &amp; Presentations</h2>
 
         <h3>Selected conferences</h3>
-        <div class="conf-grid">
-            <div class="conf-item">
-                <div class="name">Sardinian Empirical Trade Conference</div>
-                <div class="detail">FREIT, Alghero, Italy · September 2026</div>
-            </div>
-            <div class="conf-item">
-                <div class="name">European Trade Study Group Annual Conference</div>
-                <div class="detail">Exeter, United Kingdom · September 2026</div>
-            </div>
-            <div class="conf-item">
-                <div class="name">World Trade Dialogue</div>
-                <div class="detail">Kiel Institute, Hamburg · April 2026</div>
+
+        <!-- ===== 2026 ===== -->
+        <div class="conf-year-block">
+            <div class="year">2026</div>
+            <div class="conf-grid">
+                <div class="conf-item">
+                    <div class="name">Sardinian Empirical Trade Conference</div>
+                    <div class="detail">FREIT, Alghero, Italy · September 2026</div>
+                </div>
+                <div class="conf-item">
+                    <div class="name">European Trade Study Group Annual Conference</div>
+                    <div class="detail">Exeter, United Kingdom · September 2026</div>
+                </div>
+                <div class="conf-item">
+                    <div class="name">World Trade Dialogue</div>
+                    <div class="detail">Kiel Institute, Hamburg · April 2026</div>
+                </div>
             </div>
         </div>
 
-        <h3>Discussant Roles</h3>
+        <!--
+        ===== POUR AJOUTER 2027, 2028, ETC. =====
+        Décommentez et copiez le bloc ci-dessous autant de fois que nécessaire :
+
+        <div class="conf-year-block">
+            <div class="year">2027</div>
+            <div class="conf-grid">
+                <div class="conf-item">
+                    <div class="name">Nom de la conférence</div>
+                    <div class="detail">Lieu · Date</div>
+                </div>
+                <div class="conf-item">
+                    <div class="name">Nom de la conférence</div>
+                    <div class="detail">Lieu · Date</div>
+                </div>
+            </div>
+        </div>
+        -->
+
+        <!-- ===== DISCUSSANT ROLES ===== -->
+        <h3 style="margin-top:2rem;">Discussant Roles</h3>
         <div class="research-item">
             <div class="title">Geopolitical Risk and Foreign Dependence in Global Shipping</div>
             <p>World Trade Dialogue, Hamburg, Germany · April 2026</p>
@@ -946,7 +988,8 @@
             <span class="tag">Discussant</span>
         </div>
 
-        <h3>Poster Presentations</h3>
+        <!-- ===== POSTER PRESENTATIONS ===== -->
+        <h3 style="margin-top:2rem;">Poster Presentations</h3>
         <div class="research-item">
             <div class="title">Measuring Bilateral Geopolitical Tensions</div>
             <p>Inaugural Conference of the Economic Data Science Society (EDSS), Banque de France, Paris · July 2026</p>
@@ -1041,16 +1084,12 @@
     const allPageLinks = document.querySelectorAll('[data-page]');
 
     function showPage(pageId) {
-        // Cacher toutes les pages
         pages.forEach(p => p.classList.remove('active'));
-
-        // Afficher la page cible
         const target = document.getElementById('page-' + pageId);
         if (target) {
             target.classList.add('active');
         }
 
-        // Mettre à jour le titre
         const pageNames = {
             'home': 'Nathalie El-Bazzal · International Trade & Geoeconomics',
             'research': 'Research · Nathalie El-Bazzal',
@@ -1064,11 +1103,7 @@
             'contact': 'Contact · Nathalie El-Bazzal'
         };
         document.title = pageNames[pageId] || 'Nathalie El-Bazzal';
-
-        // Fermer le menu
         closeMenu();
-
-        // Mettre à jour l'URL
         history.pushState(null, '', '#' + pageId);
     }
 
@@ -1096,16 +1131,13 @@
     closeMenuBtn.addEventListener('click', closeMenu);
     overlay.addEventListener('click', closeMenu);
 
-    // ─── Clic sur les liens du menu ───
     menuLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            const pageId = this.getAttribute('data-page');
-            showPage(pageId);
+            showPage(this.getAttribute('data-page'));
         });
     });
 
-    // ─── Clic sur les boutons "View my research" ───
     allPageLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const pageId = this.getAttribute('data-page');
@@ -1116,19 +1148,15 @@
         });
     });
 
-    // ─── Gestion du hash dans l'URL ───
     window.addEventListener('hashchange', function() {
         const hash = window.location.hash.replace('#', '') || 'home';
-        const pageExists = document.getElementById('page-' + hash);
-        if (pageExists) {
+        if (document.getElementById('page-' + hash)) {
             showPage(hash);
         }
     });
 
-    // ─── Page par défaut ───
     const initialPage = window.location.hash.replace('#', '') || 'home';
-    const pageExists = document.getElementById('page-' + initialPage);
-    if (pageExists) {
+    if (document.getElementById('page-' + initialPage)) {
         showPage(initialPage);
     } else {
         showPage('home');
