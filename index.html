@@ -36,12 +36,12 @@
             margin: 0 auto;
         }
 
-        /* ─── Header avec menu hamburger ─── */
+        /* ─── Header avec menu hamburger à gauche ─── */
         .header-top {
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-start;
             align-items: center;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
             position: relative;
         }
         .hamburger {
@@ -75,19 +75,19 @@
         .dropdown-menu {
             position: fixed;
             top: 0;
-            right: -320px;
-            width: 300px;
+            left: -320px;
+            width: 280px;
             height: 100vh;
             background: #f8fafc;
-            box-shadow: -4px 0 20px rgba(0,0,0,0.08);
+            box-shadow: 4px 0 20px rgba(0,0,0,0.08);
             padding: 4rem 2rem 2rem 2rem;
-            transition: right 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+            transition: left 0.35s cubic-bezier(0.22, 1, 0.36, 1);
             z-index: 15;
             overflow-y: auto;
-            border-left: 1px solid #e9edf2;
+            border-right: 1px solid #e9edf2;
         }
         .dropdown-menu.open {
-            right: 0;
+            left: 0;
         }
         .dropdown-menu nav {
             display: flex;
@@ -147,46 +147,53 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(8px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* ─── Typographie ─── */
+        /* ─── Typographie réduite ─── */
         h1 {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 600;
             letter-spacing: -0.02em;
             margin-bottom: 0.1rem;
         }
         .subhead {
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             font-weight: 400;
             color: #475569;
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.2rem;
             border-bottom: 1px solid #e9edf2;
-            padding-bottom: 0.8rem;
+            padding-bottom: 0.6rem;
         }
         .subhead strong {
             font-weight: 500;
             color: #1a4b6d;
         }
+        .welcome-text {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #1a4b6d;
+            margin-bottom: 0.4rem;
+        }
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 600;
             letter-spacing: -0.01em;
-            margin: 0 0 1.2rem 0;
+            margin: 0 0 1rem 0;
             border-bottom: 1px solid #e9edf2;
-            padding-bottom: 0.5rem;
+            padding-bottom: 0.4rem;
         }
         h3 {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
-            margin: 1.6rem 0 0.6rem 0;
+            margin: 1.4rem 0 0.4rem 0;
             color: #0f172a;
         }
         p {
             color: #334155;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
+            font-size: 0.95rem;
         }
         a {
             color: #1a4b6d;
@@ -199,15 +206,21 @@
             border-bottom-color: #1a4b6d;
         }
 
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 0.2rem;
+        }
         .btn {
             display: inline-block;
             background-color: #1a4b6d;
             color: white;
             font-weight: 500;
-            padding: 0.5rem 1.5rem;
+            padding: 0.45rem 1.3rem;
             border-radius: 40px;
             border: none;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: background-color 0.2s;
             text-decoration: none;
@@ -217,21 +230,26 @@
             background-color: #0f3a56;
             border-bottom: none;
         }
+        .btn-secondary {
+            background-color: transparent;
+            color: #1a4b6d;
+            border: 1px solid #1a4b6d;
+        }
+        .btn-secondary:hover {
+            background-color: #f1f5f9;
+        }
 
-        /* ─── HOME : Photo + logos ─── */
+        /* ─── HOME : Photo à gauche, texte à droite ─── */
         .home-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 2rem;
+            gap: 1.8rem;
             align-items: flex-start;
-            margin: 1.8rem 0 1.5rem 0;
-        }
-        .home-text {
-            flex: 2;
-            min-width: 240px;
+            margin: 1.2rem 0 1.5rem 0;
         }
         .home-photo {
-            flex: 0 0 140px;
+            flex: 0 0 130px;
+            order: 1;
         }
         .home-photo img {
             width: 100%;
@@ -242,6 +260,11 @@
             background: #f1f5f9;
             display: block;
         }
+        .home-text {
+            flex: 2;
+            min-width: 240px;
+            order: 2;
+        }
 
         .home-logos {
             display: flex;
@@ -249,13 +272,13 @@
             align-items: center;
             justify-content: center;
             gap: 2.5rem 3.5rem;
-            margin: 2.5rem 0 1.5rem 0;
-            padding: 1.5rem 0;
+            margin: 2rem 0 1.5rem 0;
+            padding: 1.2rem 0;
             border-top: 1px solid #e9edf2;
             border-bottom: 1px solid #e9edf2;
         }
         .home-logos img {
-            max-height: 50px;
+            max-height: 44px;
             width: auto;
             opacity: 0.85;
             transition: opacity 0.2s;
@@ -268,7 +291,7 @@
 
         /* ─── Academic Experience (avec logos) ─── */
         .academic-entry {
-            padding: 1.5rem 0;
+            padding: 1.2rem 0;
             border-bottom: 1px solid #f1f5f9;
         }
         .academic-entry:last-child {
@@ -282,21 +305,21 @@
             margin-bottom: 0.3rem;
         }
         .academic-header .logo {
-            width: 56px;
-            max-height: 44px;
+            width: 50px;
+            max-height: 40px;
             object-fit: contain;
             flex-shrink: 0;
         }
         .academic-header .title {
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
         .academic-header .institution {
             color: #1a4b6d;
             font-weight: 500;
         }
         .academic-header .date {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #64748b;
             margin-left: auto;
             font-weight: 500;
@@ -305,27 +328,28 @@
             padding-left: 1.5rem;
             color: #334155;
             margin-top: 0.2rem;
+            font-size: 0.9rem;
         }
         .academic-entry ul li {
             margin-bottom: 0.2rem;
         }
         .academic-entry .course-block {
-            margin-top: 0.8rem;
+            margin-top: 0.6rem;
             padding-left: 0.8rem;
             border-left: 3px solid #1a4b6d;
         }
         .academic-entry .course-block .course-title {
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin-bottom: 0.1rem;
         }
         .academic-entry .course-block .course-meta {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #475569;
             margin-bottom: 0.2rem;
         }
         .academic-entry .course-block .course-desc {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #475569;
         }
         .topic-tags {
@@ -344,8 +368,8 @@
 
         /* ─── Research items ─── */
         .research-item {
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.2rem;
             border-bottom: 1px solid #f1f5f9;
         }
         .research-item:last-child {
@@ -353,22 +377,25 @@
         }
         .research-item .title {
             font-weight: 600;
-            font-size: 1.05rem;
+            font-size: 0.95rem;
         }
         .research-item .coauthors {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #475569;
-            margin-top: 0.3rem;
+            margin-top: 0.2rem;
+        }
+        .research-item p {
+            font-size: 0.9rem;
         }
         .tag {
             display: inline-block;
             background: #f1f5f9;
             color: #1e293b;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 500;
-            padding: 0.2rem 0.8rem;
+            padding: 0.15rem 0.7rem;
             border-radius: 20px;
-            margin-top: 0.6rem;
+            margin-top: 0.4rem;
             letter-spacing: 0.01em;
             border: 1px solid #e2e8f0;
         }
@@ -383,7 +410,7 @@
             background: #f8fafc;
             border: 1px solid #e2e8f0;
             border-radius: 12px;
-            padding: 1.8rem 2rem;
+            padding: 1.5rem 1.8rem;
             margin: 1.5rem 0 2rem 0;
             display: flex;
             flex-wrap: wrap;
@@ -391,17 +418,24 @@
             justify-content: space-between;
         }
         .grant-box .amount {
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 700;
             color: #0f172a;
+        }
+        .grant-box strong {
+            font-size: 1rem;
+        }
+        .grant-box .detail {
+            color: #475569;
+            font-size: 0.9rem;
         }
 
         /* ─── Timeline ─── */
         .timeline-item {
             display: grid;
-            grid-template-columns: 140px 1fr;
+            grid-template-columns: 120px 1fr;
             gap: 1.5rem;
-            padding: 1.2rem 0;
+            padding: 1rem 0;
             border-bottom: 1px solid #f1f5f9;
         }
         .timeline-item:last-child {
@@ -410,35 +444,39 @@
         .timeline-item .date {
             font-weight: 500;
             color: #475569;
+            font-size: 0.9rem;
+        }
+        .timeline-item p {
+            font-size: 0.9rem;
         }
 
         /* ─── Cards ─── */
         .card-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.2rem;
+            gap: 1rem;
             margin-top: 0.5rem;
         }
         .card {
             background: #fafcff;
             border: 1px solid #e9edf2;
             border-radius: 10px;
-            padding: 1.2rem 1.4rem;
+            padding: 1rem 1.2rem;
         }
         .card h4 {
             font-weight: 600;
-            font-size: 1rem;
-            margin-bottom: 0.3rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
         }
         .card p {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             color: #475569;
             margin-bottom: 0;
         }
 
         /* ─── Talks (avec logos) ─── */
         .talk-item {
-            padding: 1.2rem 0;
+            padding: 1rem 0;
             border-bottom: 1px solid #f1f5f9;
         }
         .talk-item:last-child {
@@ -452,27 +490,28 @@
             margin-bottom: 0.2rem;
         }
         .talk-header .logo {
-            width: 56px;
-            max-height: 44px;
+            width: 50px;
+            max-height: 40px;
             object-fit: contain;
             flex-shrink: 0;
         }
         .talk-header .date {
             font-weight: 500;
             color: #475569;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
         .talk-header .institution {
             font-weight: 600;
             color: #1a4b6d;
+            font-size: 0.9rem;
         }
         .talk-title {
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.95rem;
             margin-top: 0.2rem;
         }
         .talk-desc {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #475569;
             margin-top: 0.2rem;
         }
@@ -481,21 +520,22 @@
         .conf-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 1.2rem;
-            margin-bottom: 1.8rem;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
         }
         .conf-item {
             background: #fafcff;
             border: 1px solid #e9edf2;
             border-radius: 10px;
-            padding: 1rem 1.2rem;
+            padding: 0.8rem 1rem;
         }
         .conf-item .name {
             font-weight: 600;
+            font-size: 0.9rem;
             margin-bottom: 0.1rem;
         }
         .conf-item .detail {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: #475569;
         }
 
@@ -503,20 +543,21 @@
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 1rem;
+            gap: 0.8rem;
         }
         .skill-box {
             background: #fafcff;
             border: 1px solid #e9edf2;
             border-radius: 10px;
-            padding: 1.2rem 1.2rem;
+            padding: 1rem 1rem;
         }
         .skill-box strong {
             display: block;
-            margin-bottom: 0.3rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
         }
         .skill-box p {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             margin-bottom: 0;
         }
 
@@ -524,7 +565,7 @@
         .contact-block {
             background: #f8fafc;
             border-radius: 12px;
-            padding: 1.8rem 2rem;
+            padding: 1.5rem 1.8rem;
             margin-top: 1rem;
             display: flex;
             flex-wrap: wrap;
@@ -532,20 +573,22 @@
         }
         .contact-block p {
             margin-bottom: 0;
+            font-size: 0.9rem;
         }
         .contact-block strong {
             display: block;
             font-weight: 600;
             color: #0f172a;
+            font-size: 0.9rem;
         }
 
         footer {
-            margin-top: 3rem;
-            font-size: 0.9rem;
+            margin-top: 2.5rem;
+            font-size: 0.8rem;
             color: #94a3b8;
             text-align: center;
             border-top: 1px solid #e9edf2;
-            padding-top: 2rem;
+            padding-top: 1.5rem;
         }
 
         /* ─── Responsive ─── */
@@ -554,19 +597,26 @@
                 padding: 1.5rem 1rem;
             }
             h1 {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
             .subhead {
-                font-size: 1rem;
+                font-size: 0.85rem;
             }
             .home-grid {
-                flex-direction: column-reverse;
+                flex-direction: column;
                 align-items: center;
                 text-align: center;
             }
             .home-photo {
                 flex: 0 0 120px;
                 width: 120px;
+                order: 1;
+            }
+            .home-text {
+                order: 2;
+            }
+            .btn-group {
+                justify-content: center;
             }
             .timeline-item {
                 grid-template-columns: 1fr;
@@ -588,11 +638,11 @@
                 gap: 1.5rem;
             }
             .home-logos img {
-                max-height: 36px;
+                max-height: 32px;
             }
             .dropdown-menu {
                 width: 100%;
-                right: -100%;
+                left: -100%;
             }
             .conf-grid {
                 grid-template-columns: 1fr;
@@ -607,7 +657,7 @@
 
 <div class="container">
 
-    <!-- ========== HEADER AVEC MENU HAMBURGER ========== -->
+    <!-- ========== HEADER AVEC MENU HAMBURGER À GAUCHE ========== -->
     <div class="header-top">
         <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
             <span></span>
@@ -646,16 +696,18 @@
         </div>
 
         <div class="home-grid">
+            <div class="home-photo">
+                <img src="photo.jpg" alt="Portrait of Nathalie El-Bazzal" />
+            </div>
             <div class="home-text">
+                <div class="welcome-text">Hello and welcome to my website</div>
                 <p>
                     Growing up in an environment marked by recurrent geopolitical tensions and later working across the Middle East provided me with early exposure to the economic implications of political instability. Observing how conflict, sanctions, and geopolitical uncertainty disrupted trade, reshaped markets, and influenced firms' behavior motivated me to pursue research in international economics. I first explored these dynamics in my Master's theses, which examined the economic effects of the Syrian conflict. Over time, this work evolved into a broader research agenda on how geopolitical shocks propagate through international trade. As a PhD Candidate in Economics at the University of Paris 8 and a Research Affiliate at the Paris School of Economics, I investigate these issues with the support of the CEPR ReCIPE Big Research Grant, focusing on maritime trade, market integration, and global value chains.
                 </p>
-                <p>
-                    <a href="cv.pdf" target="_blank" rel="noopener" class="btn">→ View my CV</a>
-                </p>
-            </div>
-            <div class="home-photo">
-                <img src="photo.jpg" alt="Portrait of Nathalie El-Bazzal" />
+                <div class="btn-group">
+                    <a href="#" class="btn" data-page="research">View my research</a>
+                    <a href="cv.pdf" target="_blank" rel="noopener" class="btn btn-secondary">View my CV</a>
+                </div>
             </div>
         </div>
 
@@ -727,9 +779,9 @@
         <h2>Research Grant</h2>
         <div class="grant-box">
             <div>
-                <strong style="font-size:1.1rem;">CEPR ReCIPE Big Research Grant</strong>
-                <div style="color:#475569;">Trade and Financial Frictions in Fragmented Economies</div>
-                <div style="margin-top:0.4rem; font-size:0.95rem; color:#334155;">
+                <strong>CEPR ReCIPE Big Research Grant</strong>
+                <div class="detail">Trade and Financial Frictions in Fragmented Economies</div>
+                <div style="margin-top:0.4rem; font-size:0.9rem; color:#334155;">
                     Co-Principal Investigator with <a href="https://pierrelouisvezina.weebly.com" target="_blank" rel="noopener">Pierre-Louis Vézina</a> (King's College London) and <a href="https://www.banque-france.fr/fr/jean-charles-bricongne" target="_blank" rel="noopener">Jean-Charles Bricongne</a> (Banque de France).
                 </div>
             </div>
@@ -765,7 +817,7 @@
                 <span class="institution">IRIS Sup'</span>
                 <span class="date">2023–Present</span>
             </div>
-            <p style="margin-top:0.2rem;">Supervision of Master's theses and applied research projects in geopolitics, international trade, development, and public policy.</p>
+            <p style="margin-top:0.2rem; font-size:0.9rem;">Supervision of Master's theses and applied research projects in geopolitics, international trade, development, and public policy.</p>
         </div>
 
         <!-- Teaching Assistant -->
@@ -986,6 +1038,7 @@
     // ─── Navigation entre pages ───
     const pages = document.querySelectorAll('.page');
     const menuLinks = document.querySelectorAll('.dropdown-menu nav a');
+    const allPageLinks = document.querySelectorAll('[data-page]');
 
     function showPage(pageId) {
         // Cacher toutes les pages
@@ -1049,6 +1102,17 @@
             e.preventDefault();
             const pageId = this.getAttribute('data-page');
             showPage(pageId);
+        });
+    });
+
+    // ─── Clic sur les boutons "View my research" ───
+    allPageLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const pageId = this.getAttribute('data-page');
+            if (pageId) {
+                e.preventDefault();
+                showPage(pageId);
+            }
         });
     });
 
