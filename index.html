@@ -36,105 +36,90 @@
             margin: 0 auto;
         }
 
-        /* ─── Header avec menu hamburger à gauche ─── */
-        .header-top {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            margin-bottom: 1.8rem;
-            position: relative;
-        }
-        .hamburger {
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 8px;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            z-index: 20;
-        }
-        .hamburger span {
-            display: block;
-            width: 25px;
-            height: 2px;
-            background-color: #1a4b6d;
-            border-radius: 2px;
-            transition: 0.3s;
-        }
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-
-        .dropdown-menu {
+        /* ─── MENU LATÉRAL FIXE À GAUCHE (comme Thomas Renault) ─── */
+        .sidebar-menu {
             position: fixed;
             top: 0;
-            left: -320px;
-            width: 280px;
+            left: 0;
+            width: 220px;
             height: 100vh;
             background: #f8fafc;
-            box-shadow: 4px 0 20px rgba(0,0,0,0.08);
-            padding: 4rem 2rem 2rem 2rem;
-            transition: left 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-            z-index: 15;
-            overflow-y: auto;
             border-right: 1px solid #e9edf2;
-        }
-        .dropdown-menu.open {
-            left: 0;
-        }
-        .dropdown-menu nav {
+            padding: 2.5rem 1.5rem 2rem 1.5rem;
+            overflow-y: auto;
+            z-index: 10;
             display: flex;
             flex-direction: column;
-            gap: 0.2rem;
         }
-        .dropdown-menu nav a {
-            padding: 0.7rem 0.8rem;
+        .sidebar-menu .brand {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a4b6d;
+            margin-bottom: 0.2rem;
+            letter-spacing: -0.02em;
+        }
+        .sidebar-menu .sub-brand {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #e9edf2;
+            padding-bottom: 1rem;
+        }
+        .sidebar-menu .menu-section {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #94a3b8;
+            font-weight: 600;
+            margin: 0.8rem 0 0.3rem 0.2rem;
+        }
+        .sidebar-menu .menu-section:first-of-type {
+            margin-top: 0;
+        }
+        .sidebar-menu nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.05rem;
+        }
+        .sidebar-menu nav a {
+            padding: 0.4rem 0.6rem;
             color: #334155;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             border-radius: 6px;
-            transition: background 0.2s;
+            transition: background 0.2s, color 0.2s;
             border-bottom: none;
+            display: block;
+            cursor: pointer;
         }
-        .dropdown-menu nav a:hover {
+        .sidebar-menu nav a:hover {
             background: #e9edf2;
             color: #1a4b6d;
         }
-        .dropdown-menu .close-btn {
-            position: absolute;
-            top: 1.2rem;
-            right: 1.5rem;
-            background: none;
+        .sidebar-menu nav a.active-link {
+            background: #e9edf2;
+            color: #1a4b6d;
+            font-weight: 600;
+        }
+        .sidebar-menu .menu-divider {
             border: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: #64748b;
-            padding: 4px 8px;
+            border-top: 1px solid #e9edf2;
+            margin: 0.6rem 0.2rem;
+        }
+        .sidebar-menu .footer-text {
+            margin-top: auto;
+            font-size: 0.65rem;
+            color: #94a3b8;
+            padding-top: 1rem;
+            border-top: 1px solid #e9edf2;
+            text-align: center;
         }
 
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.25);
-            z-index: 14;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s, visibility 0.3s;
-        }
-        .overlay.show {
-            opacity: 1;
-            visibility: visible;
+        /* ─── Contenu principal (décalé à droite) ─── */
+        .main-content {
+            margin-left: 250px;
+            padding: 0.5rem 0.5rem 2rem 0.5rem;
         }
 
         /* ─── Pages ─── */
@@ -517,7 +502,7 @@
             margin-top: 0.2rem;
         }
 
-        /* ─── CONFERENCES : avec année à gauche ─── */
+        /* ─── CONFERENCES ─── */
         .conf-year-block {
             display: grid;
             grid-template-columns: 70px 1fr;
@@ -555,7 +540,7 @@
             color: #475569;
         }
 
-        /* ─── DISCUSSANT & POSTER avec année à gauche ─── */
+        /* ─── DISCUSSANT & POSTER ─── */
         .discussant-item,
         .poster-item {
             display: grid;
@@ -645,16 +630,128 @@
         }
 
         /* ─── Responsive ─── */
+        @media (max-width: 820px) {
+            .sidebar-menu {
+                display: none;
+            }
+            .main-content {
+                margin-left: 0;
+                padding: 0.5rem 0 2rem 0;
+            }
+            .header-top {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 1.8rem;
+                position: relative;
+            }
+            .hamburger {
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 8px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                z-index: 20;
+            }
+            .hamburger span {
+                display: block;
+                width: 25px;
+                height: 2px;
+                background-color: #1a4b6d;
+                border-radius: 2px;
+                transition: 0.3s;
+            }
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+            .dropdown-menu {
+                position: fixed;
+                top: 0;
+                left: -320px;
+                width: 280px;
+                height: 100vh;
+                background: #f8fafc;
+                box-shadow: 4px 0 20px rgba(0,0,0,0.08);
+                padding: 4rem 2rem 2rem 2rem;
+                transition: left 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+                z-index: 15;
+                overflow-y: auto;
+                border-right: 1px solid #e9edf2;
+            }
+            .dropdown-menu.open {
+                left: 0;
+            }
+            .dropdown-menu nav {
+                display: flex;
+                flex-direction: column;
+                gap: 0.1rem;
+            }
+            .dropdown-menu nav a {
+                padding: 0.6rem 0.8rem;
+                color: #334155;
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 0.9rem;
+                border-radius: 6px;
+                transition: background 0.2s;
+                border-bottom: none;
+            }
+            .dropdown-menu nav a:hover {
+                background: #e9edf2;
+                color: #1a4b6d;
+            }
+            .dropdown-menu .close-btn {
+                position: absolute;
+                top: 1.2rem;
+                right: 1.5rem;
+                background: none;
+                border: none;
+                font-size: 1.8rem;
+                cursor: pointer;
+                color: #64748b;
+                padding: 4px 8px;
+            }
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.25);
+                z-index: 14;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s, visibility 0.3s;
+            }
+            .overlay.show {
+                opacity: 1;
+                visibility: visible;
+            }
+            .dropdown-menu .menu-section {
+                font-size: 0.65rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: #94a3b8;
+                font-weight: 600;
+                margin: 0.8rem 0 0.3rem 0.2rem;
+            }
+            .dropdown-menu .menu-divider {
+                border: none;
+                border-top: 1px solid #e9edf2;
+                margin: 0.6rem 0.2rem;
+            }
+        }
+
         @media (max-width: 640px) {
-            body {
-                padding: 1.5rem 1rem;
-            }
-            h1 {
-                font-size: 1.4rem;
-            }
-            .subhead {
-                font-size: 0.8rem;
-            }
             .home-grid {
                 flex-direction: column;
                 align-items: center;
@@ -693,10 +790,6 @@
             .home-logos img {
                 max-height: 32px;
             }
-            .dropdown-menu {
-                width: 100%;
-                left: -100%;
-            }
             .conf-year-block,
             .discussant-item,
             .poster-item {
@@ -714,10 +807,39 @@
 </head>
 <body>
 
-<div class="container">
+<!-- ============================================================ -->
+<!-- ========== MENU LATÉRAL FIXE À GAUCHE ========== -->
+<!-- ============================================================ -->
+<aside class="sidebar-menu" id="sidebarMenu">
+    <div class="brand">N. El-Bazzal</div>
+    <div class="sub-brand">PhD Candidate · Economics</div>
 
-    <!-- ========== HEADER AVEC MENU HAMBURGER À GAUCHE ========== -->
-    <div class="header-top">
+    <div class="menu-section">Navigation</div>
+    <nav>
+        <a href="#" data-page="home" class="active-link">Home</a>
+        <a href="#" data-page="research">Research</a>
+        <a href="#" data-page="grant">Grant</a>
+        <a href="#" data-page="academic">Academic Experience</a>
+        <a href="#" data-page="professional">Professional Experience</a>
+        <a href="#" data-page="education">Education</a>
+        <a href="#" data-page="conferences">Conferences</a>
+        <a href="#" data-page="talks">Talks</a>
+        <a href="#" data-page="skills">Skills</a>
+        <a href="#" data-page="contact">Contact</a>
+    </nav>
+
+    <hr class="menu-divider" />
+
+    <div class="footer-text">© 2026 Nathalie El-Bazzal</div>
+</aside>
+
+<!-- ============================================================ -->
+<!-- ========== CONTENU PRINCIPAL ========== -->
+<!-- ============================================================ -->
+<div class="main-content">
+
+    <!-- ========== HEADER MOBILE (hamburger) ========== -->
+    <div class="header-top" id="mobileHeader" style="display:none;">
         <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
             <span></span>
             <span></span>
@@ -725,12 +847,13 @@
         </button>
     </div>
 
-    <!-- Overlay -->
+    <!-- Overlay mobile -->
     <div class="overlay" id="overlay"></div>
 
-    <!-- Menu déroulant -->
+    <!-- Menu mobile -->
     <div class="dropdown-menu" id="dropdownMenu">
-        <button class="close-btn" id="closeMenuBtn" aria-label="Fermer le menu">✕</button>
+        <button class="close-btn" id="closeMenuBtn">✕</button>
+        <div class="menu-section">Navigation</div>
         <nav>
             <a href="#" data-page="home">Home</a>
             <a href="#" data-page="research">Research</a>
@@ -743,6 +866,8 @@
             <a href="#" data-page="skills">Skills</a>
             <a href="#" data-page="contact">Contact</a>
         </nav>
+        <hr class="menu-divider" />
+        <div style="font-size:0.65rem; color:#94a3b8; text-align:center; padding-top:0.5rem;">© 2026 Nathalie El-Bazzal</div>
     </div>
 
     <!-- ============================================================ -->
@@ -759,7 +884,7 @@
                 <img src="photo.jpg" alt="Portrait of Nathalie El-Bazzal" />
             </div>
             <div class="home-text">
-                <div class="welcome-text">Hello and welcome to my website ! </div>
+                <div class="welcome-text">Hello and welcome to my website!</div>
                 <p>
                     Growing up in an environment marked by recurrent geopolitical tensions and later working across the Middle East provided me with early exposure to the economic implications of political instability. Observing how conflict, sanctions, and geopolitical uncertainty disrupted trade, reshaped markets, and influenced firms' behavior motivated me to pursue research in international economics. I first explored these dynamics in my Master's theses, which examined the economic effects of the Syrian conflict. Over time, this work evolved into a broader research agenda on how geopolitical shocks propagate through international trade. As a PhD Candidate in Economics at the University of Paris 8 and a Research Affiliate at the Paris School of Economics, I investigate these issues with the support of the CEPR ReCIPE Big Research Grant, focusing on maritime trade, market integration, and global value chains.
                 </p>
@@ -997,26 +1122,6 @@
             </div>
         </div>
 
-        <!--
-        ===== POUR AJOUTER 2027, 2028, ETC. =====
-        Copiez le bloc ci-dessous autant de fois que nécessaire :
-
-        <div class="conf-year-block">
-            <div class="year">2027</div>
-            <div class="conf-grid">
-                <div class="conf-item">
-                    <div class="name">Nom de la conférence</div>
-                    <div class="detail">Lieu · Date</div>
-                </div>
-                <div class="conf-item">
-                    <div class="name">Nom de la conférence</div>
-                    <div class="detail">Lieu · Date</div>
-                </div>
-            </div>
-        </div>
-        -->
-
-        <!-- ===== DISCUSSANT ROLES ===== -->
         <h3 style="margin-top:2rem;">Discussant Roles</h3>
 
         <div class="discussant-item">
@@ -1029,20 +1134,6 @@
             </div>
         </div>
 
-        <!--
-        ===== POUR AJOUTER UN DISCUSSANT EN 2027, 2028 =====
-        <div class="discussant-item">
-            <div class="year">2027</div>
-            <div class="content">
-                <div class="title">Titre du papier</div>
-                <p>Conférence, Lieu · Date</p>
-                <div class="coauthors">Paper by Auteur (Institution).</div>
-                <span class="tag">Discussant</span>
-            </div>
-        </div>
-        -->
-
-        <!-- ===== POSTER PRESENTATIONS ===== -->
         <h3 style="margin-top:2rem;">Poster Presentations</h3>
 
         <div class="poster-item">
@@ -1054,19 +1145,6 @@
                 <span class="tag">Poster</span>
             </div>
         </div>
-
-        <!--
-        ===== POUR AJOUTER UN POSTER EN 2027, 2028 =====
-        <div class="poster-item">
-            <div class="year">2027</div>
-            <div class="content">
-                <div class="title">Titre du poster</div>
-                <p>Conférence, Lieu · Date</p>
-                <div class="coauthors">with Auteur (Institution).</div>
-                <span class="tag">Poster</span>
-            </div>
-        </div>
-        -->
     </div>
 
     <!-- ============================================================ -->
@@ -1151,7 +1229,8 @@
 <script>
     // ─── Navigation entre pages ───
     const pages = document.querySelectorAll('.page');
-    const menuLinks = document.querySelectorAll('.dropdown-menu nav a');
+    const sidebarLinks = document.querySelectorAll('.sidebar-menu nav a');
+    const mobileLinks = document.querySelectorAll('.dropdown-menu nav a');
     const allPageLinks = document.querySelectorAll('[data-page]');
 
     function showPage(pageId) {
@@ -1160,6 +1239,14 @@
         if (target) {
             target.classList.add('active');
         }
+
+        // Mettre à jour le lien actif dans le menu latéral
+        sidebarLinks.forEach(link => {
+            link.classList.remove('active-link');
+            if (link.getAttribute('data-page') === pageId) {
+                link.classList.add('active-link');
+            }
+        });
 
         const pageNames = {
             'home': 'Nathalie El-Bazzal · International Trade & Geoeconomics',
@@ -1178,7 +1265,34 @@
         history.pushState(null, '', '#' + pageId);
     }
 
-    // ─── Menu hamburger ───
+    // ─── Clic sur les liens du menu latéral ───
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            showPage(this.getAttribute('data-page'));
+        });
+    });
+
+    // ─── Clic sur les liens du menu mobile ───
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            showPage(this.getAttribute('data-page'));
+        });
+    });
+
+    // ─── Clic sur les boutons "View my research" ───
+    allPageLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const pageId = this.getAttribute('data-page');
+            if (pageId) {
+                e.preventDefault();
+                showPage(pageId);
+            }
+        });
+    });
+
+    // ─── Menu mobile hamburger ───
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const dropdownMenu = document.getElementById('dropdownMenu');
     const overlay = document.getElementById('overlay');
@@ -1202,23 +1316,24 @@
     closeMenuBtn.addEventListener('click', closeMenu);
     overlay.addEventListener('click', closeMenu);
 
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            showPage(this.getAttribute('data-page'));
-        });
-    });
+    // ─── Afficher le menu mobile sur petits écrans ───
+    function checkMobileMenu() {
+        const sidebar = document.getElementById('sidebarMenu');
+        const mobileHeader = document.getElementById('mobileHeader');
+        if (window.innerWidth <= 820) {
+            sidebar.style.display = 'none';
+            mobileHeader.style.display = 'flex';
+        } else {
+            sidebar.style.display = 'flex';
+            mobileHeader.style.display = 'none';
+            closeMenu();
+        }
+    }
 
-    allPageLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const pageId = this.getAttribute('data-page');
-            if (pageId) {
-                e.preventDefault();
-                showPage(pageId);
-            }
-        });
-    });
+    window.addEventListener('resize', checkMobileMenu);
+    checkMobileMenu();
 
+    // ─── Gestion du hash dans l'URL ───
     window.addEventListener('hashchange', function() {
         const hash = window.location.hash.replace('#', '') || 'home';
         if (document.getElementById('page-' + hash)) {
@@ -1226,6 +1341,7 @@
         }
     });
 
+    // ─── Page par défaut ───
     const initialPage = window.location.hash.replace('#', '') || 'home';
     if (document.getElementById('page-' + initialPage)) {
         showPage(initialPage);
