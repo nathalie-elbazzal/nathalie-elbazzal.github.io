@@ -1,4 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="20" fill="#173e58"/>
-  <text x="50" y="68" font-family="Arial, sans-serif" font-size="52" font-weight="bold" fill="white" text-anchor="middle">NE</text>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <!-- Carré arrondi -->
+  <rect width="90" height="90" x="5" y="5" rx="18" fill="#173e58" filter="url(#shadow)"/>
+  <!-- Lettres -->
+  <text x="50" y="62" font-family="Georgia, serif" font-size="38" font-weight="bold" fill="white" letter-spacing="2" text-anchor="middle">NE</text>
 </svg>
