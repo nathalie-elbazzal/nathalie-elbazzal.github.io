@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Autoriser Google à indexer le site -->
     <meta name="robots" content="index, follow" />
 
     <title>Nathalie El-Bazzal · International Trade &amp; Geoeconomics</title>
     <meta name="description" content="Nathalie El-Bazzal, PhD Candidate in Economics, researcher at the Paris School of Economics, specialist in international trade, geoeconomics, and geopolitical risk." />
     
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://nathalie-elbazzal.github.io/" />
     <meta property="og:title" content="Nathalie El-Bazzal · International Trade &amp; Geoeconomics" />
@@ -20,13 +18,11 @@
     <meta property="og:image:height" content="627" />
     <meta property="og:image:alt" content="Nathalie El-Bazzal – PhD Candidate in Economics specializing in International Trade and Geoeconomics." />
     
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Nathalie El-Bazzal · International Trade &amp; Geoeconomics" />
     <meta name="twitter:description" content="PhD Candidate in Economics researching international trade, geoeconomics, and geopolitical risk." />
     <meta name="twitter:image" content="https://nathalie-elbazzal.github.io/social-preview-v2.png" />
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
@@ -125,6 +121,9 @@
         .main-content {
             margin-left: 210px;
             padding: 0.5rem 0.5rem 2rem 0.5rem;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
         }
 
         /* ─── Pages ─── */
@@ -172,14 +171,14 @@
             line-height: 1.7;
         }
         a {
-            color: #1a4b6d;
+            color: #1a1a1a;
             text-decoration: none;
             font-weight: 500;
             border-bottom: 1px solid transparent;
             transition: border-color 0.2s;
         }
         a:hover {
-            border-bottom-color: #1a4b6d;
+            border-bottom-color: #1a1a1a;
         }
 
         .btn-group {
@@ -224,7 +223,7 @@
             margin: 1.5rem 0 1.5rem 0;
         }
         .home-photo {
-            flex: 0 0 150px;
+            flex: 0 0 160px;
             order: 1;
         }
         .home-photo img {
@@ -239,8 +238,9 @@
             box-shadow: 0 4px 14px rgba(0,0,0,0.06);
         }
         .home-text {
-            flex: 2;
+            flex: 1;
             min-width: 220px;
+            max-width: 500px;
             order: 2;
         }
 
@@ -249,17 +249,15 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            gap: 2.8rem;
-            max-width: 650px;
-            margin: 3rem auto 0.8rem auto;
-            padding: 1.1rem 0;
-            border-top: 1px solid #e0e0e0;
-            border-bottom: 1px solid #e0e0e0;
+            gap: 2.5rem;
+            margin: 1.2rem 0 0.5rem 0;
+            border: none;
+            padding: 0;
         }
         .home-logos img {
-            max-height: 32px;
+            max-height: 28px;
             width: auto;
-            opacity: 0.85;
+            opacity: 0.7;
             transition: opacity 0.2s;
             filter: grayscale(100%);
         }
@@ -295,7 +293,7 @@
             color: #1a1a1a;
         }
         .academic-header .institution {
-            color: #1a4b6d;
+            color: #1a1a1a;
             font-weight: 500;
         }
         .academic-header .date {
@@ -489,7 +487,7 @@
         }
         .talk-header .institution {
             font-weight: 600;
-            color: #1a4b6d;
+            color: #1a1a1a;
             font-size: 0.9rem;
         }
         .talk-title {
@@ -517,7 +515,7 @@
         }
         .conf-year-block .year {
             font-weight: 600;
-            color: #1a4b6d;
+            color: #1a1a1a;
             font-size: 0.85rem;
             padding-top: 0.1rem;
         }
@@ -559,7 +557,7 @@
         .discussant-item .year,
         .poster-item .year {
             font-weight: 600;
-            color: #1a4b6d;
+            color: #1a1a1a;
             font-size: 0.85rem;
             padding-top: 0.1rem;
         }
@@ -626,11 +624,11 @@
         }
 
         footer {
-            margin-top: 2.5rem;
+            margin-top: auto;
             font-size: 0.8rem;
             color: #aaa;
             text-align: center;
-            border-top: 1px solid #e9edf2;
+            border-top: 1px solid #e0e0e0;
             padding-top: 1.5rem;
         }
 
@@ -649,6 +647,7 @@
             .main-content {
                 margin-left: 0;
                 padding: 0.5rem 0 2rem 0;
+                min-height: auto;
             }
             .header-top {
                 justify-content: flex-start;
@@ -766,6 +765,7 @@
             }
             .home-text {
                 order: 2;
+                max-width: 100%;
             }
             .btn-group {
                 justify-content: center;
@@ -868,31 +868,26 @@
         <div style="font-size:0.65rem; color:#aaa; text-align:center; padding-top:0.5rem;">© 2026 Nathalie El-Bazzal</div>
     </div>
 
-        <!-- ============================================================ -->
+    <!-- ============================================================ -->
     <!-- ========== PAGE HOME ========== -->
     <!-- ============================================================ -->
     <div class="page active" id="page-home">
 
-        <!-- Nom -->
-        <h1>Nathalie El-Bazzal</h1>
+        <h1 style="margin-top: 5rem;">Nathalie El-Bazzal</h1>
 
-        <!-- Position -->
         <p style="font-size: 0.95rem; color: #555; margin-bottom: 0.3rem;">
             <strong style="color: #1a1a1a;">PhD Candidate in Economics</strong> · University of Paris 8 · Research Affiliate at the Paris School of Economics
         </p>
 
-        <!-- Research Interests -->
         <p style="font-size: 0.85rem; color: #777; margin-bottom: 1.5rem;">
             Research Interests: International Trade · Geoeconomics · Political Economy · Global Value Chains
         </p>
 
         <div class="home-grid" style="align-items: flex-start; gap: 2rem;">
-            <!-- Photo -->
             <div class="home-photo" style="flex: 0 0 160px;">
                 <img src="photo.jpg" alt="Portrait of Nathalie El-Bazzal" />
             </div>
 
-            <!-- Texte compact -->
             <div class="home-text" style="flex: 1; max-width: 500px;">
 
                 <p style="font-size: 0.92rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.4rem;">
@@ -911,7 +906,6 @@
                     Today, as a PhD Candidate in Economics at the University of Paris 8 and a Research Affiliate at the Paris School of Economics, I continue this research with the support of the CEPR ReCIPE Big Research Grant, focusing on maritime trade, market integration, and global value chains.
                 </p>
 
-                <!-- Boutons -->
                 <div class="btn-group" style="margin-top: 0.3rem; gap: 0.6rem;">
                     <a href="#" class="btn" data-page="research" style="padding: 0.35rem 1.2rem; font-size: 0.78rem;">View my research</a>
                     <a href="cv.pdf" target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 0.35rem 1.2rem; font-size: 0.78rem;">View my CV</a>
@@ -919,11 +913,10 @@
             </div>
         </div>
 
-        <!-- Logos -->
-        <div class="home-logos" style="margin: 1.2rem 0 0.5rem 0; gap: 2.5rem; border: none; padding: 0;">
-            <img src="paris8-logo.jpg" alt="Université Paris 8" style="max-height: 28px;" />
-            <img src="pse-logo.png" alt="Paris School of Economics" style="max-height: 28px;" />
-            <img src="cepr-logo.png" alt="CEPR" style="max-height: 28px;" />
+        <div class="home-logos">
+            <img src="paris8-logo.jpg" alt="Université Paris 8" />
+            <img src="pse-logo.png" alt="Paris School of Economics" />
+            <img src="cepr-logo.png" alt="CEPR" />
         </div>
     </div>
 
@@ -1246,7 +1239,7 @@
         </div>
     </div>
 
-        <footer style="margin-top: 8rem;">
+    <footer>
         &copy; 2026 Nathalie El-Bazzal
     </footer>
 
@@ -1290,7 +1283,6 @@
         history.pushState(null, '', '#' + pageId);
     }
 
-    // ─── Clic sur les liens du menu latéral ───
     sidebarLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -1298,7 +1290,6 @@
         });
     });
 
-    // ─── Clic sur les liens du menu mobile ───
     mobileLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -1306,7 +1297,6 @@
         });
     });
 
-    // ─── Clic sur les boutons ───
     allPageLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const pageId = this.getAttribute('data-page');
@@ -1317,7 +1307,6 @@
         });
     });
 
-    // ─── Menu mobile ───
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const dropdownMenu = document.getElementById('dropdownMenu');
     const overlay = document.getElementById('overlay');
@@ -1341,7 +1330,6 @@
     closeMenuBtn.addEventListener('click', closeMenu);
     overlay.addEventListener('click', closeMenu);
 
-    // ─── Afficher le menu mobile sur petits écrans ───
     function checkMobileMenu() {
         const sidebar = document.getElementById('sidebarMenu');
         const mobileHeader = document.getElementById('mobileHeader');
@@ -1358,7 +1346,6 @@
     window.addEventListener('resize', checkMobileMenu);
     checkMobileMenu();
 
-    // ─── Gestion du hash ───
     window.addEventListener('hashchange', function() {
         const hash = window.location.hash.replace('#', '') || 'home';
         if (document.getElementById('page-' + hash)) {
