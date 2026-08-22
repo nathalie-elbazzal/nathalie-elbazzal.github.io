@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="fr"> 
-<head> 
+<html lang="fr">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
@@ -266,7 +266,7 @@
             filter: grayscale(0%);
         }
 
-        /* ─── Academic Experience ─── */
+        /* ─── Teaching / Academic Experience ─── */
         .academic-entry {
             padding: 1.2rem 0;
             border-bottom: 1px solid #f1f5f9;
@@ -414,49 +414,66 @@
             font-size: 0.9rem;
         }
 
-        /* ─── Timeline ─── */
-        .timeline-item {
-            display: grid;
-            grid-template-columns: 120px 1fr;
-            gap: 1.5rem;
-            padding: 1rem 0;
+        /* ─── CV (Education + Professional Experience) ─── */
+        .cv-section {
+            margin-bottom: 2rem;
+        }
+        .cv-section h3 {
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 0.3rem;
+        }
+        .cv-item {
+            padding: 0.6rem 0;
             border-bottom: 1px solid #f1f5f9;
         }
-        .timeline-item:last-child {
+        .cv-item:last-child {
             border-bottom: none;
         }
-        .timeline-item .date {
-            font-weight: 500;
-            color: #777;
-            font-size: 0.9rem;
-        }
-        .timeline-item p {
-            font-size: 0.9rem;
-        }
-
-        /* ─── Education ─── */
-        .card-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-top: 0.5rem;
-        }
-        .card {
-            background: #fafcff;
-            border: 1px solid #e9edf2;
-            border-radius: 10px;
-            padding: 1rem 1.2rem;
-        }
-        .card h4 {
+        .cv-item .cv-title {
             font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 0.2rem;
+            font-size: 0.95rem;
             color: #1a1a1a;
         }
-        .card p {
-            font-size: 0.85rem;
-            color: #475569;
+        .cv-item .cv-institution {
+            color: #555;
+            font-size: 0.9rem;
+        }
+        .cv-item .cv-date {
+            color: #777;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .cv-item p {
+            font-size: 0.88rem;
+            color: #333;
+            margin-top: 0.2rem;
             margin-bottom: 0;
+        }
+        .cv-item ul {
+            padding-left: 1.2rem;
+            margin-top: 0.2rem;
+            font-size: 0.88rem;
+            color: #333;
+        }
+        .cv-item ul li {
+            margin-bottom: 0.2rem;
+        }
+        .cv-pdf-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #1a1a1a;
+            color: white;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border: none;
+            transition: background-color 0.2s;
+        }
+        .cv-pdf-link:hover {
+            background-color: #333;
         }
 
         /* ─── Talks ─── */
@@ -577,29 +594,6 @@
             font-size: 0.85rem;
             color: #475569;
             margin-top: 0.2rem;
-        }
-
-        /* ─── Skills ─── */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 0.8rem;
-        }
-        .skill-box {
-            background: #fafcff;
-            border: 1px solid #e9edf2;
-            border-radius: 10px;
-            padding: 1rem 1rem;
-        }
-        .skill-box strong {
-            display: block;
-            font-size: 0.9rem;
-            margin-bottom: 0.2rem;
-            color: #1a1a1a;
-        }
-        .skill-box p {
-            font-size: 0.85rem;
-            margin-bottom: 0;
         }
 
         /* ─── Contact ─── */
@@ -768,32 +762,10 @@
                 max-width: 100%;
             }
             #page-home h1 {
-        margin-top: 1.5rem !important;
-    }
+                margin-top: 1.5rem !important;
+            }
             .btn-group {
                 justify-content: center;
-            }
-            .timeline-item {
-                grid-template-columns: 1fr;
-                gap: 0.2rem;
-            }
-            .card-grid {
-                grid-template-columns: 1fr;
-            }
-            .grant-box {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.8rem;
-            }
-            .contact-block {
-                flex-direction: column;
-                gap: 1.2rem;
-            }
-            .home-logos {
-                gap: 1.5rem;
-            }
-            .home-logos img {
-                max-height: 32px;
             }
             .conf-year-block,
             .discussant-item,
@@ -804,8 +776,11 @@
             .conf-grid {
                 grid-template-columns: 1fr;
             }
-            .skills-grid {
-                grid-template-columns: 1fr;
+            .home-logos {
+                gap: 1.5rem;
+            }
+            .home-logos img {
+                max-height: 32px;
             }
         }
     </style>
@@ -823,12 +798,10 @@
         <a href="#" data-page="home" class="active-link">Home</a>
         <a href="#" data-page="research">Research</a>
         <a href="#" data-page="grant">Grant</a>
-        <a href="#" data-page="academic">Academic Experience</a>
-        <a href="#" data-page="professional">Professional Experience</a>
-        <a href="#" data-page="education">Education</a>
+        <a href="#" data-page="teaching">Teaching</a>
         <a href="#" data-page="conferences">Conferences</a>
         <a href="#" data-page="talks">Talks</a>
-        <a href="#" data-page="skills">Skills</a>
+        <a href="#" data-page="cv">CV</a>
         <a href="#" data-page="contact">Contact</a>
     </nav>
 
@@ -859,12 +832,10 @@
             <a href="#" data-page="home">Home</a>
             <a href="#" data-page="research">Research</a>
             <a href="#" data-page="grant">Grant</a>
-            <a href="#" data-page="academic">Academic Experience</a>
-            <a href="#" data-page="professional">Professional Experience</a>
-            <a href="#" data-page="education">Education</a>
+            <a href="#" data-page="teaching">Teaching</a>
             <a href="#" data-page="conferences">Conferences</a>
             <a href="#" data-page="talks">Talks</a>
-            <a href="#" data-page="skills">Skills</a>
+            <a href="#" data-page="cv">CV</a>
             <a href="#" data-page="contact">Contact</a>
         </nav>
         <hr class="menu-divider" />
@@ -872,62 +843,69 @@
     </div>
 
     <!-- ============================================================ -->
-<!-- ========== PAGE HOME ========== -->
-<!-- ============================================================ -->
-<div class="page active" id="page-home">
+    <!-- ========== PAGE HOME ========== -->
+    <!-- ============================================================ -->
+    <div class="page active" id="page-home">
 
-    <h1 style="margin-bottom: 0.1rem; font-size: 1.8rem; font-weight: 600; color: #1a1a1a;">
-        Nathalie El-Bazzal
-    </h1>
+        <h1 style="margin-bottom: 0.1rem; font-size: 1.8rem; font-weight: 600; color: #1a1a1a;">
+            Nathalie El-Bazzal
+        </h1>
 
-    <!-- LIGNE 1 : PhD candidate bien visible, en gras et plus gros -->
-    <p style="font-size: 1.05rem; color: #1a1a1a; margin-bottom: 0.15rem; font-weight: 600;">
-        PhD Candidate in Economics
-    </p>
+        <p style="font-size: 1.05rem; color: #1a1a1a; margin-bottom: 0.15rem; font-weight: 600;">
+            PhD Candidate in Economics
+        </p>
 
-    <!-- LIGNE 2 : affiliations en taille normale, séparées par des espaces -->
-    <p style="font-size: 0.9rem; color: #555; margin-bottom: 0.3rem;">
-        University of Paris 8 · Research Affiliate at the Paris School of Economics
-    </p>
+        <p style="font-size: 0.9rem; color: #555; margin-bottom: 0.3rem;">
+            University of Paris 8 · Research Affiliate at the Paris School of Economics
+        </p>
 
-    <!-- LIGNE 3 : centres d'intérêt -->
-    <p style="font-size: 0.85rem; color: #777; margin-bottom: 1.5rem;">
-        Research Interests: International Trade · Geoeconomics · Political Economy · Global Value Chains
-    </p>
+        <p style="font-size: 0.85rem; color: #777; margin-bottom: 1.5rem;">
+            Research Interests: International Trade · Geoeconomics · Political Economy · Global Value Chains
+        </p>
 
-    <div class="home-grid" style="align-items: flex-start; gap: 2rem;">
-        <div class="home-photo" style="flex: 0 0 160px;">
-            <img src="photo.jpg" alt="Portrait of Nathalie El-Bazzal" />
+        <!-- Badge Grant -->
+        <div style="display: inline-block; background: #1a1a1a; color: white; font-size: 0.7rem; font-weight: 600; padding: 0.2rem 1rem; border-radius: 20px; margin-bottom: 1.2rem;">
+            CEPR ReCIPE Big Research Grant · £100k
         </div>
 
-        <div class="home-text" style="flex: 1; max-width: 500px;">
+        <div class="home-grid" style="align-items: flex-start; gap: 2rem;">
+            <div class="home-photo" style="flex: 0 0 160px;">
+                <img src="photo.jpg" alt="Portrait of Nathalie El-Bazzal" />
+            </div>
 
-            <p style="font-size: 0.92rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.4rem;">
-                Hello and welcome to my website!
-            </p>
+            <div class="home-text" style="flex: 1; max-width: 500px;">
 
-            <p style="font-size: 0.88rem; line-height: 1.6; color: #333; margin-bottom: 0.5rem;">
-                Growing up in an environment shaped by recurrent geopolitical tensions, and later working across the Middle East, gave me first-hand insight into how political instability translates into economic outcomes. Witnessing how conflict, sanctions, and geopolitical uncertainty reshaped trade, markets, and firms' behavior led me to pursue research in international economics. Today, as a PhD Candidate in Economics at the University of Paris 8 and a Research Affiliate at the Paris School of Economics, I continue this research with the support of the CEPR ReCIPE Big Research Grant, focusing on maritime trade, market integration, and global value chains.
-            </p>
+                <p style="font-size: 0.92rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.4rem;">
+                    Hello and welcome to my website!
+                </p>
 
-            <div class="btn-group" style="margin-top: 0.3rem; gap: 0.6rem;">
-                <a href="#" class="btn" data-page="research" style="padding: 0.35rem 1.2rem; font-size: 0.78rem;">View my research</a>
-                <a href="cv.pdf" target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 0.35rem 1.2rem; font-size: 0.78rem;">View my CV</a>
+                <p style="font-size: 0.88rem; line-height: 1.6; color: #333; margin-bottom: 0.5rem;">
+                    Growing up in an environment shaped by recurrent geopolitical tensions, and later working across the Middle East, gave me first-hand insight into how political instability translates into economic outcomes. Witnessing how conflict, sanctions, and geopolitical uncertainty reshaped trade, markets, and firms' behavior led me to pursue research in international economics. Today, as a PhD Candidate in Economics at the University of Paris 8 and a Research Affiliate at the Paris School of Economics, I continue this research with the support of the CEPR ReCIPE Big Research Grant, focusing on maritime trade, market integration, and global value chains.
+                </p>
+
+                <div class="btn-group" style="margin-top: 0.3rem; gap: 0.6rem;">
+                    <a href="#" class="btn" data-page="research" style="padding: 0.35rem 1.2rem; font-size: 0.78rem;">View my research</a>
+                    <a href="cv.pdf" target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 0.35rem 1.2rem; font-size: 0.78rem;">View my CV</a>
+                </div>
             </div>
         </div>
+
+        <div class="home-logos">
+            <img src="paris8-logo.jpg" alt="Université Paris 8" />
+            <img src="pse-logo.png" alt="Paris School of Economics" />
+            <img src="cepr-logo.png" alt="CEPR" />
+        </div>
     </div>
 
-    <div class="home-logos">
-        <img src="paris8-logo.jpg" alt="Université Paris 8" />
-        <img src="pse-logo.png" alt="Paris School of Economics" />
-        <img src="cepr-logo.png" alt="CEPR" />
-    </div>
-</div>
     <!-- ============================================================ -->
     <!-- ========== PAGE RESEARCH ========== -->
     <!-- ============================================================ -->
     <div class="page" id="page-research">
         <h2>Research</h2>
+
+        <p style="font-size: 0.9rem; color: #555; margin-bottom: 1rem;">
+            This research is supported by the <strong>CEPR ReCIPE Big Research Grant</strong> (£100k, 2026–2028).
+        </p>
 
         <h3>Working Paper</h3>
         <div class="research-item">
@@ -984,15 +962,19 @@
 
         <div class="grant-box">
             <div>
-                <strong>CEPR ReCIPE Big Research Grant</strong>
-                <div class="detail">Trade and Financial Frictions in Fragmented Economies</div>
-                <div style="margin-top:0.4rem; font-size:0.9rem; color:#333;">
+                <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.3rem;">
+                    <span style="background: #1a1a1a; color: white; font-weight: 600; font-size: 0.65rem; padding: 0.15rem 0.8rem; border-radius: 20px;">FUNDED</span>
+                    <span style="font-size: 0.8rem; color: #777;">2026–2028</span>
+                </div>
+                <strong style="font-size: 1.1rem;">CEPR ReCIPE Big Research Grant</strong>
+                <div class="detail" style="margin-top: 0.2rem;">Trade and Financial Frictions in Fragmented Economies</div>
+                <div style="margin-top:0.6rem; font-size:0.9rem; color:#333;">
                     <span style="font-weight: 600;">Co-Principal Investigator with</span>
                     <a href="https://pierrelouisvezina.weebly.com" target="_blank" rel="noopener">Pierre-Louis Vézina</a> (King's College London) and
                     <a href="https://www.banque-france.fr/fr/jean-charles-bricongne" target="_blank" rel="noopener">Jean-Charles Bricongne</a> (Banque de France).
                 </div>
                 <p style="font-size: 0.92rem; color: #555; margin-top: 0.8rem;">
-                    I initiated and conceptualized the project and played a leading role in developing the successful proposal.
+                    I initiated, conceptualized, and led the proposal for this highly competitive grant — one of the largest awarded by ReCIPE — developing its research agenda and assembling an international team of senior researchers from King's College London and the Banque de France.
                 </p>
             </div>
             <div class="amount">£100k</div>
@@ -1000,15 +982,16 @@
     </div>
 
     <!-- ============================================================ -->
-    <!-- ========== PAGE ACADEMIC EXPERIENCE ========== -->
+    <!-- ========== PAGE TEACHING ========== -->
     <!-- ============================================================ -->
-    <div class="page" id="page-academic">
-        <h2>Academic Experience</h2>
+    <div class="page" id="page-teaching">
+        <h2>Teaching</h2>
 
+        <!-- Academic Experience (PSE) -->
         <div class="academic-entry">
             <div class="academic-header">
                 <img src="pse-logo.png" alt="Paris School of Economics" class="logo" />
-                <span class="title">Research Affiliate</span>
+                <span class="title">Academic Experience</span>
                 <span class="institution">Paris School of Economics</span>
                 <span class="date">2026–Present</span>
             </div>
@@ -1018,6 +1001,7 @@
             </ul>
         </div>
 
+        <!-- Teaching (IRIS Sup') -->
         <div class="academic-entry">
             <div class="academic-header">
                 <img src="iris-logo.png" alt="IRIS Sup'" class="logo" />
@@ -1028,6 +1012,7 @@
             <p style="margin-top:0.2rem; font-size:0.9rem;">Supervision of Master's theses and applied research projects in geopolitics, international trade, development, and public policy.</p>
         </div>
 
+        <!-- Teaching (Paris 1) -->
         <div class="academic-entry">
             <div class="academic-header">
                 <img src="paris1-logo.jpg" alt="University Paris 1 Panthéon-Sorbonne" class="logo" />
@@ -1062,63 +1047,6 @@
                     <span>Entrepreneurship &amp; Innovation</span>
                     <span>Market &amp; Society</span>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- ========== PAGE PROFESSIONAL EXPERIENCE ========== -->
-    <!-- ============================================================ -->
-    <div class="page" id="page-professional">
-        <h2>Professional Experience</h2>
-        <div class="timeline-item">
-            <div class="date">2022–2024</div>
-            <div>
-                <strong>Trade Advisor in Industry and Cleantech</strong> · Business France, French Embassy in Cairo, Egypt
-                <p>Conducted sectoral economic analysis, advised French companies on market entry across the MENA region, and organized high-level trade missions with government and private-sector stakeholders.</p>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="date">2019–2020</div>
-            <div>
-                <strong>Chief Education Advisor</strong> · French High School Charles de Gaulle, Damascus, Syria
-                <p>Managed academic operations, coordinated institutional activities, and implemented educational policies while operating in a complex geopolitical environment.</p>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="date">2018–2019</div>
-            <div>
-                <strong>Trade Officer</strong> · Business France, French Embassy in Doha, Qatar
-                <p>Conducted market analysis, advised French companies on business opportunities in Qatar, and supported high-level France-Qatar economic partnerships.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- ========== PAGE EDUCATION ========== -->
-    <!-- ============================================================ -->
-    <div class="page" id="page-education">
-        <h2>Education</h2>
-        <div class="card-grid">
-            <div class="card">
-                <h4>University of Paris 8 · 2026–Present</h4>
-                <p>PhD Candidate in Economics.<br/>Trade Shocks and Geoeconomic Fragmentation.<br/>Supervisor: Jamel Saadaoui.</p>
-            </div>
-            <div class="card">
-                <h4>University Paris 1 Panthéon-Sorbonne · 2024–2026</h4>
-                <p>Pre-Doctoral Studies in International Economics.</p>
-            </div>
-            <div class="card">
-                <h4>ESCP Business School · 2020–2021</h4>
-                <p>MSc in Financial Management.<br/><strong>Master's Thesis:</strong> Foreign Direct Investment in a Conflict Country: The Syrian Case.</p>
-            </div>
-            <div class="card">
-                <h4>Sciences Po Grenoble · 2018–2020</h4>
-                <p>Master in International Relations, Middle Eastern and Mediterranean Studies.<br/><strong>Master's Thesis:</strong> Economic Recovery in Syria under Political Instability.</p>
-            </div>
-            <div class="card">
-                <h4>University of Lille &amp; Saint Joseph University of Beirut · 2014–2018</h4>
-                <p>Bachelor in Political Science.</p>
             </div>
         </div>
     </div>
@@ -1202,22 +1130,66 @@
     </div>
 
     <!-- ============================================================ -->
-    <!-- ========== PAGE SKILLS ========== -->
+    <!-- ========== PAGE CV ========== -->
     <!-- ============================================================ -->
-    <div class="page" id="page-skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-box">
-                <strong>Technical Skills</strong>
-                <p>R, Python, Stata, LaTeX.</p>
+    <div class="page" id="page-cv">
+        <h2>Curriculum Vitae</h2>
+
+        <a href="cv.pdf" target="_blank" rel="noopener" class="cv-pdf-link">📄 Download full CV (PDF)</a>
+
+        <!-- Education -->
+        <div class="cv-section" style="margin-top: 1.5rem;">
+            <h3>Education</h3>
+            <div class="cv-item">
+                <div class="cv-title">PhD Candidate in Economics</div>
+                <div class="cv-institution">University of Paris 8</div>
+                <div class="cv-date">2026–Present</div>
+                <p>Trade Shocks and Geoeconomic Fragmentation · Supervisor: Jamel Saadaoui</p>
             </div>
-            <div class="skill-box">
-                <strong>Languages</strong>
-                <p>French and Arabic: native. English: fluent.</p>
+            <div class="cv-item">
+                <div class="cv-title">Pre-Doctoral Studies in International Economics</div>
+                <div class="cv-institution">University Paris 1 Panthéon-Sorbonne</div>
+                <div class="cv-date">2024–2026</div>
             </div>
-            <div class="skill-box">
-                <strong>Sport</strong>
-                <p>Former French High-Level Athlete (Wrestling).<br/>National and international medalist.</p>
+            <div class="cv-item">
+                <div class="cv-title">MSc in Financial Management</div>
+                <div class="cv-institution">ESCP Business School</div>
+                <div class="cv-date">2020–2021</div>
+                <p><strong>Master's Thesis:</strong> Foreign Direct Investment in a Conflict Country: The Syrian Case</p>
+            </div>
+            <div class="cv-item">
+                <div class="cv-title">Master in International Relations</div>
+                <div class="cv-institution">Sciences Po Grenoble</div>
+                <div class="cv-date">2018–2020</div>
+                <p><strong>Master's Thesis:</strong> Economic Recovery in Syria under Political Instability</p>
+            </div>
+            <div class="cv-item">
+                <div class="cv-title">Bachelor in Political Science</div>
+                <div class="cv-institution">University of Lille &amp; Saint Joseph University of Beirut</div>
+                <div class="cv-date">2014–2018</div>
+            </div>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="cv-section">
+            <h3>Professional Experience</h3>
+            <div class="cv-item">
+                <div class="cv-title">Trade Advisor in Industry and Cleantech</div>
+                <div class="cv-institution">Business France, French Embassy in Cairo, Egypt</div>
+                <div class="cv-date">2022–2024</div>
+                <p>Conducted sectoral economic analysis, advised French companies on market entry across the MENA region, and organized high-level trade missions with government and private-sector stakeholders.</p>
+            </div>
+            <div class="cv-item">
+                <div class="cv-title">Chief Education Advisor</div>
+                <div class="cv-institution">French High School Charles de Gaulle, Damascus, Syria</div>
+                <div class="cv-date">2019–2020</div>
+                <p>Managed academic operations, coordinated institutional activities, and implemented educational policies while operating in a complex geopolitical environment.</p>
+            </div>
+            <div class="cv-item">
+                <div class="cv-title">Trade Officer</div>
+                <div class="cv-institution">Business France, French Embassy in Doha, Qatar</div>
+                <div class="cv-date">2018–2019</div>
+                <p>Conducted market analysis, advised French companies on business opportunities in Qatar, and supported high-level France-Qatar economic partnerships.</p>
             </div>
         </div>
     </div>
@@ -1273,12 +1245,10 @@
             'home': 'Nathalie El-Bazzal · International Trade & Geoeconomics',
             'research': 'Research · Nathalie El-Bazzal',
             'grant': 'Research Grant · Nathalie El-Bazzal',
-            'academic': 'Academic Experience · Nathalie El-Bazzal',
-            'professional': 'Professional Experience · Nathalie El-Bazzal',
-            'education': 'Education · Nathalie El-Bazzal',
+            'teaching': 'Teaching · Nathalie El-Bazzal',
             'conferences': 'Conferences · Nathalie El-Bazzal',
             'talks': 'Talks · Nathalie El-Bazzal',
-            'skills': 'Skills · Nathalie El-Bazzal',
+            'cv': 'CV · Nathalie El-Bazzal',
             'contact': 'Contact · Nathalie El-Bazzal'
         };
         document.title = pageNames[pageId] || 'Nathalie El-Bazzal';
