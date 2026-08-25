@@ -9,12 +9,12 @@
     <title>Nathalie El-Bazzal</title>
     <meta name="description" content="Nathalie El-Bazzal, PhD Candidate in Economics, researcher at the Paris School of Economics, specialist in international trade, geoeconomics, and geopolitical risk." />
     
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <style>
-        
+        /* ==================== BASE (Style Yanis) ==================== */
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             margin: 0;
@@ -127,6 +127,8 @@
             height: 90px;
             border-radius: 50%;
             object-fit: cover;
+            object-position: center 25%; /* Descend le cadrage vers le bas */
+            transform: scale(1.05); /* Dé-zoome légèrement */
         }
         .profile-info h1 {
             font-size: 1.6rem;
@@ -403,7 +405,7 @@
         </div>
     </div>
 
-    <!-- ==================== SECTION TEACHING ==================== -->
+    <!-- ==================== SECTION TEACHING (TOUT LE CONTENU) ==================== -->
     <div class="section" id="teaching">
         <div class="section-title">Teaching</div>
         <h3>Academic Experience</h3>
@@ -427,7 +429,10 @@
                 <div class="date">2023 - Present</div>
             </div>
             <div class="institution">IRIS Sup'</div>
-            <div class="desc">Supervision of Master's theses and applied research projects in geopolitics, international trade, development, and public policy.</div>
+            <ul>
+                <li>Supervise Master's theses in geopolitics, international trade, and development.</li>
+                <li>Supervise professional group reports on public-private partnerships, economic diversification, labor markets, and geopolitical disruptions.</li>
+            </ul>
         </div>
         
         <div class="item">
@@ -438,10 +443,15 @@
             <div class="institution">University Paris 1 Panthéon-Sorbonne</div>
             
             <div class="desc" style="margin-top: 1rem; font-weight: 600; color: #222;">Introduction to Econometrics — Bachelor in Economics (3rd Year)</div>
-            <div class="desc">Professor: Ibrahim Ahamada · Spring 2026. Course providing in-depth exploration of theoretical foundations and practical tools of econometric analysis.</div>
+            <div class="desc">Professor: Ibrahim Ahamada · Spring 2026. This course provides an in-depth exploration of the theoretical foundations and practical tools of econometric analysis, from model specification to empirical validation.</div>
+            <div class="topic-tags" style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                <span style="background: #f1f5f9; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem;">Linear Algebra</span>
+                <span style="background: #f1f5f9; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem;">Probability</span>
+                <span style="background: #f1f5f9; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem;">OLS &amp; Multiple Regression</span>
+            </div>
             
             <div class="desc" style="margin-top: 1rem; font-weight: 600; color: #222;">History of Economic Thought — Bachelor in Economics (3rd Year)</div>
-            <div class="desc">Professors: Goulven Rubin, Jean Dellemotte &amp; Laurie Breban · Fall 2025. Critical examination of the evolution of economic thought.</div>
+            <div class="desc">Professors: Goulven Rubin, Jean Dellemotte &amp; Laurie Breban · Fall 2025. A critical examination of the evolution of economic thought.</div>
         </div>
     </div>
 
@@ -493,7 +503,7 @@
         </div>
     </div>
 
-    <!-- ==================== SECTION TALKS ==================== -->
+    <!-- ==================== SECTION TALKS (TOUT LE CONTENU) ==================== -->
     <div class="section" id="talks">
         <div class="section-title">Invited Talks &amp; Media</div>
 
@@ -503,6 +513,7 @@
                 <div class="date">May 2026</div>
             </div>
             <div class="desc">HEIP · The School of International and Political Studies</div>
+            <div class="desc">Master's Program in International Relations and Cooperation, Specialization in Economic Diplomacy.</div>
         </div>
 
         <div class="item">
@@ -511,6 +522,7 @@
                 <div class="date">February 2026</div>
             </div>
             <div class="desc">ESCP International Politics Society</div>
+            <div class="desc">Discussion on corporate diplomacy, state-led development models, business strategy, and geopolitics in the MENA region.</div>
         </div>
     </div>
 
