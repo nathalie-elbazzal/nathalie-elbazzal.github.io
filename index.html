@@ -410,6 +410,107 @@
             border-top: 1px solid #eaeaea;
             padding-top: 1.5rem;
         }
+
+        /* ==================== MOBILE ==================== */
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        padding: 1.5rem;
+    }
+
+    .sidebar-profile {
+        margin-bottom: 1.5rem;
+    }
+
+    .sidebar nav {
+        gap: 0.15rem;
+    }
+
+    .sidebar nav a {
+        padding: 0.55rem 0.8rem;
+    }
+
+    .sidebar .socials {
+        margin-top: 1.5rem;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 2rem 1.3rem;
+        display: block;
+        min-height: auto;
+    }
+
+    .content-column {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .home-top {
+        display: grid;
+        grid-template-columns: 75px 1fr;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .profile-photo {
+        width: 75px;
+        height: 75px;
+    }
+
+    .profile-text h1 {
+        font-size: 1.35rem;
+    }
+
+    .profile-text p {
+        font-size: 0.85rem;
+    }
+
+    .interests-side {
+        grid-column: 1 / -1;
+        width: 100%;
+        box-sizing: border-box;
+        border-left: none;
+        border-top: 1px solid #eaeaea;
+        padding-left: 0;
+        padding-top: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    #home > p {
+        text-align: left;
+        font-size: 0.88rem;
+        line-height: 1.7;
+    }
+
+    .logos-home {
+        gap: 1.5rem;
+    }
+
+    .logos-home img {
+        max-height: 30px;
+    }
+
+    .item-header {
+        gap: 0.5rem;
+    }
+
+    .talk-header {
+        flex-wrap: wrap;
+    }
+
+    .talk-date {
+        margin-left: 38px;
+    }
+}
     </style>
 </head>
 <body>
