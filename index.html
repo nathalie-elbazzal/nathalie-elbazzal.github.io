@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <style>
-        
+        /* ==================== BASE ==================== */
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             margin: 0;
@@ -39,71 +39,36 @@
             text-decoration-color: #222;
         }
 
-        /* ==================== BOUTON MENU (3 points) ==================== */
-        .menu-btn {
-            position: fixed;
-            top: 1rem;
-            left: 1rem;
-            width: 40px;
-            height: 40px;
-            background: #222;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-            transition: background 0.2s;
-        }
-        .menu-btn:hover {
-            background: #444;
-        }
-
-        /* ==================== MENU LATÉRAL FONCÉ (rétractable) ==================== */
+        /* ==================== MENU LATÉRAL FIXE (TOUJOURS OUVERT) ==================== */
         .sidebar {
             position: fixed;
             top: 0;
-            left: -260px; /* Caché par défaut */
+            left: 0;
             height: 100vh;
-            width: 240px;
-            background: #1e1e1e;
-            padding: 3rem 1.5rem;
+            width: 230px;
+            background: #1e1e1e; /* Fond gris foncé */
+            padding: 2.5rem 1.5rem;
             overflow-y: auto;
-            z-index: 999;
+            z-index: 10;
             display: flex;
             flex-direction: column;
-            transition: left 0.3s ease;
-            box-shadow: 4px 0 20px rgba(0,0,0,0.3);
-        }
-        
-        .sidebar.open {
-            left: 0;
-        }
-
-        /* Bouton fermer (X) à l'intérieur du menu */
-        .sidebar .close-btn {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: none;
-            border: none;
-            color: #aaa;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        .sidebar .close-btn:hover {
-            color: white;
         }
 
         .sidebar-profile {
-            text-align: left;
-            margin-bottom: 3rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .sidebar-profile img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 25%;
+            border: 3px solid #444;
+            margin-bottom: 1rem;
         }
         .sidebar-profile .name {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: #f5f5f5;
         }
@@ -123,7 +88,7 @@
             color: #ccc;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.85rem;
+            font-size: 0.85rem; /* Petit texte comme Thomas */
             border-radius: 6px;
             transition: background 0.2s, color 0.2s;
             display: flex;
@@ -171,26 +136,12 @@
             color: #fff;
         }
 
-        /* Overlay sombre quand le menu est ouvert */
-        .overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.4);
-            z-index: 998;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s, visibility 0.3s;
-        }
-        .overlay.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
         /* ==================== CONTENU PRINCIPAL ==================== */
         .main-content {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 2rem 3rem 3rem 3rem;
+            margin-left: 250px;
+            padding: 3rem 3rem;
+            min-height: 100vh;
+            max-width: 900px;
         }
 
         /* ==================== GESTION DES SECTIONS ==================== */
@@ -206,20 +157,18 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* ==================== PROFIL (Accueil) ==================== */
-        .profile-header {
+        /* ==================== ACCUEIL : PROFIL + INTERESTS ==================== */
+        .home-top {
             display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            margin-top: 3rem;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 2rem;
             margin-bottom: 2.5rem;
         }
-        .profile-pic {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: center 25%;
+        .profile-info {
+            flex: 1;
+            min-width: 300px;
         }
         .profile-info h1 {
             font-size: 1.8rem;
@@ -233,7 +182,8 @@
             font-size: 1rem;
         }
         .contact-btn {
-            margin-left: auto;
+            display: inline-block;
+            margin-top: 1rem;
             padding: 0.5rem 1.2rem;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -248,7 +198,33 @@
             text-decoration: none;
         }
 
-        /* ==================== TYPOGRAPHIE ==================== */
+        /* Boîtes Interests à droite */
+        .interests-box {
+            width: 200px;
+            flex-shrink: 0;
+        }
+        .interests-box .title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 1rem;
+        }
+        .interest-tags {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .interest-tags span {
+            background: #f5f5f5;
+            border: 1px solid #eaeaea;
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.8rem; /* Plus petit */
+            color: #444;
+            font-weight: 500;
+        }
+
+        /* ==================== TYPOGRAPHIE & CONTENU ==================== */
         p {
             margin: 0 0 1.2rem 0;
         }
@@ -371,16 +347,10 @@
 </head>
 <body>
 
-<!-- ==================== BOUTON MENU (3 points) ==================== -->
-<button class="menu-btn" id="openMenuBtn" aria-label="Menu">
-    <i class="fa-solid fa-bars"></i>
-</button>
-
-<!-- ==================== MENU LATÉRAL ==================== -->
+<!-- ==================== MENU LATÉRAL FIXE ==================== -->
 <aside class="sidebar" id="sidebar">
-    <button class="close-btn" id="closeMenuBtn"><i class="fa-solid fa-xmark"></i></button>
-    
     <div class="sidebar-profile">
+        <img src="photo.jpg" alt="Nathalie El-Bazzal">
         <div class="name">Nathalie El-Bazzal</div>
         <div class="role">PhD Candidate · Economics</div>
     </div>
@@ -403,22 +373,32 @@
     </div>
 </aside>
 
-<!-- Overlay pour fermer le menu en cliquant à côté -->
-<div class="overlay" id="overlay"></div>
-
 <!-- ==================== CONTENU PRINCIPAL ==================== -->
 <div class="main-content">
 
     <!-- ==================== SECTION HOME ==================== -->
     <div class="section active" id="home">
-        <div class="profile-header">
-            <img src="photo.jpg" alt="Nathalie El-Bazzal" class="profile-pic">
+        
+        <!-- Bloc du haut : Profil à gauche, Interests à droite -->
+        <div class="home-top">
             <div class="profile-info">
                 <h1>Nathalie El-Bazzal</h1>
                 <p>Ph.D. Candidate in Economics</p>
                 <p style="font-size: 0.9rem; color: #555;">University of Paris 8 · Research Affiliate at the Paris School of Economics</p>
+                <a href="mailto:nathalie.elbazzal@psemail.eu" class="contact-btn">Contact</a>
             </div>
-            <a href="mailto:nathalie.elbazzal@psemail.eu" class="contact-btn">Contact</a>
+
+            <div class="interests-box">
+                <div class="title">Interests</div>
+                <div class="interest-tags">
+                    <span>Artificial Intelligence</span>
+                    <span>International Trade</span>
+                    <span>Geoeconomics</span>
+                    <span>Political Economy</span>
+                    <span>Global Value Chains</span>
+                    <span>Maritime Trade</span>
+                </div>
+            </div>
         </div>
 
         <p>
@@ -492,7 +472,7 @@
         </div>
     </div>
 
-    <!-- ==================== SECTION TEACHING (DÉTAILS COMPLETS AVEC LOGOS) ==================== -->
+    <!-- ==================== SECTION TEACHING ==================== -->
     <div class="section" id="teaching">
         <div class="section-title">Teaching</div>
         <h3>Academic Experience</h3>
@@ -553,7 +533,7 @@
         </div>
     </div>
 
-    <!-- ==================== SECTION CONFERENCES (LISTE TYPE CV) ==================== -->
+    <!-- ==================== SECTION CONFERENCES (Liste type CV) ==================== -->
     <div class="section" id="conferences">
         <div class="section-title">Conferences &amp; Presentations</div>
 
@@ -600,7 +580,7 @@
         </div>
     </div>
 
-    <!-- ==================== SECTION CV (AVEC PIÈCE JOINTE) ==================== -->
+    <!-- ==================== SECTION CV ==================== -->
     <div class="section" id="cv">
         <div class="section-title">Curriculum Vitae</div>
 
@@ -680,27 +660,7 @@
 </div>
 
 <script>
-    // Gestion du menu rétractable
-    const openMenuBtn = document.getElementById('openMenuBtn');
-    const closeMenuBtn = document.getElementById('closeMenuBtn');
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-
-    function openMenu() {
-        sidebar.classList.add('open');
-        overlay.classList.add('show');
-    }
-
-    function closeMenu() {
-        sidebar.classList.remove('open');
-        overlay.classList.remove('show');
-    }
-
-    openMenuBtn.addEventListener('click', openMenu);
-    closeMenuBtn.addEventListener('click', closeMenu);
-    overlay.addEventListener('click', closeMenu);
-
-    // Gestion des sections
+    // Navigation entre les sections (toujours ouverte)
     function showSection(sectionId) {
         const sections = document.querySelectorAll('.section');
         sections.forEach(sec => sec.classList.remove('active'));
@@ -714,3 +674,10 @@
         navLinks.forEach(link => link.classList.remove('active-link'));
         const activeNav = document.getElementById('nav-' + sectionId);
         if (activeNav) activeNav.classList.add('active-link');
+
+        window.scrollTo(0, 0);
+    }
+</script>
+
+</body>
+</html>
