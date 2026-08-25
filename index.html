@@ -947,11 +947,26 @@
 
         const navLinks = document.querySelectorAll('.sidebar nav a');
         navLinks.forEach(link => link.classList.remove('active-link'));
+
         const activeNav = document.getElementById('nav-' + sectionId);
-        if (activeNav) activeNav.classList.add('active-link');
+        if (activeNav) {
+            activeNav.classList.add('active-link');
+        }
 
         window.scrollTo(0, 0);
     }
+
+    function toggleMobileMenu() {
+        document.getElementById('sidebar').classList.toggle('mobile-open');
+    }
+
+    document.querySelectorAll('.sidebar nav a').forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                document.getElementById('sidebar').classList.remove('mobile-open');
+            }
+        });
+    });
 </script>
 
 </body>
