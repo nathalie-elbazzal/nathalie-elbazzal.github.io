@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <style>
-        /* ==================== BASE (Style Yanis) ==================== */
+        /* ==================== BASE ==================== */
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             margin: 0;
@@ -27,16 +27,13 @@
             font-size: 0.95rem;
         }
 
+        /* LIENS : PAS DE SOULIGNEMENT SAUF SI C'EST UN VRAI LIEN EXTERNE */
         a {
             color: #222;
-            text-decoration: underline;
-            text-decoration-thickness: 1px;
-            text-underline-offset: 3px;
-            text-decoration-color: #ccc;
-            transition: text-decoration-color 0.2s;
+            text-decoration: none;
         }
         a:hover {
-            text-decoration-color: #222;
+            text-decoration: underline;
         }
 
         /* ==================== MENU LATÉRAL FIXE ==================== */
@@ -127,7 +124,7 @@
             color: #fff;
         }
 
-        /* ==================== CONTENU PRINCIPAL ==================== */
+        /* ==================== CONTENU PRINCIPAL (COLONNE ÉTROITE CENTRÉE) ==================== */
         .main-content {
             margin-left: 240px;
             padding: 4rem 2rem;
@@ -137,9 +134,8 @@
             min-height: 100vh;
         }
 
-        /* Largeur du texte réduite, centré, sans cadre */
         .content-column {
-            max-width: 640px;
+            max-width: 620px; /* Largeur réduite pour être vraiment au milieu */
             width: 100%;
         }
 
@@ -156,12 +152,13 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* ==================== PAGE HOME ==================== */
+        /* ==================== PAGE HOME (Aligné à gauche, pas trop large) ==================== */
         .home-top {
             display: flex;
             align-items: flex-start;
             gap: 1.5rem;
             margin-bottom: 2rem;
+            text-align: left;
         }
         .profile-photo {
             width: 90px;
@@ -184,8 +181,17 @@
             color: #555;
             margin: 0.2rem 0 0 0;
         }
+        .profile-text .contact-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.4rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            text-decoration: none;
+        }
 
-        /* Interests à droite, en rectangles réduits */
+        /* Interests à droite en petits rectangles */
         .interests-side {
             flex-shrink: 0;
             width: 150px;
@@ -215,6 +221,7 @@
             margin: 0 0 1.2rem 0;
             font-size: 0.95rem;
             line-height: 1.7;
+            color: #333;
         }
         
         .section-title {
@@ -362,20 +369,17 @@
 
 <!-- ==================== CONTENU PRINCIPAL ==================== -->
 <div class="main-content">
-    
-    <!-- Colonne de texte étroite et centrée -->
     <div class="content-column">
 
-        <!-- ==================== SECTION HOME ==================== -->
+        <!-- ==================== SECTION HOME (Bien au centre, largeur réduite) ==================== -->
         <div class="section active" id="home">
-            
-            <!-- Profil : Photo + Infos + Interests -->
             <div class="home-top">
                 <img src="photo.jpg" alt="Nathalie El-Bazzal" class="profile-photo">
                 <div class="profile-text">
                     <h1>Nathalie El-Bazzal</h1>
                     <p>Ph.D. Candidate in Economics</p>
                     <p style="font-size: 0.85rem;">University of Paris 8 · Research Affiliate at the Paris School of Economics</p>
+                    <a href="mailto:nathalie.elbazzal@psemail.eu" class="contact-link">Contact</a>
                 </div>
 
                 <div class="interests-side">
@@ -458,7 +462,7 @@
             </div>
         </div>
 
-        <!-- ==================== SECTION TEACHING ==================== -->
+        <!-- ==================== SECTION TEACHING (Détails complets remis) ==================== -->
         <div class="section" id="teaching">
             <div class="section-title">Teaching</div>
             <h3>Academic Experience</h3>
@@ -497,33 +501,44 @@
                 
                 <div class="desc" style="margin-top: 1rem; font-weight: 600; color: #222;">Introduction to Econometrics — Bachelor in Economics (3rd Year)</div>
                 <div class="desc">Professor: Ibrahim Ahamada · Spring 2026. This course provides an in-depth exploration of the theoretical foundations and practical tools of econometric analysis, from model specification to empirical validation.</div>
+                <div style="margin-top: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                    <span style="background: #f1f5f9; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem;">Linear Algebra</span>
+                    <span style="background: #f1f5f9; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem;">Probability</span>
+                    <span style="background: #f1f5f9; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem;">OLS &amp; Multiple Regression</span>
+                    <span style="background: #f1f5f9; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem;">Hypothesis Testing</span>
+                    <span style="background: #f1f5f9; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem;">Model Diagnostics</span>
+                    <span style="background: #f1f5f9; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem;">Multicollinearity &amp; Autocorrelation</span>
+                </div>
                 
-                <div class="desc" style="margin-top: 1rem; font-weight: 600; color: #222;">History of Economic Thought — Bachelor in Economics (3rd Year)</div>
-                <div class="desc">Professors: Goulven Rubin, Jean Dellemotte &amp; Laurie Breban · Fall 2025. A critical examination of the evolution of economic thought.</div>
+                <div class="desc" style="margin-top: 1.5rem; font-weight: 600; color: #222;">History of Economic Thought — Bachelor in Economics (3rd Year)</div>
+                <div class="desc">Professors: Goulven Rubin, Jean Dellemotte &amp; Laurie Breban · Fall 2025. A critical examination of the evolution of economic thought, tracing the intellectual developments from classical economics to the marginalist and institutionalist traditions.</div>
+                <div style="margin-top: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                    <span style="background: #f1f5f9; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem;">Classical Political Economy</span>
+                    <span style="background: #f1f5f9; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem;">Marxian Critique</span>
+                    <span style="background: #f1f5f9; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem;">Marginalist Revolution</span>
+                    <span style="background: #f1f5f9; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem;">Institutionalist Economics</span>
+                    <span style="background: #f1f5f9; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem;">Entrepreneurship &amp; Innovation</span>
+                    <span style="background: #f1f5f9; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem;">Market &amp; Society</span>
+                </div>
             </div>
         </div>
 
-        <!-- ==================== SECTION CONFERENCES ==================== -->
+        <!-- ==================== SECTION CONFERENCES (Sans liens soulignés) ==================== -->
         <div class="section" id="conferences">
             <div class="section-title">Conferences &amp; Presentations</div>
 
             <div class="cv-entry">
-                <strong style="color: #222;">2026:</strong> 
-                <a href="#" target="_blank">Sardinian Empirical Trade Conference (FREIT)</a> (Alghero, Italy); 
-                <a href="#" target="_blank">European Trade Study Group Annual Conference</a> (Exeter, United Kingdom); 
-                <a href="#" target="_blank">World Trade Dialogue</a> (Hamburg, Germany).
+                <strong>2026:</strong> Sardinian Empirical Trade Conference (FREIT) (Alghero, Italy); European Trade Study Group Annual Conference (Exeter, United Kingdom); World Trade Dialogue (Hamburg, Germany).
             </div>
 
             <h3>Discussant Roles</h3>
             <div class="cv-entry">
-                <strong style="color: #222;">2026:</strong> 
-                Discussant for <a href="#" target="_blank">Geopolitical Risk and Foreign Dependence in Global Shipping</a>, by <a href="https://sfuchs-de.github.io" target="_blank">Simon Fuchs</a> (Federal Reserve Bank of Atlanta), <a href="https://www.fernandoleibovici.com" target="_blank">Fernando Leibovici</a> (Federal Reserve Bank of St. Louis), and <a href="https://sites.google.com/site/wongwoanfoong/home" target="_blank">Woan Foong Wong</a> (University of Oregon), at the <a href="#" target="_blank">World Trade Dialogue</a>.
+                <strong>2026:</strong> Discussant for <a href="https://sfuchs-de.github.io" target="_blank">Geopolitical Risk and Foreign Dependence in Global Shipping</a>, by <a href="https://www.fernandoleibovici.com" target="_blank">Fernando Leibovici</a> (Federal Reserve Bank of St. Louis), and <a href="https://sites.google.com/site/wongwoanfoong/home" target="_blank">Woan Foong Wong</a> (University of Oregon), at the World Trade Dialogue.
             </div>
 
             <h3>Poster Presentations</h3>
             <div class="cv-entry">
-                <strong style="color: #222;">2026:</strong> 
-                <a href="#" target="_blank">Measuring Bilateral Geopolitical Tensions</a>, Inaugural Conference of the Economic Data Science Society (EDSS), Banque de France, Paris (July 2026). With <a href="https://www.banque-france.fr/fr/jean-charles-bricongne" target="_blank">Jean-Charles Bricongne</a>, <a href="https://bchaulvet.github.io" target="_blank">Benoît Chaulvet</a>, <a href="https://www.thomas-renault.com" target="_blank">Thomas Renault</a>, and <a href="https://www.jamelsaadaoui.com" target="_blank">Jamel Saadaoui</a>.
+                <strong>2026:</strong> Measuring Bilateral Geopolitical Tensions, Inaugural Conference of the Economic Data Science Society (EDSS), Banque de France, Paris (July 2026). With <a href="https://www.banque-france.fr/fr/jean-charles-bricongne" target="_blank">Jean-Charles Bricongne</a>, <a href="https://bchaulvet.github.io" target="_blank">Benoît Chaulvet</a>, <a href="https://www.thomas-renault.com" target="_blank">Thomas Renault</a>, and <a href="https://www.jamelsaadaoui.com" target="_blank">Jamel Saadaoui</a>.
             </div>
         </div>
 
@@ -614,12 +629,15 @@
             </div>
         </div>
 
-        <!-- ==================== SECTION CONTACT ==================== -->
+        <!-- ==================== SECTION CONTACT (Adresse corrigée en cascade) ==================== -->
         <div class="section" id="contact">
             <div class="section-title">Contact</div>
             <div class="desc">
-                Email: <a href="mailto:nathalie.elbazzal@psemail.eu">nathalie.elbazzal@psemail.eu</a><br><br>
-                Office: Paris School of Economics, Office R4-66, 48 Boulevard Jourdan, 75014 Paris, France.
+                <a href="mailto:nathalie.elbazzal@psemail.eu">nathalie.elbazzal@psemail.eu</a><br><br>
+                Paris School of Economics<br>
+                Office<br>
+                48 Boulevard Jourdan<br>
+                75014 Paris, France
             </div>
         </div>
 
@@ -631,7 +649,6 @@
 </div>
 
 <script>
-    // Navigation entre les sections
     function showSection(sectionId) {
         const sections = document.querySelectorAll('.section');
         sections.forEach(sec => sec.classList.remove('active'));
