@@ -9,18 +9,12 @@
     <title>Nathalie El-Bazzal</title>
     <meta name="description" content="Nathalie El-Bazzal, PhD Candidate in Economics, researcher at the Paris School of Economics, specialist in international trade, geoeconomics, and geopolitical risk." />
     
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://nathalie-elbazzal.github.io/" />
-    <meta property="og:title" content="Nathalie El-Bazzal" />
-    <meta property="og:description" content="PhD Candidate in Economics researching international trade, geoeconomics, and geopolitical risk." />
-    <meta property="og:image" content="https://nathalie-elbazzal.github.io/social-preview-v2.png" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <style>
-        /* ==================== STYLE EXACT DE YANIS (POLICE PLUS PETITE) ==================== */
+        
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             margin: 0;
@@ -28,7 +22,7 @@
             background-color: #ffffff;
             color: #222;
             line-height: 1.6;
-            font-size: 1rem; /* Taille de police standard, comme Yanis */
+            font-size: 1rem;
         }
 
         a {
@@ -43,30 +37,85 @@
             text-decoration-color: #222;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-        }
-
-        /* Menu de navigation en haut (comme Yanis) */
-        .navbar {
+        /* ==================== MENU LATÉRAL GAUCHE ==================== */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 220px;
+            background: #fdfdfd;
+            border-right: 1px solid #eaeaea;
+            padding: 2.5rem 1.5rem;
+            overflow-y: auto;
+            z-index: 10;
             display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin-bottom: 3.5rem;
-            font-weight: 700;
+            flex-direction: column;
+        }
+        .sidebar .brand {
             font-size: 1.1rem;
-        }
-        .navbar a {
+            font-weight: 700;
             color: #222;
-            text-decoration: none;
+            margin-bottom: 0.2rem;
         }
-        .navbar a:hover {
-            opacity: 0.7;
+        .sidebar .sub-brand {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 2.5rem;
+        }
+        .sidebar nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+        .sidebar nav a {
+            padding: 0.45rem 0.8rem;
+            color: #555;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .sidebar nav a:hover {
+            background: #f0f0f0;
+            color: #222;
+        }
+        .sidebar nav a.active-link {
+            background: #f0f0f0;
+            color: #222;
+            font-weight: 700;
+        }
+        .sidebar .footer-text {
+            margin-top: auto;
+            font-size: 0.75rem;
+            color: #aaa;
+            padding-top: 1rem;
+            border-top: 1px solid #eaeaea;
         }
 
-        /* En-tête profil (Photo ronde + bouton Contact) */
+        /* ==================== CONTENU PRINCIPAL ==================== */
+        .main-content {
+            margin-left: 240px;
+            padding: 3rem 3rem 3rem 3rem;
+            min-height: 100vh;
+            max-width: 850px;
+        }
+
+        /* ==================== GESTION DES SECTIONS ==================== */
+        .section {
+            display: none;
+            animation: fadeIn 0.2s ease;
+        }
+        .section.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ==================== PROFIL (Accueil) ==================== */
         .profile-header {
             display: flex;
             align-items: center;
@@ -106,20 +155,7 @@
             text-decoration: none;
         }
 
-        /* Gestion des sections cachées/affichées */
-        .section {
-            display: none;
-        }
-        .section.active {
-            display: block;
-            animation: fadeIn 0.2s ease;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(5px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Textes et titres de sections */
+        /* ==================== TYPOGRAPHIE & CONTENU ==================== */
         p {
             margin: 0 0 1.2rem 0;
         }
@@ -183,7 +219,7 @@
             margin-bottom: 0.3rem;
         }
 
-        /* Logos présents partout dans les sections */
+        /* ==================== LOGOS ==================== */
         .logo {
             height: 35px;
             width: auto;
@@ -205,31 +241,85 @@
             width: auto;
         }
 
+        /* ==================== BOUTON CV PDF ==================== */
+        .cv-pdf-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+        .cv-pdf-link:hover {
+            background-color: #444;
+            text-decoration: none;
+        }
+
         footer {
             text-align: center;
             color: #aaa;
             font-size: 0.85rem;
-            margin-top: 5rem;
-            border-top: 1px solid #eee;
+            margin-top: 4rem;
+            border-top: 1px solid #eaeaea;
             padding-top: 2rem;
         }
+
+        /* ==================== RESPONSIVE (MOBILE) ==================== */
+        @media (max-width: 820px) {
+            .sidebar {
+                display: none;
+            }
+            .main-content {
+                margin-left: 0;
+                padding: 2rem 1.5rem;
+            }
+            .navbar-mobile {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                margin-bottom: 2rem;
+                font-weight: 700;
+            }
+            .navbar-mobile a {
+                text-decoration: none;
+                color: #222;
+            }
+        }
+        .navbar-mobile { display: none; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    
-    <!-- ==================== MENU DU HAUT ==================== -->
-    <nav class="navbar">
-        <a href="#" onclick="showSection('home')">Home</a>
-        <a href="#" onclick="showSection('research')">Research</a>
-        <a href="#" onclick="showSection('grant')">Grant</a>
-        <a href="#" onclick="showSection('teaching')">Teaching</a>
-        <a href="#" onclick="showSection('conferences')">Conferences</a>
-        <a href="#" onclick="showSection('talks')">Talks</a>
-        <a href="#" onclick="showSection('cv')">CV</a>
-        <a href="#" onclick="showSection('contact')">Contact</a>
+<!-- ==================== MENU LATÉRAL ==================== -->
+<aside class="sidebar" id="sidebar">
+    <div class="brand">N. El-Bazzal</div>
+    <div class="sub-brand">PhD Candidate · Economics</div>
+    <nav>
+        <a href="#" onclick="showSection('home')" class="active-link" id="nav-home">Home</a>
+        <a href="#" onclick="showSection('research')" id="nav-research">Research</a>
+        <a href="#" onclick="showSection('grant')" id="nav-grant">Grant</a>
+        <a href="#" onclick="showSection('teaching')" id="nav-teaching">Teaching</a>
+        <a href="#" onclick="showSection('conferences')" id="nav-conferences">Conferences</a>
+        <a href="#" onclick="showSection('talks')" id="nav-talks">Talks</a>
+        <a href="#" onclick="showSection('cv')" id="nav-cv">CV</a>
+        <a href="#" onclick="showSection('contact')" id="nav-contact">Contact</a>
     </nav>
+    <div class="footer-text">© 2026 Nathalie El-Bazzal</div>
+</aside>
+
+<!-- Menu mobile (si téléphone) -->
+<div class="navbar-mobile" style="padding: 1rem;">
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('research')">Research</a>
+    <a href="#" onclick="showSection('cv')">CV</a>
+</div>
+
+<!-- ==================== CONTENU PRINCIPAL ==================== -->
+<div class="main-content">
 
     <!-- ==================== SECTION HOME ==================== -->
     <div class="section active" id="home">
@@ -313,7 +403,7 @@
         </div>
     </div>
 
-    <!-- ==================== SECTION TEACHING (AVEC LOGOS) ==================== -->
+    <!-- ==================== SECTION TEACHING ==================== -->
     <div class="section" id="teaching">
         <div class="section-title">Teaching</div>
         <h3>Academic Experience</h3>
@@ -403,7 +493,7 @@
         </div>
     </div>
 
-    <!-- ==================== SECTION TALKS (AVEC LOGOS) ==================== -->
+    <!-- ==================== SECTION TALKS ==================== -->
     <div class="section" id="talks">
         <div class="section-title">Invited Talks &amp; Media</div>
 
@@ -424,110 +514,93 @@
         </div>
     </div>
 
-    <!-- ==================== SECTION CV ==================== -->
+    <!-- ==================== SECTION CV (AVEC PIÈCE JOINTE) ==================== -->
     <div class="section" id="cv">
         <div class="section-title">Curriculum Vitae</div>
 
-        <h3>Education</h3>
-        <div class="item">
-            <div class="item-header">
-                <div class="item-title">PhD Candidate in Economics</div>
-                <div class="date">2026–Present</div>
+        <a href="cv.pdf" target="_blank" rel="noopener" class="cv-pdf-link">📄 Download full CV (PDF)</a>
+
+        <!-- Education -->
+        <div class="cv-section" style="margin-top: 1.5rem;">
+            <h3>Education</h3>
+            <div class="cv-item" style="padding: 0.4rem 0;">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline;">
+                    <span style="font-weight: 600; font-size: 0.92rem; color: #1a1a1a;">PhD Candidate in Economics</span>
+                    <span style="font-size: 0.78rem; color: #777;">2026–Present</span>
+                </div>
+                <div style="font-size: 0.85rem; color: #555;">University of Paris 8</div>
+                <div style="font-size: 0.82rem; color: #666;">Trade Shocks and Geoeconomic Fragmentation · Supervisor: Jamel Saadaoui</div>
             </div>
-            <div class="institution">University of Paris 8</div>
-            <div class="desc">Trade Shocks and Geoeconomic Fragmentation · Supervisor: Jamel Saadaoui</div>
+            <div class="cv-item" style="padding: 0.4rem 0;">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline;">
+                    <span style="font-weight: 600; font-size: 0.92rem; color: #1a1a1a;">Pre-Doctoral Studies in International Economics</span>
+                    <span style="font-size: 0.78rem; color: #777;">2024–2026</span>
+                </div>
+                <div style="font-size: 0.85rem; color: #555;">University Paris 1 Panthéon-Sorbonne</div>
+            </div>
+            <div class="cv-item" style="padding: 0.4rem 0;">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline;">
+                    <span style="font-weight: 600; font-size: 0.92rem; color: #1a1a1a;">MSc in Financial Management</span>
+                    <span style="font-size: 0.78rem; color: #777;">2020–2021</span>
+                </div>
+                <div style="font-size: 0.85rem; color: #555;">ESCP Business School</div>
+                <div style="font-size: 0.82rem; color: #666;"><strong>Master's Thesis:</strong> Foreign Direct Investment in a Conflict Country: The Syrian Case</div>
+            </div>
+            <div class="cv-item" style="padding: 0.4rem 0;">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline;">
+                    <span style="font-weight: 600; font-size: 0.92rem; color: #1a1a1a;">Master's in International Relations - Middle Eastern and Mediterranean Specialization</span>
+                    <span style="font-size: 0.78rem; color: #777;">2018–2020</span>
+                </div>
+                <div style="font-size: 0.85rem; color: #555;">Sciences Po Grenoble</div>
+                <div style="font-size: 0.82rem; color: #666;"><strong>Master's Thesis:</strong> Economic Recovery in Syria under Political Instability</div>
+            </div>
+            <div class="cv-item" style="padding: 0.4rem 0; border-bottom: none;">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline;">
+                    <span style="font-weight: 600; font-size: 0.92rem; color: #1a1a1a;">Bachelor's in Political Science</span>
+                    <span style="font-size: 0.78rem; color: #777;">2014–2018</span>
+                </div>
+                <div style="font-size: 0.85rem; color: #555;">University of Lille &amp; Saint Joseph University of Beirut</div>
+            </div>
         </div>
 
-        <div class="item">
-            <div class="item-header">
-                <div class="item-title">Pre-Doctoral Studies in International Economics</div>
-                <div class="date">2024–2026</div>
+        <!-- Professional Experience -->
+        <div class="cv-section">
+            <h3>Professional Experience</h3>
+            <div class="cv-item" style="padding: 0.4rem 0;">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline;">
+                    <span style="font-weight: 600; font-size: 0.92rem; color: #1a1a1a;">Trade Advisor in Industry and Cleantech</span>
+                    <span style="font-size: 0.78rem; color: #777;">2022–2024</span>
+                </div>
+                <div style="font-size: 0.85rem; color: #555;">Business France, French Embassy in Cairo, Egypt (also covered Jordan)</div>
             </div>
-            <div class="institution">University Paris 1 Panthéon-Sorbonne</div>
+            <div class="cv-item" style="padding: 0.4rem 0;">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline;">
+                    <span style="font-weight: 600; font-size: 0.92rem; color: #1a1a1a;">Chief Education Advisor</span>
+                    <span style="font-size: 0.78rem; color: #777;">2019–2020</span>
+                </div>
+                <div style="font-size: 0.85rem; color: #555;">French High School Charles de Gaulle, Damascus, Syria</div>
+            </div>
+            <div class="cv-item" style="padding: 0.4rem 0; border-bottom: none;">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline;">
+                    <span style="font-weight: 600; font-size: 0.92rem; color: #1a1a1a;">Trade Officer</span>
+                    <span style="font-size: 0.78rem; color: #777;">2018–2019</span>
+                </div>
+                <div style="font-size: 0.85rem; color: #555;">Business France, French Embassy in Doha, Qatar</div>
+            </div>
         </div>
 
-        <div class="item">
-            <div class="item-header">
-                <div class="item-title">MSc in Financial Management</div>
-                <div class="date">2020–2021</div>
+        <!-- Other -->
+        <div class="cv-section">
+            <h3>Other</h3>
+            <div class="cv-item" style="padding: 0.4rem 0; border-bottom: none;">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline;">
+                    <span style="font-weight: 600; font-size: 0.92rem; color: #1a1a1a;">Former French High-Level Athlete</span>
+                </div>
+                <div style="font-size: 0.85rem; color: #555;">Wrestling · National and International Medalist</div>
+                <div style="font-size: 0.82rem; color: #666;">
+                    Silver medal, French National Championships (2015); bronze medal (2014); medalist in international competitions.
+                </div>
             </div>
-            <div class="institution">ESCP Business School</div>
-            <div class="desc"><strong>Master's Thesis:</strong> Foreign Direct Investment in a Conflict Country: The Syrian Case</div>
-        </div>
-
-        <div class="item">
-            <div class="item-header">
-                <div class="item-title">Master's in International Relations - Middle Eastern and Mediterranean Specialization</div>
-                <div class="date">2018–2020</div>
-            </div>
-            <div class="institution">Sciences Po Grenoble</div>
-            <div class="desc"><strong>Master's Thesis:</strong> Economic Recovery in Syria under Political Instability</div>
-        </div>
-
-        <div class="item">
-            <div class="item-header">
-                <div class="item-title">Bachelor's in Political Science</div>
-                <div class="date">2014–2018</div>
-            </div>
-            <div class="institution">University of Lille &amp; Saint Joseph University of Beirut</div>
-        </div>
-
-        <h3>Professional Experience</h3>
-        <div class="item">
-            <div class="item-header">
-                <div class="item-title">Trade Advisor in Industry and Cleantech</div>
-                <div class="date">2022–2024</div>
-            </div>
-            <div class="institution">Business France, French Embassy in Cairo, Egypt (also covered Jordan)</div>
-            <ul>
-                <li>Conducted sectoral economic analyses across energy, infrastructure, transport, water, waste management, and security.</li>
-                <li>Advised more than 160 firms on market-entry strategies and international expansion across MENA.</li>
-                <li>Organized high-level trade missions across Egypt, Jordan, Tunisia, and the UAE.</li>
-            </ul>
-        </div>
-
-        <div class="item">
-            <div class="item-header">
-                <div class="item-title">Chief Education Advisor</div>
-                <div class="date">2019–2020</div>
-            </div>
-            <div class="institution">French High School Charles de Gaulle, Damascus, Syria</div>
-            <div class="desc">Managed academic operations and implemented strategic educational policies in a complex geopolitical environment.</div>
-        </div>
-
-        <div class="item">
-            <div class="item-header">
-                <div class="item-title">Trade Officer</div>
-                <div class="date">2018–2019</div>
-            </div>
-            <div class="institution">Business France, French Embassy in Doha, Qatar</div>
-            <ul>
-                <li>Conducted economic and sectoral analyses of Qatari industries.</li>
-                <li>Organized the Qatar-France Business and Investment Forum.</li>
-                <li>Supported economic exchanges between French and Qatari partners.</li>
-            </ul>
-        </div>
-
-        <h3>Other</h3>
-        <div class="item">
-            <div class="item-title">Former French High-Level Athlete</div>
-            <div class="desc">Wrestling · National and International Medalist.<br>Silver medal, French National Championships (2015); bronze medal (2014); medalist in international competitions.</div>
-        </div>
-        <div class="item">
-            <div class="item-title">Delegate - ESCP Alumni MENA</div>
-            <div class="desc">March 2023 - Present</div>
-        </div>
-        <div class="item">
-            <div class="item-title">Founder - Public Speaking Club</div>
-            <div class="desc">2016-2020. Conducted workshops in France, Lebanon, and Qatar.</div>
-        </div>
-        <div class="item">
-            <div class="item-title">Software</div>
-            <div class="desc">R, Python, Stata, LaTeX</div>
-        </div>
-        <div class="item">
-            <div class="item-title">Languages</div>
-            <div class="desc">French and Arabic (native); English (fluent)</div>
         </div>
     </div>
 
@@ -548,17 +621,27 @@
 
 <script>
     function showSection(sectionId) {
+        // Cacher toutes les sections
         const sections = document.querySelectorAll('.section');
         sections.forEach(sec => sec.classList.remove('active'));
 
+        // Afficher la section demandée
         const target = document.getElementById(sectionId);
         if (target) {
             target.classList.add('active');
         }
 
+        // Mettre à jour le menu actif
+        const navLinks = document.querySelectorAll('.sidebar nav a');
+        navLinks.forEach(link => link.classList.remove('active-link'));
+        const activeNav = document.getElementById('nav-' + sectionId);
+        if (activeNav) activeNav.classList.add('active-link');
+
+        // Remonter en haut de page
         window.scrollTo(0, 0);
     }
 
+    // Si quelqu'un ouvre le site avec un # quelque part dans l'URL
     window.onload = function() {
         const hash = window.location.hash.replace('#', '');
         if (hash && document.getElementById(hash)) {
