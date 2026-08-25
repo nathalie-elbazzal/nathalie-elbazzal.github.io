@@ -15,20 +15,20 @@
     <meta property="og:description" content="PhD Candidate in Economics researching international trade, geoeconomics, and geopolitical risk." />
     <meta property="og:image" content="https://nathalie-elbazzal.github.io/social-preview-v2.png" />
     
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <style>
-        /* ==================== STYLE EXACT DE YANIS ==================== */
+        /* ==================== STYLE EXACT DE YANIS (POLICE PLUS PETITE) ==================== */
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #ffffff;
             color: #222;
-            line-height: 1.7;
-            font-size: 1.05rem;
+            line-height: 1.6;
+            font-size: 1rem; /* Taille de police standard, comme Yanis */
         }
 
         a {
@@ -54,7 +54,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 2rem;
-            margin-bottom: 4rem;
+            margin-bottom: 3.5rem;
             font-weight: 700;
             font-size: 1.1rem;
         }
@@ -66,21 +66,21 @@
             opacity: 0.7;
         }
 
-        /* En-tête profil : Photo ronde + bouton Contact (comme Yanis) */
+        /* En-tête profil (Photo ronde + bouton Contact) */
         .profile-header {
             display: flex;
             align-items: center;
             gap: 1.5rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
         .profile-pic {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;  /* Photo parfaitement ronde */
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
             object-fit: cover;
         }
         .profile-info h1 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 700;
             margin: 0;
             color: #222;
@@ -88,7 +88,7 @@
         .profile-info p {
             margin: 0.2rem 0 0 0;
             color: #777;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
         .contact-btn {
             margin-left: auto;
@@ -97,7 +97,7 @@
             border-radius: 5px;
             color: #222;
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             transition: 0.2s;
         }
         .contact-btn:hover {
@@ -125,14 +125,21 @@
         }
         
         .section-title {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 700;
             margin: 0 0 2rem 0;
             color: #222;
         }
 
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem 0;
+            color: #222;
+        }
+
         .item {
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
 
         .item-header {
@@ -145,17 +152,17 @@
 
         .item-title {
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #222;
         }
 
         .date {
             color: #777;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .institution {
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: #444;
             font-weight: 500;
             margin-bottom: 0.5rem;
@@ -163,19 +170,29 @@
 
         .desc {
             color: #444;
+            font-size: 0.95rem;
         }
 
         ul {
-            margin: 0.8rem 0 0 1.2rem;
+            margin: 0.5rem 0 0 1.2rem;
             padding: 0;
             color: #444;
+            font-size: 0.95rem;
         }
         li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
         }
 
-        /* Logos en bas de la page d'accueil */
-        .logos {
+        /* Logos présents partout dans les sections */
+        .logo {
+            height: 35px;
+            width: auto;
+            vertical-align: middle;
+            margin-right: 0.8rem;
+            object-fit: contain;
+        }
+
+        .logos-home {
             margin-top: 3rem;
             display: flex;
             flex-wrap: wrap;
@@ -183,7 +200,7 @@
             align-items: center;
             opacity: 0.9;
         }
-        .logos img {
+        .logos-home img {
             max-height: 40px;
             width: auto;
         }
@@ -229,7 +246,7 @@
             Growing up in an environment shaped by recurrent geopolitical tensions, and later working across the Middle East, gave me first-hand insight into how political instability translates into economic outcomes. Witnessing how conflict, sanctions, and geopolitical uncertainty reshaped trade, markets, and firms' behavior led me to pursue research in international economics. Today, as a PhD Candidate in Economics at the University of Paris 8 and a Research Affiliate at the Paris School of Economics, I continue this research with the support of the CEPR ReCIPE Big Research Grant, focusing on maritime trade, market integration, and global value chains.
         </p>
 
-        <div class="logos">
+        <div class="logos-home">
             <img src="paris8-logo.jpg" alt="Université Paris 8">
             <img src="pse-logo.png" alt="Paris School of Economics">
             <img src="cepr-logo.png" alt="CEPR">
@@ -240,32 +257,35 @@
     <div class="section" id="research">
         <div class="section-title">Research</div>
 
+        <h3>Working Paper</h3>
         <div class="item">
             <div class="item-title">Trading Under Fire: Houthi Attacks and the Disruption of Global Shipping</div>
-            <div class="desc">Working Paper. Investigating how geopolitical shocks reshape global shipping networks and international trade, using the Houthi attacks in the Red Sea as a natural experiment.</div>
+            <div class="desc">I investigate how geopolitical shocks reshape global shipping networks and international trade, using the Houthi attacks in the Red Sea as a natural experiment. Drawing on high-frequency AIS and Kpler vessel-level data covering 2019–2025, I provide causal evidence on how the crisis affected vessel routing, shipping delays, and trade volumes.</div>
         </div>
 
+        <h3>Work in Progress</h3>
         <div class="item">
-            <div class="item-title">Geopolitics, Geoeconomics and Politics: A Survey and Event-Classification Protocol</div>
-            <div class="desc">Work in Progress. With <a href="https://www.jamelsaadaoui.com/" target="_blank">Jamel Saadaoui</a>.</div>
-        </div>
-
-        <div class="item">
-            <div class="item-title">Trade and Financial Frictions in Fragmented Economies</div>
-            <div class="desc">Work in Progress. With <a href="#" target="_blank">Pierre-Louis Vézina</a> (King's College London) and <a href="#" target="_blank">Jean-Charles Bricongne</a> (Banque de France).</div>
+            <div class="item-title">Geoeconomic Fragmentation and Market Integration during the Syrian Conflict</div>
+            <div class="desc">with <a href="https://pierrelouisvezina.weebly.com" target="_blank">Pierre-Louis Vézina</a> (King's College London) and <a href="https://www.banque-france.fr/fr/jean-charles-bricongne" target="_blank">Jean-Charles Bricongne</a> (Banque de France).</div>
         </div>
 
         <div class="item">
             <div class="item-title">Measuring Bilateral Geopolitical Tensions</div>
-            <div class="desc">Work in Progress. With Jean-Charles Bricongne, Benoît Chaulvet, Thomas Renault, and Jamel Saadaoui.</div>
+            <div class="desc">with <a href="https://www.banque-france.fr/fr/jean-charles-bricongne" target="_blank">Jean-Charles Bricongne</a> (Banque de France), <a href="https://bchaulvet.github.io" target="_blank">Benoît Chaulvet</a> (University Paris 1 Panthéon-Sorbonne), <a href="https://www.thomas-renault.com" target="_blank">Thomas Renault</a> (University Paris-Saclay), and <a href="https://www.jamelsaadaoui.com" target="_blank">Jamel Saadaoui</a> (University of Paris 8).</div>
         </div>
 
+        <div class="item">
+            <div class="item-title">Geopolitics, Geoeconomics and Politics: A Survey and Event-Classification Protocol</div>
+            <div class="desc">with <a href="https://www.jamelsaadaoui.com" target="_blank">Jamel Saadaoui</a> (University of Paris 8).</div>
+        </div>
+
+        <h3>Research Notes</h3>
         <div class="item">
             <div class="item-header">
                 <div class="item-title"><a href="https://www.jamelsaadaoui.com/when-market-spillovers-are-not-geopolitics/" target="_blank">When Market Spillovers Are Not Geopolitics</a></div>
                 <div class="date">2026</div>
             </div>
-            <div class="desc">Research Note. With Jamel Saadaoui.</div>
+            <div class="desc">with <a href="https://www.jamelsaadaoui.com" target="_blank">Jamel Saadaoui</a> (University of Paris 8).</div>
         </div>
 
         <div class="item">
@@ -273,7 +293,7 @@
                 <div class="item-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6052355" target="_blank">How Sanctions Redraw Oil Trade Flows, 2022-2025</a></div>
                 <div class="date">2026</div>
             </div>
-            <div class="desc">Research Note. With Homayoun Falakshahi (Kpler).</div>
+            <div class="desc">with <strong>Homayoun Falakshahi</strong> (Kpler).</div>
         </div>
     </div>
 
@@ -288,18 +308,19 @@
             </div>
             <div class="desc">
                 <strong>£100,000</strong> · Trade and Financial Frictions in Fragmented Economies<br>
-                Co-Principal Investigator with <a href="#" target="_blank">Pierre-Louis Vézina</a> (King's College London) and <a href="#" target="_blank">Jean-Charles Bricongne</a> (Banque de France).
+                Co-Principal Investigator with <a href="https://pierrelouisvezina.weebly.com" target="_blank">Pierre-Louis Vézina</a> (King's College London) and <a href="https://www.banque-france.fr/fr/jean-charles-bricongne" target="_blank">Jean-Charles Bricongne</a> (Banque de France).
             </div>
         </div>
     </div>
 
-    <!-- ==================== SECTION TEACHING ==================== -->
+    <!-- ==================== SECTION TEACHING (AVEC LOGOS) ==================== -->
     <div class="section" id="teaching">
         <div class="section-title">Teaching</div>
+        <h3>Academic Experience</h3>
 
         <div class="item">
             <div class="item-header">
-                <div class="item-title">Junior Researcher</div>
+                <div class="item-title"><img src="pse-logo.png" alt="PSE" class="logo"> Junior Researcher</div>
                 <div class="date">2026 - Present</div>
             </div>
             <div class="institution">Paris School of Economics</div>
@@ -309,18 +330,19 @@
             </ul>
         </div>
 
+        <h3>Teaching</h3>
         <div class="item">
             <div class="item-header">
-                <div class="item-title">Master's Thesis Supervisor &amp; Project Leader</div>
+                <div class="item-title"><img src="iris-logo.png" alt="IRIS" class="logo"> Master's Thesis Supervisor &amp; Project Leader</div>
                 <div class="date">2023 - Present</div>
             </div>
             <div class="institution">IRIS Sup'</div>
             <div class="desc">Supervision of Master's theses and applied research projects in geopolitics, international trade, development, and public policy.</div>
         </div>
-
+        
         <div class="item">
             <div class="item-header">
-                <div class="item-title">Teaching Assistant in Economics</div>
+                <div class="item-title"><img src="paris1-logo.jpg" alt="Paris 1" class="logo"> Teaching Assistant in Economics</div>
                 <div class="date">2025 - 2026</div>
             </div>
             <div class="institution">University Paris 1 Panthéon-Sorbonne</div>
@@ -336,7 +358,8 @@
     <!-- ==================== SECTION CONFERENCES ==================== -->
     <div class="section" id="conferences">
         <div class="section-title">Conferences &amp; Presentations</div>
-
+        
+        <h3>Selected conferences</h3>
         <div class="item">
             <div class="item-header">
                 <div class="item-title">Sardinian Empirical Trade Conference (FREIT)</div>
@@ -344,7 +367,6 @@
             </div>
             <div class="desc">Alghero, Italy · September 2026</div>
         </div>
-
         <div class="item">
             <div class="item-header">
                 <div class="item-title">European Trade Study Group Annual Conference</div>
@@ -352,7 +374,6 @@
             </div>
             <div class="desc">Exeter, United Kingdom · September 2026</div>
         </div>
-
         <div class="item">
             <div class="item-header">
                 <div class="item-title">World Trade Dialogue</div>
@@ -361,30 +382,34 @@
             <div class="desc">Hamburg, Germany · April 2026</div>
         </div>
 
+        <h3>Discussant Roles</h3>
         <div class="item">
             <div class="item-header">
-                <div class="item-title">Discussant - Geopolitical Risk and Foreign Dependence in Global Shipping</div>
+                <div class="item-title">Geopolitical Risk and Foreign Dependence in Global Shipping</div>
                 <div class="date">2026</div>
             </div>
-            <div class="desc">Paper by Simon Fuchs, Fernando Leibovici, and Woan Foong Wong. At the World Trade Dialogue.</div>
+            <div class="desc">World Trade Dialogue, Hamburg, Germany · April 2026</div>
+            <div class="desc">Paper by <a href="https://sfuchs-de.github.io" target="_blank">Simon Fuchs</a> (Federal Reserve Bank of Atlanta), <a href="https://www.fernandoleibovici.com" target="_blank">Fernando Leibovici</a> (Federal Reserve Bank of St. Louis), and <a href="https://sites.google.com/site/wongwoanfoong/home" target="_blank">Woan Foong Wong</a> (University of Oregon, CEPR, and NBER).</div>
         </div>
 
+        <h3>Poster Presentations</h3>
         <div class="item">
             <div class="item-header">
-                <div class="item-title">Poster - Measuring Bilateral Geopolitical Tensions</div>
+                <div class="item-title">Measuring Bilateral Geopolitical Tensions</div>
                 <div class="date">2026</div>
             </div>
             <div class="desc">Inaugural Conference of the Economic Data Science Society (EDSS), Banque de France, Paris · July 2026</div>
+            <div class="desc">with <a href="https://www.banque-france.fr/fr/jean-charles-bricongne" target="_blank">Jean-Charles Bricongne</a>, <a href="https://bchaulvet.github.io" target="_blank">Benoît Chaulvet</a>, <a href="https://www.thomas-renault.com" target="_blank">Thomas Renault</a>, and <a href="https://www.jamelsaadaoui.com" target="_blank">Jamel Saadaoui</a>.</div>
         </div>
     </div>
 
-    <!-- ==================== SECTION TALKS ==================== -->
+    <!-- ==================== SECTION TALKS (AVEC LOGOS) ==================== -->
     <div class="section" id="talks">
         <div class="section-title">Invited Talks &amp; Media</div>
 
         <div class="item">
             <div class="item-header">
-                <div class="item-title">Guest Lecturer · How Do Middle East Conflicts Affect Maritime Corridors and International Trade?</div>
+                <div class="item-title"><img src="heip-logo.png" alt="HEIP" class="logo"> Guest Lecturer · How Do Middle East Conflicts Affect Maritime Corridors and International Trade?</div>
                 <div class="date">May 2026</div>
             </div>
             <div class="desc">HEIP · The School of International and Political Studies</div>
@@ -392,7 +417,7 @@
 
         <div class="item">
             <div class="item-header">
-                <div class="item-title">Guest Speaker · Corporate Diplomacy in the MENA Region</div>
+                <div class="item-title"><img src="escp-politics-logo.jpeg" alt="ESCP" class="logo"> Guest Speaker · Corporate Diplomacy in the MENA Region</div>
                 <div class="date">February 2026</div>
             </div>
             <div class="desc">ESCP International Politics Society</div>
@@ -403,6 +428,7 @@
     <div class="section" id="cv">
         <div class="section-title">Curriculum Vitae</div>
 
+        <h3>Education</h3>
         <div class="item">
             <div class="item-header">
                 <div class="item-title">PhD Candidate in Economics</div>
@@ -446,6 +472,7 @@
             <div class="institution">University of Lille &amp; Saint Joseph University of Beirut</div>
         </div>
 
+        <h3>Professional Experience</h3>
         <div class="item">
             <div class="item-header">
                 <div class="item-title">Trade Advisor in Industry and Cleantech</div>
@@ -481,26 +508,23 @@
             </ul>
         </div>
 
+        <h3>Other</h3>
         <div class="item">
             <div class="item-title">Former French High-Level Athlete</div>
             <div class="desc">Wrestling · National and International Medalist.<br>Silver medal, French National Championships (2015); bronze medal (2014); medalist in international competitions.</div>
         </div>
-
         <div class="item">
             <div class="item-title">Delegate - ESCP Alumni MENA</div>
             <div class="desc">March 2023 - Present</div>
         </div>
-
         <div class="item">
             <div class="item-title">Founder - Public Speaking Club</div>
             <div class="desc">2016-2020. Conducted workshops in France, Lebanon, and Qatar.</div>
         </div>
-
         <div class="item">
             <div class="item-title">Software</div>
             <div class="desc">R, Python, Stata, LaTeX</div>
         </div>
-
         <div class="item">
             <div class="item-title">Languages</div>
             <div class="desc">French and Arabic (native); English (fluent)</div>
@@ -524,21 +548,17 @@
 
 <script>
     function showSection(sectionId) {
-        // Cacher toutes les sections
         const sections = document.querySelectorAll('.section');
         sections.forEach(sec => sec.classList.remove('active'));
 
-        // Afficher la section demandée
         const target = document.getElementById(sectionId);
         if (target) {
             target.classList.add('active');
         }
 
-        // Remonter en haut de page
         window.scrollTo(0, 0);
     }
 
-    // Si quelqu'un ouvre le site avec un # quelque part dans l'URL
     window.onload = function() {
         const hash = window.location.hash.replace('#', '');
         if (hash && document.getElementById(hash)) {
