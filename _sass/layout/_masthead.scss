@@ -61,9 +61,8 @@
   white-space: nowrap;
 
   &--lg {
-    padding-right: 2em;
-    font-weight: 700;
-  }
+  display: none !important;
+}
 }
 
 .masthead__menu-item.selected a {
