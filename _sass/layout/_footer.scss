@@ -105,3 +105,12 @@
     }
   }
 }
+/* Force footer text visibility */
+.page__footer,
+.page__footer footer,
+.page__footer p,
+.page__footer .page__footer-copyright,
+.page__footer .page__footer-copyright a {
+  color: #222 !important;
+  opacity: 1 !important;
+}
