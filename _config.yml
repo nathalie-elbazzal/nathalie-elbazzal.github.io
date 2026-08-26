@@ -19,7 +19,7 @@ repository: "nathalie-elbazzal/nathalie-elbazzal.github.io"
 # ============================================================
 
 author:
-  avatar           : "/images/photo.jpg"
+  avatar           : "photo.jpg"
   name             : "Nathalie El-Bazzal"
   pronouns         :
   bio              : "PhD Candidate in Economics · Research Affiliate at the Paris School of Economics"
@@ -46,7 +46,7 @@ author:
   bitbucket        :
   codepen          :
   dribbble         :
-  github           : "nathalie-elbazzal"
+  github           :
   kaggle           :
   stackoverflow    :
 
