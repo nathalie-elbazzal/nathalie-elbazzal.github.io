@@ -88,3 +88,72 @@
 .page__content i {
   font-style: normal;
 }
+/* ===== Homepage layout ===== */
+
+.home-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 2.3fr) minmax(150px, 0.8fr);
+  gap: 2.2rem;
+  align-items: start;
+}
+
+.home-bio p {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.65;
+}
+
+.research-interests {
+  border-left: 2px solid #7A263A;
+  padding-left: 1rem;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: #222;
+}
+
+.research-interests-title {
+  color: #7A263A;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.65rem;
+}
+
+.research-interests > div:not(.research-interests-title) {
+  margin-bottom: 0.3rem;
+}
+
+.home-logos {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.home-logos img {
+  max-height: 42px;
+  width: auto;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .home-intro {
+    display: block;
+  }
+
+  .research-interests {
+    margin-top: 1.5rem;
+    border-left: 2px solid #7A263A;
+  }
+
+  .home-logos {
+    gap: 1.3rem;
+  }
+
+  .home-logos img {
+    max-height: 34px;
+  }
+}
