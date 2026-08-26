@@ -132,9 +132,8 @@ facebook:
   app_id                 :
   publisher              :
 
-og_image                 :
-og_description           : "Nathalie El-Bazzal — PhD Candidate in Economics. Research on international trade, geoeconomics, political economy, maritime trade, and global value chains."
-
+og_image                 : "/images/social-preview-v3.png"
+og_description           : "Nathalie El-Bazzal — International Trade & Geoeconomics"
 social:
   type                   : "Person"
   name                   : "Nathalie El-Bazzal"
