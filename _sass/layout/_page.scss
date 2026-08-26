@@ -399,3 +399,7 @@
   font-size: $type-size-6;
   text-transform: uppercase;
 }
+/* Hide site name from top navigation */
+.masthead__menu-item--lg {
+  display: none !important;
+}
