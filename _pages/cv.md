@@ -6,7 +6,7 @@ author_profile: true
 
 [**📄 Download full CV (PDF)**](/files/cv.pdf)
 
-## Education
+<h2 style="color:#7A263A;">Education</h2>
 
 ### PhD Candidate in Economics
 **2026–Present**  
@@ -32,7 +32,7 @@ Master's Thesis: *Economic Recovery in Syria under Political Instability*
 University of Lille & Saint Joseph University of Beirut
 
 
-## Professional Experience
+<h2 style="color:#7A263A;">Professional Experience</h2>
 
 ### Trade Advisor in Industry and Cleantech
 **2022–2024**  
@@ -47,7 +47,7 @@ French High School Charles de Gaulle, Damascus, Syria
 Business France, French Embassy in Doha, Qatar
 
 
-## Other
+<h2 style="color:#7A263A;">Other</h2>
 
 ### Former French High-Level Athlete
 
