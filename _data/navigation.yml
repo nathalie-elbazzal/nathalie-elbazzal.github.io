@@ -1,0 +1,24 @@
+main:
+  - title: "Home"
+    url: /
+
+  - title: "Research"
+    url: /research/
+
+  - title: "Grant"
+    url: /grant/
+
+  - title: "Teaching"
+    url: /teaching/
+
+  - title: "Conferences"
+    url: /conferences/
+
+  - title: "Talks"
+    url: /talks/
+
+  - title: "CV"
+    url: /cv/
+
+  - title: "Contact"
+    url: /contact/
