@@ -51,27 +51,35 @@
 {% endif %}
 
 
-<!-- Twitter -->
+<!-- Twitter / X -->
+
+<meta name="twitter:card" content="summary_large_image">
+
+{% if page.url == "/" %}
+  <meta name="twitter:title" content="Nathalie El-Bazzal">
+  <meta name="twitter:description" content="International Trade &amp; Geoeconomics">
+  <meta name="twitter:image" content="https://nathalie-elbazzal.github.io/images/social-preview-v3.PNG">
+{% else %}
+  <meta name="twitter:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
+  <meta name="twitter:description" content="{{ seo_description }}">
+
+  {% if page.header.image %}
+    <meta name="twitter:image" content="{% if page.header.image contains '://' %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: '/images/' | prepend: base_path }}{% endif %}">
+  {% elsif site.og_image %}
+    <meta name="twitter:image" content="{{ site.og_image | absolute_url }}">
+  {% endif %}
+{% endif %}
+
+{% if canonical_url %}
+  <meta name="twitter:url" content="{{ canonical_url }}">
+{% endif %}
 
 {% if site.twitter.username %}
   <meta name="twitter:site" content="@{{ site.twitter.username | replace: "@", "" }}">
-  <meta name="twitter:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
-  <meta name="twitter:description" content="{{ seo_description }}">
-  <meta name="twitter:url" content="{{ canonical_url }}">
+{% endif %}
 
-  {% if page.header.image %}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{% if page.header.image contains '://' %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: '/images/' | prepend: base_path }}{% endif %}">
-  {% elsif site.og_image %}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{{ site.og_image | absolute_url }}">
-  {% else %}
-    <meta name="twitter:card" content="summary">
-  {% endif %}
-
-  {% if seo_author_twitter %}
-    <meta name="twitter:creator" content="@{{ seo_author_twitter }}">
-  {% endif %}
+{% if seo_author_twitter %}
+  <meta name="twitter:creator" content="@{{ seo_author_twitter }}">
 {% endif %}
 
 
@@ -143,7 +151,7 @@
 <meta property="og:site_name" content="{{ site.title }}">
 
 {% if page.url == "/" %}
-  <meta property="og:title" content="Nathalie El-Bazzal — International Trade &amp; Geoeconomics">
+  <meta property="og:title" content="Nathalie El-Bazzal">
 {% else %}
   <meta property="og:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
 {% endif %}
@@ -154,13 +162,21 @@
   <meta property="og:type" content="website">
 {% endif %}
 
-{% if page.excerpt %}
+
+<!-- Open Graph description -->
+
+{% if page.url == "/" %}
+  <meta property="og:description" content="International Trade &amp; Geoeconomics">
+{% elsif page.excerpt %}
   <meta property="og:description" content="{{ seo_description }}">
 {% elsif site.og_description %}
   <meta property="og:description" content="{{ site.og_description }}">
 {% else %}
   <meta property="og:description" content="{{ seo_description }}">
 {% endif %}
+
+
+<!-- Open Graph URL -->
 
 {% if seo_url %}
   <meta property="og:url" content="{{ page.url | prepend: seo_url | replace: '/index.html', '/' }}">
@@ -169,7 +185,16 @@
 
 <!-- Social preview image -->
 
-{% if page.header.image %}
+{% if page.url == "/" %}
+
+  <meta property="og:image" content="https://nathalie-elbazzal.github.io/images/social-preview-v3.PNG">
+  <meta property="og:image:secure_url" content="https://nathalie-elbazzal.github.io/images/social-preview-v3.PNG">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="International Trade and Geoeconomics">
+
+{% elsif page.header.image %}
 
   <meta property="og:image" content="{% if page.header.image contains '://' %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: '/images/' | prepend: base_path }}{% endif %}">
 
