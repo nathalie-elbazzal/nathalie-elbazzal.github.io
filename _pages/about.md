@@ -108,7 +108,6 @@ redirect_from:
 
       <div class="interest-item">International Trade</div>
       <div class="interest-item">Geoeconomics</div>
-      <div class="interest-item">Maritime Economics</div>
       <div class="interest-item">Global Value Chains</div>
       <div class="interest-item">Political Economy</div>
     </div>
