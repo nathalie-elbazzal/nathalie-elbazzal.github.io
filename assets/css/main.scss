@@ -37,3 +37,36 @@
     "layout/sidebar",
     "layout/json_cv"
 ;
+/* ===== Custom academic styling ===== */
+
+.page__content {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #222;
+}
+
+.page__content h1 {
+  font-size: 1.55rem;
+  color: #111;
+}
+
+.page__content h2 {
+  font-size: 1.18rem;
+  color: #111;
+  margin-top: 1.8rem;
+}
+
+.page__content h3 {
+  font-size: 0.98rem;
+  color: #111;
+  margin-top: 1.3rem;
+}
+
+.page__content a {
+  color: #111;
+}
+
+.page__content em,
+.page__content i {
+  font-style: normal;
+}
