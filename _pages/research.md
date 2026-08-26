@@ -26,14 +26,30 @@ with [**Jamel Saadaoui**](https://www.jamelsaadaoui.com) (University of Paris 8)
 
 ## Research Notes
 
-### [When Market Spillovers Are Not Geopolitics](https://www.jamelsaadaoui.com/when-market-spillovers-are-not-geopolitics/)
+<div style="margin-bottom:1.2rem;">
 
-2026
+  <div style="font-size:0.92rem; font-weight:600; line-height:1.4;">
+    <a href="https://www.jamelsaadaoui.com/when-market-spillovers-are-not-geopolitics/">
+      When Market Spillovers Are Not Geopolitics
+    </a>
+  </div>
 
-with [**Jamel Saadaoui**](https://www.jamelsaadaoui.com/) (University of Paris 8).
+  <div style="font-size:0.80rem; color:#333; margin-top:0.25rem; line-height:1.5;">
+    with <a href="https://www.jamelsaadaoui.com/"><strong>Jamel Saadaoui</strong></a> (University of Paris 8) · 2026
+  </div>
 
-### [How Sanctions Redraw Oil Trade Flows, 2022-2025](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6052355)
+</div>
 
-2026
+<div style="margin-bottom:1.2rem;">
 
-with **Homayoun Falakshahi** (Kpler).
+  <div style="font-size:0.92rem; font-weight:600; line-height:1.4;">
+    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6052355">
+      How Sanctions Redraw Oil Trade Flows, 2022–2025
+    </a>
+  </div>
+
+  <div style="font-size:0.80rem; color:#333; margin-top:0.25rem; line-height:1.5;">
+    with <strong>Homayoun Falakshahi</strong> (Kpler) · 2026
+  </div>
+
+</div>
