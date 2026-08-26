@@ -132,7 +132,7 @@ facebook:
   app_id                 :
   publisher              :
 
-og_image                 : "/images/social-preview-v3.png"
+og_image                 : "/images/social-preview-v3.PNG"
 og_description           : "Nathalie El-Bazzal — International Trade & Geoeconomics"
 social:
   type                   : "Person"
