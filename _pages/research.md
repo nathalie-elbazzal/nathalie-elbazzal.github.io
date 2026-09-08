@@ -14,7 +14,7 @@ I investigate how geopolitical shocks reshape global shipping networks and inter
 
 ### Geoeconomic Fragmentation and Market Integration during the Syrian Conflict
 
-with [**Pierre-Louis Vézina**](https://pierrelouisvezina.weebly.com) (King's College London) and [**Jean-Charles Bricongne**](https://www.banque-france.fr/fr/jean-charles-bricongne) (Banque de France).
+with [**Pierre-Louis Vézina**](https://pierrelouisvezina.weebly.com) (King's College London). 
 
 ### Measuring Bilateral Geopolitical Tensions
 
