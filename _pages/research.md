@@ -7,9 +7,9 @@ author_profile: true
 ## Working Paper
 
 ### Trading Under Fire: Houthi Attacks and the Disruption of Global Shipping
+**Best Student Paper Award — Sardinian Empirical Trade Conference (SETC – FREIT), Alghero, Italy, September 2026**  
 
-I investigate how geopolitical shocks reshape global shipping networks and international trade, using the Houthi attacks in the Red Sea as a natural experiment. Drawing on high-frequency AIS and Kpler vessel-level data covering 2019–2025, I provide causal evidence on how the crisis affected vessel routing, shipping delays, and trade volumes.
-
+[Graduate Student Paper Competition](https://freit.org/SETC/grad-competition.html)
 ## Work in Progress
 
 ### Geoeconomic Fragmentation and Market Integration during the Syrian Conflict
