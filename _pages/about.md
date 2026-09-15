@@ -94,9 +94,18 @@ redirect_from:
 
 <div class="home-wrapper">
 
+
   <h2 class="home-title">
-    Hello and welcome to my website!
-  </h2>
+  Hello and welcome to my website!
+</h2>
+
+<div class="news-item">
+  <strong>September 2026 — Best Student Paper Award</strong><br>
+  Sardinian Empirical Trade Conference (SETC - FREIT), Alghero, Italy<br>
+  <a href="https://freit.org/SETC/grad-competition.html" target="_blank">
+    <em>Trading Under Fire: The Impact of Houthi Attacks in the Red Sea on Global Shipping and Trade</em>
+  </a>
+</div>
 
   <div class="home-layout">
 
