@@ -7,9 +7,14 @@ author_profile: true
 ## Working Paper
 
 ### Trading Under Fire: Houthi Attacks and the Disruption of Global Shipping
-**Best Student Paper Award — Sardinian Empirical Trade Conference (SETC – FREIT), Alghero, Italy, September 2026**  
 
-[Graduate Student Paper Competition](https://freit.org/SETC/grad-competition.html)
+<div style="color:#7d2e3b; font-weight:600; margin-top:0.4rem; margin-bottom:0.3rem;">
+  Best Student Paper Award — Sardinian Empirical Trade Conference (SETC – FREIT), Alghero, Italy, September 2026
+</div>
+
+<a href="https://freit.org/SETC/grad-competition.html">
+  Student Paper Competition
+</a>
 ## Work in Progress
 
 ### Geoeconomic Fragmentation and Market Integration during the Syrian Conflict
