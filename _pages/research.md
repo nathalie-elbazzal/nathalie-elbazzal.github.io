@@ -12,9 +12,6 @@ author_profile: true
   Best Student Paper Award — Sardinian Empirical Trade Conference (SETC – FREIT), Alghero, Italy, September 2026
 </div>
 
-<a href="https://freit.org/SETC/grad-competition.html">
-  Student Paper Competition
-</a>
 ## Work in Progress
 
 ### Geoeconomic Fragmentation and Market Integration during the Syrian Conflict
