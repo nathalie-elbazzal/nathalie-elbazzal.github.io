@@ -115,7 +115,7 @@ redirect_from:
 
 <div style="font-size:0.85rem; font-weight:700; letter-spacing:0.08em; 
             text-transform:uppercase; color:#7d2e3b; 
-            margin-top:0.10rem; margin-bottom:0.1rem;">
+            margin-top:0.12rem; margin-bottom:0.2rem;">
   About
 </div>
 <p class="home-text" style="margin-top:0.2rem;">
