@@ -106,23 +106,22 @@ redirect_from:
     News
   </div>
 
-  <div class="news-item">
-    <strong>September 2026 — Best Student Paper Award</strong><br>
-    Sardinian Empirical Trade Conference (SETC – FREIT), Alghero, Italy<br>
-    <a href="https://freit.org/SETC/grad-competition.html" target="_blank">
-      <em>Trading Under Fire: The Impact of Houthi Attacks in the Red Sea on Global Shipping and Trade</em>
-    </a>
-  </div>
+ <div class="news-item">
+  <strong>September 2026 — Best Student Paper Award</strong><br>
+  Sardinian Empirical Trade Conference (SETC – FREIT), Alghero, Italy<br>
+  <a href="https://freit.org/SETC/grad-competition.html" target="_blank">
+    <em>Trading Under Fire: The Impact of Houthi Attacks in the Red Sea on Global Shipping and Trade</em>
+  </a>
 </div>
+</div>
+
 <div style="font-size:0.85rem; font-weight:700; letter-spacing:0.08em; 
-
             text-transform:uppercase; color:#7d2e3b; 
-
-            margin-top:2.5rem; margin-bottom:0.8rem;">
-
+            margin-top:1.5rem; margin-bottom:0.3rem;">
   About
-  </div>
-<p class="home-text">
+</div>
+
+<p class="home-text" style="margin-top:0.3rem;">
   Growing up in an environment shaped by recurrent geopolitical tensions, and later working across the Middle East, gave me first-hand insight into how political instability translates into economic outcomes. Witnessing how conflict, sanctions, and geopolitical uncertainty reshaped trade, markets, and firms’ behavior led me to pursue research in international economics. What started with my Master’s theses has since developed into a broader research agenda. Today, as a PhD Candidate in Economics at the University of Paris 8 and a Research Affiliate at the Paris School of Economics, I explore these questions through maritime trade, market integration, and global value chains, with the support of the CEPR ReCIPE Big Research Grant.
 </p>
     <div class="interests-box">
