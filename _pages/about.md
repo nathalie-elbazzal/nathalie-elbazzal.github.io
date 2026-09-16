@@ -135,5 +135,3 @@ redirect_from:
     <img src="/images/pse-logo.png" alt="Paris School of Economics">
     <img src="/images/cepr-logo.png" alt="CEPR ReCIPE">
   </div>
-
-</div>
