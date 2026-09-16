@@ -117,11 +117,11 @@ redirect_from:
 
 <div style="font-size:0.85rem; font-weight:700; letter-spacing:0.08em; 
             text-transform:uppercase; color:#7d2e3b; 
-            margin-top:1.5rem; margin-bottom:0.3rem;">
+            margin-top:0.5rem; margin-bottom:0.2rem;">
   About
 </div>
 
-<p class="home-text" style="margin-top:0.3rem;">
+<p class="home-text" style="margin-top:0.2rem;">
   Growing up in an environment shaped by recurrent geopolitical tensions, and later working across the Middle East, gave me first-hand insight into how political instability translates into economic outcomes. Witnessing how conflict, sanctions, and geopolitical uncertainty reshaped trade, markets, and firms’ behavior led me to pursue research in international economics. What started with my Master’s theses has since developed into a broader research agenda. Today, as a PhD Candidate in Economics at the University of Paris 8 and a Research Affiliate at the Paris School of Economics, I explore these questions through maritime trade, market integration, and global value chains, with the support of the CEPR ReCIPE Big Research Grant.
 </p>
     <div class="interests-box">
