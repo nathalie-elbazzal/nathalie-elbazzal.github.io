@@ -5,8 +5,8 @@ main:
   - title: "Research"
     url: /research/
 
-  - title: "Grant"
-    url: /grant/
+  - title: "Grants & Awards"
+  url: /grant/
 
   - title: "Teaching"
     url: /teaching/
