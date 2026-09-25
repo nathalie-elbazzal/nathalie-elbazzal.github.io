@@ -16,7 +16,7 @@ Discussant for **Geopolitical Risk and Foreign Dependence in Global Shipping**, 
 
 ## Poster Presentations
 
-**2026:** *Trading Under Fire: Houthi Attacks and the Disruption of Global Shipping*, **Junior Poster Session, 5th Kiel-CEPR Conference on Geoeconomics**, Berlin — **Scheduled, November 2026**
+**2026:** *Trading Under Fire: Houthi Attacks and the Disruption of Global Shipping*, **Junior Poster Session, 5th Kiel-CEPR Conference on Geoeconomics**, Berlin, Germany, **Scheduled November 2026**
 
-**2026:** *Measuring Bilateral Geopolitical Tensions*, **Inaugural Conference of the Economic Data Science Society (EDSS)**, Banque de France  
+**2026:** *Measuring Bilateral Geopolitical Tensions*, **Inaugural Conference of the Economic Data Science Society (EDSS)**, Banque de France, Paris, France, July 2026  
 with [**Jean-Charles Bricongne**](https://www.banque-france.fr/fr/jean-charles-bricongne), [**Benoît Chaulvet**](https://bchaulvet.github.io), [**Thomas Renault**](https://www.thomas-renault.com), and [**Jamel Saadaoui**](https://www.jamelsaadaoui.com).
