@@ -16,7 +16,7 @@ Supervisor: Jamel Saadaoui
 ### Pre-Doctoral Studies in International Economics
 **2024–2026**  
 University Paris 1 Panthéon-Sorbonne  
-**With Highest Honors — GPA: 4.0/4.0**
+**With Highest Honors - GPA: 4.0/4.0**
 
 ### MSc in Financial Management
 **2020–2021**  
