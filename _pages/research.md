@@ -42,16 +42,3 @@ with [**Jamel Saadaoui**](https://www.jamelsaadaoui.com) (University of Paris 8)
 
 </div>
 
-<div style="margin-bottom:1.2rem;">
-
-  <div style="font-size:0.92rem; font-weight:600; line-height:1.4;">
-    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6052355">
-      How Sanctions Redraw Oil Trade Flows, 2022–2025
-    </a>
-  </div>
-
-  <div style="font-size:0.80rem; color:#333; margin-top:0.25rem; line-height:1.5;">
-    with <strong>Homayoun Falakshahi</strong> (Kpler) · 2026
-  </div>
-
-</div>
