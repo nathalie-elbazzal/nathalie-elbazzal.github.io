@@ -119,7 +119,10 @@ redirect_from:
 </div>
 
 <p class="home-text" style="margin-top:0.05rem;">
- Growing up amid recurrent geopolitical tensions, and later working across the Middle East, I witnessed how political shocks reshape economic life: trade routes shift, markets fragment, and firms adapt to persistent uncertainty. These observations raised questions that have stayed with me ever since: how do geopolitical and geoeconomic shocks, from conflicts to sanctions, propagate through trade networks, markets, and global value chains, and who bears their costs? What began with my Master's theses has since grown into a broader research agenda. As a PhD candidate in Economics at the University of Paris 8 and a Research Affiliate at the Paris School of Economics, I address these questions by combining international trade with applied microeconometric methods, with a focus on maritime trade, market integration, and global value chains. My work is supported by a CEPR ReCIPE Big Research Grant.
+Growing up amid recurrent geopolitical tensions, and later working across the Middle East, I witnessed how political shocks reshape economic life: trade routes shift, markets fragment, and firms adapt to persistent uncertainty. These observations raised questions that have stayed with me ever since: how do geopolitical and geoeconomic shocks, from conflicts to sanctions, propagate through trade networks, markets, and global value chains, and who bears their costs?
+What began with my Master's theses has since grown into a broader research agenda. As a PhD candidate in Economics at the University of Paris 8 and a Research Affiliate at the Paris School of Economics, I address these questions by combining international trade with applied microeconometric methods, with a focus on maritime trade, market integration, and global value chains. My work is supported by a CEPR ReCIPE Big Research Grant.
+
+
 </p>
     <div class="interests-box">
       <div class="interests-title">Research Interests</div>
