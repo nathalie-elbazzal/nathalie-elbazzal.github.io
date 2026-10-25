@@ -4,7 +4,7 @@ title: "Grants & Awards"
 author_profile: true
 ---
 
-**Best PhD Student Paper Award**  
+**Best Graduate Student Paper Award**  
 2026  
 **Sardinian Empirical Trade Conference (SETC)** · Forum for Research in Empirical International Trade (FREIT)  
 Awarded for *Chokepoint Risk and Trade:
