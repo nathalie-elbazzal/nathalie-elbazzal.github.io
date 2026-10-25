@@ -109,7 +109,8 @@ redirect_from:
   <strong>September 2026 - Best PhD Student Paper Award</strong><br>
   Sardinian Empirical Trade Conference (SETC - FREIT), Alghero, Italy<br>
   <a href="https://freit.org/SETC/grad-competition.html" target="_blank">
-    <em>Trading Under Fire: Houthi Attacks and the Disruption of Global Shipping</em>
+    <em>Chokepoint Risk and Trade:
+Evidence from the Red Sea Crisis</em>
   </a>
 </div>
 <div style="font-size:0.85rem; font-weight:700; letter-spacing:0.08em; 
