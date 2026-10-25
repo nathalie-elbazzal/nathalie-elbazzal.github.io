@@ -6,7 +6,8 @@ author_profile: true
 
 ## Working Paper
 
-### Trading Under Fire: Houthi Attacks and the Disruption of Global Shipping
+### Chokepoint Risk and Trade:
+Evidence from the Red Sea Crisis
 
 <div style="color:#7d2e3b; font-weight:600; margin-top:0.4rem; margin-bottom:0.3rem;">
   Best PhD Student Paper Award - Sardinian Empirical Trade Conference (SETC - FREIT). Alghero, Italy, September 2026
@@ -21,10 +22,6 @@ with [**Pierre-Louis Vézina**](https://pierrelouisvezina.weebly.com) (King's Co
 ### Measuring Bilateral Geopolitical Tensions
 
 with [**Jean-Charles Bricongne**](https://www.banque-france.fr/fr/jean-charles-bricongne) (Banque de France), [**Benoît Chaulvet**](https://bchaulvet.github.io) (University Paris 1 Panthéon-Sorbonne), [**Thomas Renault**](https://www.thomas-renault.com) (University Paris-Saclay), and [**Jamel Saadaoui**](https://www.jamelsaadaoui.com) (University of Paris 8).
-
-### Geopolitics, Geoeconomics and Politics: A Survey and Event-Classification Protocol
-
-with [**Jamel Saadaoui**](https://www.jamelsaadaoui.com) (University of Paris 8).
 
 ## Research Notes
 
