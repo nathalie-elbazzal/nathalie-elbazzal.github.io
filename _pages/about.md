@@ -106,7 +106,7 @@ redirect_from:
     News
   </div>
 <div class="news-item" style="margin-bottom:0.15rem;">
-  <strong>September 2026 - Best PhD Student Paper Award</strong><br>
+  <strong>September 2026 - Best Graduate Student Paper Award</strong><br>
   Sardinian Empirical Trade Conference (SETC - FREIT), Alghero, Italy<br>
   <a href="https://freit.org/SETC/grad-competition.html" target="_blank">
     <em>Chokepoint Risk and Trade:
