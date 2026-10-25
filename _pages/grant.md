@@ -7,7 +7,8 @@ author_profile: true
 **Best PhD Student Paper Award**  
 2026  
 **Sardinian Empirical Trade Conference (SETC)** · Forum for Research in Empirical International Trade (FREIT)  
-Awarded for *Trading Under Fire: Houthi Attacks and the Disruption of Global Shipping*.
+Awarded for *Chokepoint Risk and Trade:
+Evidence from the Red Sea Crisis*.
 
 ---
 
