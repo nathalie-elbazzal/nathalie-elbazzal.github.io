@@ -10,7 +10,7 @@ author_profile: true
 Evidence from the Red Sea Crisis
 
 <div style="color:#7d2e3b; font-weight:600; margin-top:0.4rem; margin-bottom:0.3rem;">
-  Best PhD Student Paper Award - Sardinian Empirical Trade Conference (SETC - FREIT). Alghero, Italy, September 2026
+  Best Graduate Student Paper Award - Sardinian Empirical Trade Conference (SETC - FREIT). Alghero, Italy, September 2026
 </div>
 
 ## Work in Progress
