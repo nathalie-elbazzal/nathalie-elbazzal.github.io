@@ -4,6 +4,7 @@ title: "Conferences & Presentations"
 author_profile: true
 ---
 **2027:** **ReCIPE Annual Conference** (Oxford, United Kingdom. March, scheduled). 
+
 **2026:** **Geopolitical Alignment, Tensions, and the Global Economy** (Paris Nanterre, France. December, scheduled)
 **5th Kiel-CEPR Conference on Geoeconomics (Junior Poster Session)** (Berlin, Germany. November); **Sardinian Empirical Trade Conference (FREIT)** (Alghero, Italy. September); **European Trade Study Group Annual Conference** (Exeter, United Kingdom. September); **Inaugural Conference of the Economic Data Science Society (EDSS) (Poster)** (Banque de France, Paris, France. July); **World Trade Dialogue** (Hamburg, Germany. April).
 
