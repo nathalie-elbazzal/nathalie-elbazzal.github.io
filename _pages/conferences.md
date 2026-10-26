@@ -12,7 +12,7 @@ author_profile: true
 
 **2026**
 
-Discussant for **Russia’s Wartime Economy: Measuring Regional Inequalities from Outer Space**, by [**Jan Fidrmuc**](http://www.fidrmuc.net) (University of Lille), [**Irakli Barbakadze**](https://sites.google.com/view/iraklibarbakadze/home) (University College London and King's College London), [**Martin Hulényi**](https://www.martinhulenyi.eu) (Lisbon School of Economics and Management), and [**Ketevani Kapanadze**](https://www.ketevanikapanadze.com/about/)(European Research University).
+Discussant for **Russia’s Wartime Economy: Measuring Regional Inequalities from Outer Space**, by [**Jan Fidrmuc**](http://www.fidrmuc.net) (University of Lille), [**Irakli Barbakadze**](https://sites.google.com/view/iraklibarbakadze/home) (University College London and King's College London), [**Martin Hulényi**](https://www.martinhulenyi.eu) (Lisbon School of Economics and Management), and [**Ketevani Kapanadze**](https://www.ketevanikapanadze.com/about/)(European Research University) at the **Geopolitical Alignment, Tensions, and the Global Economy** (Paris-Nanterre, France). 
 
 Discussant for **Evading Sanctions**, by [**Feodora A. Teti**](https://feodorateti.github.io/) (LMU Munich & ifo Institute), [**Lisa Scheckenhofer**](https://www.ifo.de/en/scheckenhofer-l) (ifo Institute), [**David Torun**](https://sites.google.com/view/davidtorun/) (University of Zurich), and [**Joschka Wanner**](http://www.joschkawanner.de) (University of Würzburg), at the **Sardinian Empirical Trade Conference (FREIT)** (Alghero, Italy).
 
