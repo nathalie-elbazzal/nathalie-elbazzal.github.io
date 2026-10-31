@@ -11,6 +11,7 @@ author_profile: true
 ### PhD Candidate in Economics
 **2026–Present**  
 University of Paris 8 
+
 Trade Shocks and Geoeconomic Fragmentation  
 
 ### Pre-Doctoral Studies in International Economics
